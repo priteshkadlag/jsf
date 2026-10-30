@@ -1,26 +1,189 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-ivory: #f2ece2;
+  --color-paper: #f8f4ee;
+  --color-sand: #e3d8c7;
+  --color-ink: #26211c;
+  --color-stone: #6b6157;
+  --color-espresso: #1a1511;
+  --color-bark: #2a221b;
+  --color-teak: #8f5628;
+  --color-brass: #cf9f66;
+  --color-line: rgb(38 33 28 / 0.14);
+  --color-line-light: rgb(242 236 226 / 0.16);
+
+  --font-serif: var(--font-display), "Times New Roman", serif;
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-quart: cubic-bezier(0.76, 0, 0.24, 1);
+
+  --text-display: clamp(3.25rem, 11vw, 11.5rem);
+  --text-display--line-height: 0.9;
+  --text-headline: clamp(2.5rem, 6.4vw, 6.25rem);
+  --text-headline--line-height: 0.98;
+  --text-title: clamp(1.9rem, 3.6vw, 3.4rem);
+  --text-title--line-height: 1.05;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--color-teak);
+    color: var(--color-ivory);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-teak);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  img,
+  video {
+    user-select: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+@layer components {
+  .container-x {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 1680px;
+    padding-inline: clamp(1rem, 4vw, 3.5rem);
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  /* Arch: semicircular head on a portrait frame. */
+  .arch {
+    border-radius: 999px 999px 0 0;
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s var(--ease-expo);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+    background-position: 0% 100%;
+  }
+
+  /* SplitType masks */
+  .split-word {
+    display: inline-block;
+    overflow: clip;
+    vertical-align: top;
+    padding-bottom: 0.12em;
+    margin-bottom: -0.12em;
+  }
+  .split-word > .split-inner {
+    display: inline-block;
+    will-change: transform;
+  }
+}
+
+/* Sticky bars that sit below the fixed header and rise to the top when it hides */
+.sticky-under-header {
+  top: 72px;
+  transition: top 0.7s var(--ease-quart);
+}
+@media (min-width: 768px) {
+  .sticky-under-header {
+    top: 80px;
+  }
+}
+html[data-header="hidden"] .sticky-under-header {
+  top: 0;
+}
+
+/* Hide split text until JS has prepared it, so there's no flash of unanimated copy. */
+html.js [data-reveal]:not([data-split-ready]) {
+  visibility: hidden;
+}
+
+/* Subtle film grain for depth on dark sections */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+@keyframes hint {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(200%);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 40s) linear infinite;
+}
+.marquee-reverse .animate-marquee {
+  animation-direction: reverse;
+}
+.marquee:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  html.js [data-reveal]:not([data-split-ready]) {
+    visibility: visible;
+  }
 }
