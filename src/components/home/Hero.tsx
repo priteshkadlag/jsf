@@ -101,8 +101,8 @@ export default function Hero() {
               }`}
             >
               <div
-                className="arch bg-gradient-to-b from-[#7a4724] to-[#5a321a] shadow-[inset_0_0_0_10px_#4a2a15]"
-                style={{ height: "min(62svh, 108vw)", aspectRatio: "1.88 / 2.84" }}
+                className="arch bg-gradient-to-b from-[#c08240] to-[#9a5f27] shadow-[inset_0_0_0_10px_#8f5626]"
+                style={{ height: "min(64svh, 114vw)", aspectRatio: "1.84 / 2.92" }}
               />
             </div>
             {mode === "3d" && <DoorScene progress={progress} active={active} onReady={onReady} className="!absolute inset-0" />}
