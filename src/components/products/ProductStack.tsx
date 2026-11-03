@@ -9,10 +9,10 @@ import { Arrow } from "@/components/ui/Button";
 import { products } from "@/data/products";
 
 const tones = [
-  { bg: "bg-paper", text: "text-ink", muted: "text-stone", accent: "text-teak", stroke: "rgb(143 86 40 / 0.55)", btn: "bg-ink text-ivory hover:bg-teak" },
-  { bg: "bg-espresso", text: "text-ivory", muted: "text-ivory/65", accent: "text-brass", stroke: "rgb(207 159 102 / 0.6)", btn: "bg-ivory text-ink hover:bg-brass" },
-  { bg: "bg-sand", text: "text-ink", muted: "text-stone", accent: "text-teak", stroke: "rgb(143 86 40 / 0.5)", btn: "bg-ink text-ivory hover:bg-teak" },
-  { bg: "bg-bark", text: "text-ivory", muted: "text-ivory/65", accent: "text-brass", stroke: "rgb(207 159 102 / 0.6)", btn: "bg-ivory text-ink hover:bg-brass" },
+  { bg: "bg-paper", text: "text-ink", muted: "text-stone", accent: "text-teak", stroke: "rgb(90 62 46 / 0.55)", btn: "bg-ink text-ivory hover:bg-teak" },
+  { bg: "bg-espresso", text: "text-ivory", muted: "text-ivory/65", accent: "text-brass", stroke: "rgb(180 147 90 / 0.6)", btn: "bg-ivory text-ink hover:bg-brass" },
+  { bg: "bg-sand", text: "text-ink", muted: "text-stone", accent: "text-teak", stroke: "rgb(90 62 46 / 0.5)", btn: "bg-ink text-ivory hover:bg-teak" },
+  { bg: "bg-bark", text: "text-ivory", muted: "text-ivory/65", accent: "text-brass", stroke: "rgb(180 147 90 / 0.6)", btn: "bg-ivory text-ink hover:bg-brass" },
 ];
 
 /**
@@ -70,7 +70,7 @@ export default function ProductStack() {
             aria-labelledby={`${p.slug}-title`}
             className="relative scroll-mt-0 md:sticky md:top-0 md:h-svh"
           >
-            <div data-card-inner className={`relative h-full origin-top overflow-hidden ${t.bg} ${t.text} [backface-visibility:hidden] md:rounded-[40px_40px_0_0] md:shadow-[0_-30px_60px_-30px_rgb(26_21_17/0.45)] md:will-change-transform`}>
+            <div data-card-inner className={`relative h-full origin-top overflow-hidden ${t.bg} ${t.text} [backface-visibility:hidden] md:rounded-[40px_40px_0_0] md:shadow-[0_-30px_60px_-30px_rgb(31_42_36/0.45)] md:will-change-transform`}>
               {/* Dimming layer for the receding card (opacity is far cheaper than a CSS filter) */}
               <span data-shade aria-hidden="true" className="pointer-events-none absolute inset-0 z-10 bg-espresso opacity-0" />
               {/* Giant outlined index */}

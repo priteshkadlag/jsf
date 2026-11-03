@@ -18,7 +18,7 @@ export default function ClientWall() {
           transition={{ duration: 1, ease: [0.19, 1, 0.22, 1], delay: (i % 5) * 0.07 }}
           style={{ transformPerspective: 900 }}
         >
-          <div className="group relative flex aspect-[4/3] flex-col overflow-hidden rounded-sm bg-white transition-[transform,box-shadow] duration-700 ease-[var(--ease-expo)] hover:-translate-y-2 hover:shadow-[0_24px_50px_-24px_rgb(26_21_17/0.45)]">
+          <div className="group relative flex aspect-[4/3] flex-col overflow-hidden rounded-sm bg-white transition-[transform,box-shadow] duration-700 ease-[var(--ease-expo)] hover:-translate-y-2 hover:shadow-[0_24px_50px_-24px_rgb(31_42_36/0.45)]">
             <div className="relative flex-1 p-6 transition-transform duration-700 ease-[var(--ease-expo)] group-hover:-translate-y-3 md:p-8">
               <div className="relative h-full w-full">
                 <Picture media={c.logo} alt={c.name} fill sizes="(min-width: 1280px) 18vw, (min-width: 640px) 30vw, 45vw" className="object-contain mix-blend-multiply" />

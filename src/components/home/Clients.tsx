@@ -6,7 +6,7 @@ import { clients } from "@/data/clients";
 
 function LogoCard({ name, logo }: (typeof clients)[number]) {
   return (
-    <div className="mx-3 flex h-24 w-44 shrink-0 items-center justify-center rounded-sm bg-white p-3 shadow-[0_1px_0_rgb(38_33_28/0.06)] md:mx-4 md:h-28 md:w-52">
+    <div className="mx-3 flex h-24 w-44 shrink-0 items-center justify-center rounded-sm bg-white p-3 shadow-[0_1px_0_rgb(31_42_36/0.06)] md:mx-4 md:h-28 md:w-52">
       <Picture
         media={logo}
         alt={name}

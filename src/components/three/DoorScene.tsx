@@ -1,9 +1,10 @@
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useEffect, useLayoutEffect, useMemo, useRef, type RefObject } from "react";
+import { useEffect, useMemo, useRef, type RefObject } from "react";
 import * as THREE from "three";
-import { CENTER_Y, F, T, TOTAL_H, TOTAL_W, W, createWoodTexture, frameShape, leafLayout, wallShape } from "@/components/three/door-geometry";
+import { CENTER_Y, F, H, R, S, T, TOTAL_H, TOTAL_W, W, archBand, leafLayout } from "@/components/three/door-geometry";
+import Surroundings from "@/components/three/Surroundings";
 
 const clamp01 = (v: number) => Math.min(1, Math.max(0, v));
 const easeInOut = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
@@ -13,60 +14,20 @@ export const DOOR_FILL_HEIGHT = 0.64;
 export const DOOR_FILL_WIDTH = 0.72;
 
 type Materials = {
-  leaf: THREE.MeshStandardMaterial;
-  carving: THREE.MeshStandardMaterial;
+  paint: THREE.MeshStandardMaterial;
   frame: THREE.MeshStandardMaterial;
+  stone: THREE.MeshStandardMaterial;
+  bead: THREE.MeshStandardMaterial;
   glass: THREE.MeshStandardMaterial;
-  iron: THREE.MeshStandardMaterial;
   brass: THREE.MeshStandardMaterial;
 };
 
-const REED_R = 0.011;
-
-/** Vertical reeds of the arched head panel, drawn as one instanced mesh per face. */
-function Reeds({ face, material, reeds }: { face: "front" | "back"; material: THREE.Material; reeds: { x: number; y0: number; y1: number }[] }) {
-  const ref = useRef<THREE.InstancedMesh>(null);
-  useLayoutEffect(() => {
-    const mesh = ref.current;
-    if (!mesh) return;
-    const m = new THREE.Matrix4();
-    const z = face === "front" ? T + 0.012 : -0.012;
-    reeds.forEach((reed, i) => {
-      const h = reed.y1 - reed.y0;
-      m.makeScale(1, h, 0.6).setPosition(reed.x, reed.y0 + h / 2, z);
-      mesh.setMatrixAt(i, m);
-    });
-    mesh.instanceMatrix.needsUpdate = true;
-  }, [face, reeds]);
-  return (
-    <instancedMesh ref={ref} args={[undefined, undefined, reeds.length]} material={material}>
-      <cylinderGeometry args={[REED_R, REED_R, 1, 10, 1]} />
-    </instancedMesh>
-  );
-}
-
-/** Stepped diamond medallion: a square plate turned 45° with a four-sided pyramid on top. */
-function Diamond({ size, materials, z, flip }: { size: number; materials: Materials; z: number; flip?: boolean }) {
-  const dir = flip ? -1 : 1;
-  return (
-    <group position={[0, 0, z]} scale={[1, 1, dir]}>
-      <mesh material={materials.carving} rotation={[0, 0, Math.PI / 4]} position={[0, 0, 0.012]}>
-        <boxGeometry args={[size, size, 0.024]} />
-      </mesh>
-      <mesh material={materials.carving} rotation={[0, 0, Math.PI / 4]} position={[0, 0, 0.03]}>
-        <boxGeometry args={[size * 0.74, size * 0.74, 0.014]} />
-      </mesh>
-      {/* Pyramid: a 4-sided cone pointing out of the door, corners aligned to the diamond */}
-      <mesh material={materials.carving} rotation={[Math.PI / 2, 0, 0]} position={[0, 0, 0.037 + size * 0.11]}>
-        <coneGeometry args={[size * 0.5, size * 0.22, 4, 1]} />
-      </mesh>
-    </group>
-  );
-}
+const MUNTIN = 0.03;
+const BEAD = 0.022;
 
 function Leaf({ side, materials, groupRef }: { side: 1 | -1; materials: Materials; groupRef: RefObject<THREE.Group | null> }) {
-  const { leafGeo, panes, reeds, width } = useMemo(() => {
-    const { leaf, panes, reeds, width } = leafLayout();
+  const { leafGeo, glassGeo, panel, muntins, width } = useMemo(() => {
+    const { leaf, glass, panel, muntins, width } = leafLayout();
     const leafGeo = new THREE.ExtrudeGeometry(leaf, {
       depth: T,
       bevelEnabled: true,
@@ -75,60 +36,73 @@ function Leaf({ side, materials, groupRef }: { side: 1 | -1; materials: Material
       bevelSegments: 2,
       curveSegments: 32,
     });
-    return { leafGeo, panes, reeds, width };
+    const glassGeo = new THREE.ShapeGeometry(glass);
+    return { leafGeo, glassGeo, panel, muntins, width };
   }, []);
 
-  useEffect(() => () => leafGeo.dispose(), [leafGeo]);
+  useEffect(
+    () => () => {
+      leafGeo.dispose();
+      glassGeo.dispose();
+    },
+    [leafGeo, glassGeo],
+  );
 
   const front = T + 0.008;
+  const pw = panel.x1 - panel.x0;
+  const ph = panel.y1 - panel.y0;
+  const { x0, x1, xm, y0, rails, arc } = muntins;
   return (
     // Mirroring with scale.x = -1 lets both leaves share one geometry; three.js flips winding for us.
     <group ref={groupRef} position={[(-side * W) / 2, 0, -T / 2]} scale={[side, 1, 1]}>
-      <mesh geometry={leafGeo} material={materials.leaf} />
+      <mesh geometry={leafGeo} material={materials.paint} />
+      <mesh geometry={glassGeo} material={materials.glass} position={[0, 0, T / 2]} />
 
-      {panes.map((p, i) => {
-        const cx = (p.x0 + p.x1) / 2;
-        const cy = (p.y0 + p.y1) / 2;
-        const size = Math.min(p.x1 - p.x0, p.y1 - p.y0) * 0.68;
-        return (
-          <group key={i} position={[cx, cy, 0]}>
-            <mesh material={materials.glass} position={[0, 0, T / 2]}>
-              <planeGeometry args={[p.x1 - p.x0, p.y1 - p.y0]} />
+      {/* Glazing bars: a vertical, three rails and the inner arch */}
+      <mesh material={materials.paint} position={[xm, (y0 + H) / 2, T / 2]}>
+        <boxGeometry args={[MUNTIN, H - y0, T * 0.7]} />
+      </mesh>
+      {rails.map((y) => (
+        <mesh key={y} material={materials.paint} position={[(x0 + x1) / 2, y, T / 2]}>
+          <boxGeometry args={[x1 - x0, MUNTIN, T * 0.7]} />
+        </mesh>
+      ))}
+      <mesh material={materials.paint} position={[arc.cx, arc.cy, T / 2]} rotation={[0, 0, arc.start]} scale={[1, 1, 1.6]}>
+        <torusGeometry args={[arc.radius, MUNTIN / 2, 8, 40, arc.length]} />
+      </mesh>
+
+      {/* Fielded bottom panel with a bead moulding, on both faces */}
+      {([1, -1] as const).map((dir) => (
+        <group key={dir} position={[(panel.x0 + panel.x1) / 2, (panel.y0 + panel.y1) / 2, dir === 1 ? front : -0.008]} scale={[1, 1, dir]}>
+          {[-1, 1].map((s) => (
+            <mesh key={`h${s}`} material={materials.paint} position={[0, s * (ph / 2 - BEAD / 2), 0.006]}>
+              <boxGeometry args={[pw, BEAD, 0.012]} />
             </mesh>
-            <Diamond size={size} materials={materials} z={T / 2 + 0.004} />
-            <Diamond size={size} materials={materials} z={T / 2 - 0.004} flip />
-          </group>
-        );
-      })}
-
-      <Reeds face="front" material={materials.carving} reeds={reeds} />
-      <Reeds face="back" material={materials.carving} reeds={reeds} />
-
-      {/* Black iron pull bars on both faces, set into the meeting stile */}
-      {[front + 0.04, -0.048].map((z) => (
-        <group key={z} position={[width - 0.055, 1.48, z]}>
-          <mesh material={materials.iron}>
-            <boxGeometry args={[0.026, 0.48, 0.022]} />
+          ))}
+          {[-1, 1].map((s) => (
+            <mesh key={`v${s}`} material={materials.paint} position={[s * (pw / 2 - BEAD / 2), 0, 0.006]}>
+              <boxGeometry args={[BEAD, ph, 0.012]} />
+            </mesh>
+          ))}
+          <mesh material={materials.paint} position={[0, 0, 0.008]}>
+            <boxGeometry args={[pw - 0.1, ph - 0.1, 0.016]} />
           </mesh>
-          {[-0.2, 0.2].map((dy) => (
-            <mesh key={dy} position={[0, dy, z > 0 ? -0.02 : 0.02]} material={materials.iron}>
-              <boxGeometry args={[0.016, 0.016, 0.04]} />
+        </group>
+      ))}
+
+      {/* Long brass pull bars on both faces, set into the meeting stile */}
+      {([1, -1] as const).map((dir) => (
+        <group key={dir} position={[width - 0.045, 1.3, dir === 1 ? front : -0.008]} scale={[1, 1, dir]}>
+          <mesh material={materials.brass} position={[0, 0, 0.035]}>
+            <cylinderGeometry args={[0.011, 0.011, 0.56, 16]} />
+          </mesh>
+          {[-0.22, 0.22].map((dy) => (
+            <mesh key={dy} material={materials.brass} position={[0, dy, 0.0175]} rotation={[Math.PI / 2, 0, 0]}>
+              <cylinderGeometry args={[0.007, 0.007, 0.035, 10]} />
             </mesh>
           ))}
         </group>
       ))}
-
-      {/* Brass lever and escutcheon on the right-hand leaf only */}
-      {side === -1 && (
-        <group position={[width - 0.08, 1.02, front + 0.012]}>
-          <mesh material={materials.brass}>
-            <boxGeometry args={[0.036, 0.12, 0.01]} />
-          </mesh>
-          <mesh material={materials.brass} position={[-0.06, 0.03, 0.022]}>
-            <boxGeometry args={[0.13, 0.016, 0.016]} />
-          </mesh>
-        </group>
-      )}
     </group>
   );
 }
@@ -140,32 +114,29 @@ function Doorway({ progress, onReady }: { progress: RefObject<number>; onReady?:
   const pointer = useRef({ x: 0, y: 0 });
   const camera = useThree((s) => s.camera) as THREE.PerspectiveCamera;
   const size = useThree((s) => s.size);
+  const gl = useThree((s) => s.gl);
+  const scene = useThree((s) => s.scene);
 
-  const { materials, frameGeo, wallGeo } = useMemo(() => {
-    const leafTex = createWoodTexture("#b0712f", 19);
-    const carveTex = leafTex.clone();
-    carveTex.offset.set(0.37, 0.21);
-    carveTex.repeat.set(4, 4);
-    const frameTex = createWoodTexture("#a3652a", 7);
+  const { materials, frameGeo, surroundGeo } = useMemo(() => {
     const materials: Materials = {
-      leaf: new THREE.MeshStandardMaterial({ map: leafTex, roughness: 0.42 }),
-      carving: new THREE.MeshStandardMaterial({ map: carveTex, color: "#fff2df", roughness: 0.4 }),
-      frame: new THREE.MeshStandardMaterial({ map: frameTex, roughness: 0.48 }),
+      paint: new THREE.MeshStandardMaterial({ color: "#8a9a83", roughness: 0.55 }),
+      frame: new THREE.MeshStandardMaterial({ color: "#7f8f78", roughness: 0.6 }),
+      stone: new THREE.MeshStandardMaterial({ color: "#efe7d9", roughness: 0.85 }),
+      bead: new THREE.MeshStandardMaterial({ color: "#c9b183", roughness: 0.4, metalness: 0.3 }),
       glass: new THREE.MeshStandardMaterial({
-        color: "#241c16",
+        color: "#eef3ee",
         transparent: true,
-        opacity: 0.74,
+        opacity: 0.16,
         roughness: 0.05,
-        metalness: 0.2,
+        metalness: 0.1,
         side: THREE.DoubleSide,
         depthWrite: false,
       }),
-      iron: new THREE.MeshStandardMaterial({ color: "#1c1a18", roughness: 0.38, metalness: 0.55 }),
-      brass: new THREE.MeshStandardMaterial({ color: "#c9a062", roughness: 0.3, metalness: 0.55 }),
+      brass: new THREE.MeshStandardMaterial({ color: "#b4935a", roughness: 0.28, metalness: 0.55 }),
     };
-    const frameGeo = new THREE.ExtrudeGeometry(frameShape(), { depth: 0.24, bevelEnabled: false, curveSegments: 48 });
-    const wallGeo = new THREE.ShapeGeometry(wallShape(), 48);
-    return { materials, frameGeo, wallGeo };
+    const frameGeo = new THREE.ExtrudeGeometry(archBand(R, R + F), { depth: 0.24, bevelEnabled: false, curveSegments: 48 });
+    const surroundGeo = new THREE.ExtrudeGeometry(archBand(R + F, R + F + S), { depth: 0.05, bevelEnabled: false, curveSegments: 48 });
+    return { materials, frameGeo, surroundGeo };
   }, []);
 
   useEffect(() => {
@@ -174,24 +145,29 @@ function Doorway({ progress, onReady }: { progress: RefObject<number>; onReady?:
       pointer.current.y = -((e.clientY / window.innerHeight) * 2 - 1);
     };
     window.addEventListener("pointermove", move, { passive: true });
-    // Signal readiness after the first frame has actually been drawn.
-    const id = requestAnimationFrame(() => requestAnimationFrame(() => onReady?.()));
+    // Compile every shader up front, then signal readiness once a frame has actually been drawn,
+    // so the placeholder never hands over to a half-built scene.
+    let id = 0;
+    let cancelled = false;
+    gl.compileAsync(scene, camera)
+      .catch(() => {})
+      .then(() => {
+        if (!cancelled) id = requestAnimationFrame(() => requestAnimationFrame(() => onReady?.()));
+      });
     return () => {
+      cancelled = true;
       window.removeEventListener("pointermove", move);
       cancelAnimationFrame(id);
     };
-  }, [onReady]);
+  }, [onReady, gl, scene, camera]);
 
   useEffect(
     () => () => {
-      Object.values(materials).forEach((m) => {
-        m.map?.dispose();
-        m.dispose();
-      });
+      Object.values(materials).forEach((m) => m.dispose());
       frameGeo.dispose();
-      wallGeo.dispose();
+      surroundGeo.dispose();
     },
-    [materials, frameGeo, wallGeo],
+    [materials, frameGeo, surroundGeo],
   );
 
   useFrame((_, delta) => {
@@ -219,21 +195,24 @@ function Doorway({ progress, onReady }: { progress: RefObject<number>; onReady?:
 
   return (
     <group>
-      {/* Plaster wall, unlit so it matches the page's ivory exactly */}
-      <mesh geometry={wallGeo} position={[0, 0, 0.12]}>
-        <meshBasicMaterial color="#f2ece2" toneMapped={false} />
-      </mesh>
-      {/* Floor in front of the wall */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 12.12]}>
-        <planeGeometry args={[48, 24]} />
-        <meshBasicMaterial color="#e6dccd" toneMapped={false} />
-      </mesh>
-      {/* Laterite threshold */}
+      <Surroundings />
+      {/* Marble threshold */}
       <mesh position={[0, 0.012, 0.02]}>
         <boxGeometry args={[W + 2 * F + 0.1, 0.024, 0.34]} />
-        <meshStandardMaterial color="#9c6a4b" roughness={0.85} />
+        <meshStandardMaterial color="#e9e1d4" roughness={0.4} />
       </mesh>
+      {/* Stone surround standing proud of the wall */}
+      <mesh geometry={surroundGeo} material={materials.stone} position={[0, 0, 0.12]} />
       <mesh geometry={frameGeo} material={materials.frame} position={[0, 0, -0.12]} />
+      {/* Pale gilded bead tracing the frame */}
+      <mesh material={materials.bead} position={[0, H, 0.124]}>
+        <torusGeometry args={[R + F / 2, 0.007, 8, 64, Math.PI]} />
+      </mesh>
+      {[-1, 1].map((s) => (
+        <mesh key={s} material={materials.bead} position={[s * (R + F / 2), H / 2, 0.124]}>
+          <cylinderGeometry args={[0.007, 0.007, H, 8]} />
+        </mesh>
+      ))}
       <Leaf side={1} materials={materials} groupRef={left} />
       <Leaf side={-1} materials={materials} groupRef={right} />
 

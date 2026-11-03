@@ -104,7 +104,7 @@ export default function Milestones() {
           });
           // Ignite the node when the growing line reaches it.
           gsap.timeline({ scrollTrigger: { trigger: item, start: "top 55%", toggleActions: "play none none reverse" } })
-            .to(item.querySelector("[data-node]"), { scale: 1, backgroundColor: "#cf9f66", borderColor: "#cf9f66", duration: 0.5, ease: "back.out(3)" })
+            .to(item.querySelector("[data-node]"), { scale: 1, backgroundColor: "#b4935a", borderColor: "#b4935a", duration: 0.5, ease: "back.out(3)" })
             .to(item.querySelector("[data-node-ring]"), { scale: 2.6, autoAlpha: 0, duration: 0.9, ease: "power2.out" }, 0);
         });
       });
@@ -162,7 +162,7 @@ export default function Milestones() {
                 <div className={`${left ? "md:pr-20 md:text-right" : "md:order-2 md:pl-20"}`}>
                   <p
                     data-mark
-                    className="font-serif text-[clamp(4.5rem,11vw,10rem)] leading-[0.85] text-transparent [-webkit-text-stroke:1px_rgb(207_159_102)]"
+                    className="font-serif text-[clamp(4.5rem,11vw,10rem)] leading-[0.85] text-transparent [-webkit-text-stroke:1px_rgb(180_147_90)]"
                   >
                     {m.mark}
                   </p>

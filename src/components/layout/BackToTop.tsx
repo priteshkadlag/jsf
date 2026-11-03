@@ -38,7 +38,7 @@ export default function BackToTop() {
               type="button"
               onClick={toTop}
               aria-label="Back to top"
-              className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-ink text-ivory ring-1 ring-ivory/20 shadow-[0_10px_30px_-10px_rgb(26_21_17/0.6)] transition-colors duration-500 hover:bg-teak"
+              className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-ink text-ivory ring-1 ring-ivory/20 shadow-[0_10px_30px_-10px_rgb(31_42_36/0.6)] transition-colors duration-500 hover:bg-teak"
             >
               <svg viewBox="0 0 64 64" className="absolute inset-0 h-full w-full -rotate-90" aria-hidden="true">
                 <circle cx="32" cy="32" r={R} fill="none" stroke="currentColor" strokeOpacity="0.15" strokeWidth="1.5" />
@@ -47,7 +47,7 @@ export default function BackToTop() {
                   cy="32"
                   r={R}
                   fill="none"
-                  stroke="#cf9f66"
+                  stroke="#b4935a"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   style={{ pathLength: progress }}

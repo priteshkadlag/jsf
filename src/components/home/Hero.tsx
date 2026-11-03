@@ -25,7 +25,7 @@ function detectMode(): Mode {
 const noopSubscribe = () => () => {};
 
 /**
- * Cinematic opener. A 3D teak arched door sits in an ivory wall; as you scroll it swings
+ * Cinematic opener. A 3D sage-green arched door sits in an ivory wall; as you scroll it swings
  * open and the camera walks through into a real JSF interior. Falls back to a still
  * hero when WebGL is unavailable or the visitor prefers reduced motion.
  */
@@ -100,10 +100,26 @@ export default function Hero() {
                 ready ? "opacity-0" : "opacity-100"
               }`}
             >
-              <div
-                className="arch bg-gradient-to-b from-[#c08240] to-[#9a5f27] shadow-[inset_0_0_0_10px_#8f5626]"
-                style={{ height: "min(64svh, 114vw)", aspectRatio: "1.84 / 2.92" }}
-              />
+              {/* Drawn to the 3D door's dimensions in centimetres: surround, frame, leaves, glazing and pulls */}
+              <svg viewBox="0 0 204 302" style={{ height: "min(64svh, 107vw)", aspectRatio: "204 / 302" }}>
+                <path d="M0 302V102A102 102 0 0 1 204 102V302Z" fill="#d9cdb8" />
+                <path d="M12 302V102A90 90 0 0 1 192 102V302Z" fill="#868866" />
+                <path d="M22 302V102A80 80 0 0 1 182 102V302Z" fill="#919371" />
+                <g fill="#bba78c">
+                  <path d="M33 220H93V33.1A69.5 69.5 0 0 0 33 93.7Z" />
+                  <path d="M111 220H171V93.7A69.5 69.5 0 0 0 111 33.1Z" />
+                </g>
+                <g fill="none" stroke="#919371" strokeWidth="3">
+                  <path d="M63 220V102A39 39 0 0 1 93 64.1M141 220V102A39 39 0 0 0 111 64.1" />
+                  <path d="M33 180.7H93M33 141.3H93M33 102H93M111 180.7H171M111 141.3H171M111 102H171" />
+                </g>
+                <g fill="none" stroke="#858768" strokeWidth="1.5">
+                  <rect x="33" y="232" width="60" height="56" />
+                  <rect x="111" y="232" width="60" height="56" />
+                  <path d="M102 22V302" />
+                </g>
+                <path d="M97 144V200M107 144V200" stroke="#b4935a" strokeWidth="2.2" strokeLinecap="round" />
+              </svg>
             </div>
             {mode === "3d" && <DoorScene progress={progress} active={active} onReady={onReady} className="!absolute inset-0" />}
           </div>

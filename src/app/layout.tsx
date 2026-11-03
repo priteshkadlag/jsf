@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, Manrope } from "next/font/google";
+import { EB_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import Header from "@/components/layout/Header";
@@ -9,10 +9,9 @@ import Cursor from "@/components/layout/Cursor";
 import BackToTop from "@/components/layout/BackToTop";
 import { site } from "@/data/site";
 
-const display = Instrument_Serif({
+const display = EB_Garamond({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: "400",
   style: ["normal", "italic"],
 });
 
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f2ece2",
+  themeColor: "#e8e3db",
   width: "device-width",
   initialScale: 1,
 };
