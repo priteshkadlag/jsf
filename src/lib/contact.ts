@@ -1,11 +1,14 @@
 import { products } from "@/data/products";
 
+export const roles = ["Architect", "Interior designer", "Developer", "Homeowner", "Other"] as const;
+
 export const projectTypes = ["Villa / residence", "Apartment", "Hotel / hospitality", "Commercial", "Other"] as const;
 
 export type Enquiry = {
   name: string;
   email: string;
   phone: string;
+  role: string;
   projectType: string;
   product: string;
   message: string;
@@ -23,6 +26,7 @@ export function validateEnquiry(input: Partial<Record<keyof Enquiry, unknown>>):
     name: str(input.name, 120),
     email: str(input.email, 200),
     phone: str(input.phone, 30),
+    role: str(input.role, 60),
     projectType: str(input.projectType, 60),
     product: str(input.product, 60),
     message: str(input.message, 4000),
@@ -31,6 +35,7 @@ export function validateEnquiry(input: Partial<Record<keyof Enquiry, unknown>>):
   if (data.name.length < 2) errors.name = "Please tell us your name.";
   if (!EMAIL.test(data.email)) errors.email = "Please enter a valid email address.";
   if (data.phone && !PHONE.test(data.phone)) errors.phone = "Please enter a valid phone number.";
+  if (data.role && !(roles as readonly string[]).includes(data.role)) errors.role = "Please choose an option from the list.";
   if (data.product && !products.some((p) => p.slug === data.product)) errors.product = "Please choose a product from the list.";
   if (data.message.length < 10) errors.message = "A few words about your project, please (10+ characters).";
   return Object.keys(errors).length ? { errors } : { data, errors };

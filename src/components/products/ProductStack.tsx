@@ -6,7 +6,35 @@ import { gsap, useGSAP } from "@/lib/gsap";
 import Picture from "@/components/ui/Picture";
 import Magnetic from "@/components/ui/Magnetic";
 import { Arrow } from "@/components/ui/Button";
-import { products } from "@/data/products";
+import { products, type Product, type ProductType } from "@/data/products";
+
+type Card = {
+  item: ProductType;
+  /** The category this card belongs to (itself, for a category card). */
+  category: Product;
+  categoryIndex: number;
+  /** Set on door-type cards: position within the category's types. */
+  typeIndex?: number;
+  next?: ProductType;
+};
+
+/** Each category is a card; a category's types (e.g. door types) follow it as their own cards. */
+function buildCards(): Card[] {
+  const cards: Card[] = [];
+  products.forEach((category, categoryIndex) => {
+    const nextCategory = products[categoryIndex + 1];
+    const types = category.types ?? [];
+    // The category card skips past its own types to the next category, as do the last type cards.
+    cards.push({ item: category, category, categoryIndex, next: nextCategory });
+    types.forEach((t, typeIndex) =>
+      cards.push({ item: t, category, categoryIndex, typeIndex, next: types[typeIndex + 1] ?? nextCategory }),
+    );
+  });
+  return cards;
+}
+
+const cards = buildCards();
+const pad = (n: number) => String(n).padStart(2, "0");
 
 const tones = [
   { bg: "bg-paper", text: "text-ink", muted: "text-stone", accent: "text-teak", stroke: "rgb(90 62 46 / 0.55)", btn: "bg-ink text-ivory hover:bg-teak" },
@@ -59,9 +87,11 @@ export default function ProductStack() {
 
   return (
     <div ref={root} className="relative">
-      {products.map((p, i) => {
+      {cards.map(({ item: p, category, categoryIndex, typeIndex, next }, i) => {
         const t = tones[i % tones.length];
         const [main, ...rest] = p.images;
+        const isType = typeIndex !== undefined;
+        const types = !isType ? (category.types ?? []) : [];
         return (
           <section
             key={p.slug}
@@ -80,7 +110,7 @@ export default function ProductStack() {
                 className="pointer-events-none absolute -bottom-[0.18em] right-[-0.04em] select-none font-serif leading-none text-transparent will-change-transform"
                 style={{ fontSize: "clamp(12rem, 34vw, 34rem)", WebkitTextStroke: `1px ${t.stroke}` }}
               >
-                {String(i + 1).padStart(2, "0")}
+                {pad(categoryIndex + 1)}
               </span>
 
               <div className="container-x relative grid h-full items-center gap-12 py-20 md:grid-cols-12 md:gap-10 md:py-0">
@@ -107,7 +137,9 @@ export default function ProductStack() {
                 {/* Copy */}
                 <div className={`md:col-span-5 ${i % 2 ? "md:order-1 md:col-start-1" : "md:col-start-8"}`}>
                   <p data-rise className={`eyebrow ${t.accent}`}>
-                    {String(i + 1).padStart(2, "0")} / {String(products.length).padStart(2, "0")} — Collection
+                    {isType
+                      ? `Door types · ${pad(typeIndex + 1)} / ${pad(category.types!.length)}`
+                      : `${pad(categoryIndex + 1)} / ${pad(products.length)} — Collection`}
                   </p>
                   <h2 data-rise id={`${p.slug}-title`} className="mt-6 font-serif text-[clamp(2.8rem,5.4vw,5.6rem)] leading-[0.95]">
                     {p.name}
@@ -118,19 +150,33 @@ export default function ProductStack() {
                   <p data-rise className={`mt-8 max-w-md leading-relaxed ${t.muted}`}>
                     {p.description}
                   </p>
+                  {types.length > 0 && (
+                    <ul data-rise aria-label={`${p.name}: types`} className="mt-8 flex flex-wrap gap-2">
+                      {types.map((type) => (
+                        <li key={type.slug}>
+                          <a
+                            href={`#${type.slug}`}
+                            className={`inline-block rounded-full border border-current/25 px-4 py-2 text-sm transition-colors duration-500 hover:border-current ${t.muted}`}
+                          >
+                            {type.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <div data-rise className="mt-10 flex flex-wrap items-center gap-6">
                     <Magnetic strength={0.25}>
                       <Link
-                        href={`/contact?product=${p.slug}`}
+                        href={`/contact?product=${category.slug}`}
                         className={`group inline-flex items-center gap-3 rounded-full px-7 py-4 text-sm font-semibold tracking-wide transition-colors duration-500 ${t.btn}`}
                       >
                         Enquire about {p.name.toLowerCase()}
                         <Arrow className="transition-transform duration-500 group-hover:translate-x-1" />
                       </Link>
                     </Magnetic>
-                    {i < products.length - 1 && (
-                      <a href={`#${products[i + 1].slug}`} className={`eyebrow link-underline ${t.muted}`}>
-                        Next: {products[i + 1].name} ↓
+                    {next && (
+                      <a href={`#${next.slug}`} className={`eyebrow link-underline ${t.muted}`}>
+                        Next: {next.name} ↓
                       </a>
                     )}
                   </div>

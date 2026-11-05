@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Contact — Request a Quote",
-  description: `Talk to JSF Industries about doors, windows and carpentry for your project. Call ${site.phone}, email ${site.email} or visit our factory in Tuem, Goa.`,
+  description: `Talk to JSF Industries about doors, joinery and interiors for your project. Call ${site.phone}, email ${site.email} or visit our factory in Tuem, Goa.`,
   alternates: { canonical: "/contact" },
 };
 

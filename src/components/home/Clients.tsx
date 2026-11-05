@@ -30,7 +30,7 @@ export default function Clients({ index = "07" }: { index?: string }) {
         </div>
         <div className="max-w-sm">
           <p className="text-sm text-stone">
-            From luxury villa collections to Manohar International Airport — partners who return to us project after project.
+            Developers, architects and designers, from luxury villa collections to Manohar International Airport, who return to us project after project.
           </p>
           <Link href="/clients" className="link-underline mt-4 inline-block text-sm font-semibold text-teak">
             View all clients →

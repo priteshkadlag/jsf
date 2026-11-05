@@ -14,7 +14,7 @@ export default function Intro() {
         as="h2"
         className="mt-10 max-w-[18ch] font-serif text-[clamp(2.4rem,5.2vw,5.6rem)] leading-[1.02] md:max-w-[22ch]"
       >
-        Since 1989, we have crafted the doors and windows that give Goa&rsquo;s finest homes their character.
+        Since 1989, we have made the doors, windows and joinery that give Goa&rsquo;s finest homes their character.
       </ScrubText>
       <span id="intro-title" className="sr-only">
         About JSF Industries
@@ -31,14 +31,14 @@ export default function Intro() {
         <div className="flex flex-col justify-end gap-8 md:col-span-5 md:col-start-7">
           <FadeIn>
             <p className="text-lg leading-relaxed text-ink/85 md:text-xl">
-              Founded by Shri Jivanbhai S. Fatania, JSF has become a leader in designer doors. Our designs balance aesthetics and
-              functionality, delivering interiors that elevate spaces while ensuring durability and performance.
+              Founded by Shri Jivanbhai S. Fatania, JSF is a leader in doors and architectural joinery. We work from your drawings,
+              solve the hard details and deliver woodwork that looks right and lasts.
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="leading-relaxed text-stone">
-              Everything is made at our own factory in Tuem Industrial Estate, Goa — which lets us produce custom solutions
-              efficiently, keep strict quality control on every project, and deliver on time.
+              Everything is made in our own factory in Tuem, Goa. That means custom work at scale, strict quality checks and
+              on-time delivery.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>

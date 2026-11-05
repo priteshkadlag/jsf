@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { products } from "@/data/products";
-import { projectTypes, validateEnquiry, type FieldErrors } from "@/lib/contact";
+import { projectTypes, roles, validateEnquiry, type FieldErrors } from "@/lib/contact";
 import { site } from "@/data/site";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -113,6 +113,23 @@ export default function ContactForm() {
               <Field name="name" label="Your name" required autoComplete="name" error={errors.name} />
               <Field name="email" label="Email" type="email" required autoComplete="email" error={errors.email} />
               <Field name="phone" label="Phone (optional)" type="tel" autoComplete="tel" error={errors.phone} />
+              <div className="relative">
+                <label htmlFor="role" className="block text-xs text-stone">
+                  You are
+                </label>
+                <select
+                  id="role"
+                  name="role"
+                  defaultValue=""
+                  aria-invalid={errors.role ? true : undefined}
+                  className="mt-1 w-full border-0 border-b border-ink/25 bg-transparent px-0 pb-3 pt-2 text-lg focus:border-teak focus:ring-0"
+                >
+                  <option value="">Select…</option>
+                  {roles.map((r) => (
+                    <option key={r}>{r}</option>
+                  ))}
+                </select>
+              </div>
               <div className="relative">
                 <label htmlFor="projectType" className="block text-xs text-stone">
                   Project type

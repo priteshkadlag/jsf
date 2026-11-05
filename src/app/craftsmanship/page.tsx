@@ -6,7 +6,7 @@ import FadeIn from "@/components/ui/FadeIn";
 import InViewVideo from "@/components/ui/InViewVideo";
 import ParallaxImage from "@/components/ui/ParallaxImage";
 import CtaBand from "@/components/ui/CtaBand";
-import { machinery, site } from "@/data/site";
+import { machinery, researchAndDevelopment, site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Craftsmanship — Our Factory in Tuem, Goa",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const process = [
   {
     title: "Timber selection",
-    text: "Every project starts with choosing the right material — solid teak for entrances and windows that must weather the coast, and the right core and finish for flush, veneer and laminated doors.",
+    text: "Every project starts with the right material: solid teak for entrances and windows that must weather the coast, marine-grade ply and treated wood made to last, and the right core and finish for flush, veneer and laminated doors.",
   },
   {
     title: "Kiln seasoning",
@@ -34,7 +34,7 @@ const process = [
   },
   {
     title: "Installation",
-    text: "Our teams install on site and coordinate with architects and developers, so every door and window sits true within the architecture.",
+    text: "Our teams install on site and work through the details with architects and developers, so every door and window sits true and the architect doesn't need to be there.",
   },
 ];
 
@@ -114,6 +114,22 @@ export default function CraftsmanshipPage() {
           </div>
         </div>
       </section>
+
+      {researchAndDevelopment.length > 0 && (
+        <section aria-labelledby="rnd-title" className="container-x pt-24 md:pt-36">
+          <SectionLabel index="03">Research &amp; development</SectionLabel>
+          <h2 id="rnd-title" className="sr-only">
+            Research and development
+          </h2>
+          <ul className="mt-10 max-w-4xl space-y-6">
+            {researchAndDevelopment.map((line) => (
+              <FadeIn as="li" key={line} className="font-serif text-[clamp(1.6rem,2.8vw,2.6rem)] leading-[1.15]">
+                {line}
+              </FadeIn>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section aria-label="Workshop" className="container-x grid gap-4 py-24 md:grid-cols-3 md:py-36">
         <ParallaxImage media="craft/teak-stair-window" alt="A teak window above a timber staircase" className="aspect-[3/4]" sizes="(min-width:768px) 33vw, 100vw" />

@@ -5,12 +5,12 @@ import Counter from "@/components/ui/Counter";
 import Button from "@/components/ui/Button";
 import FadeIn from "@/components/ui/FadeIn";
 
-export default function FactoryTeaser() {
+export default function FactoryTeaser({ index = "05" }: { index?: string }) {
   return (
     <section aria-labelledby="factory-title" className="grain relative overflow-hidden bg-bark py-28 text-ivory md:py-40">
       <div className="container-x relative grid gap-16 md:grid-cols-12 md:gap-10">
         <div className="md:col-span-5">
-          <SectionLabel index="05" tone="light">
+          <SectionLabel index={index} tone="light">
             The factory · Tuem, Goa
           </SectionLabel>
           <RevealText as="h2" id="factory-title" className="mt-8 font-serif text-headline">

@@ -9,7 +9,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
  * The arched window, JSF's signature: an arch-shaped aperture grows on scroll until the
  * interior fills the screen, then the brand's own words about the arch appear over it.
  */
-export default function ArchReveal() {
+export default function ArchReveal({ index = "04" }: { index?: string }) {
   const section = useRef<HTMLElement>(null);
 
   useGSAP(
@@ -55,7 +55,7 @@ export default function ArchReveal() {
           data-arch-title
           className="pointer-events-none absolute inset-x-0 top-[12svh] z-10 flex flex-col items-center px-4 text-center md:top-[14svh]"
         >
-          <SectionLabel index="04">Signature</SectionLabel>
+          <SectionLabel index={index}>Signature</SectionLabel>
           <h2 id="arch-title" className="mt-6 font-serif text-display">
             The <em className="text-teak">arched</em> window
           </h2>

@@ -1,54 +1,83 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import Image from "next/image";
+import { useRef, useSyncExternalStore, type CSSProperties } from "react";
 import { gsap, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 import Picture from "@/components/ui/Picture";
 import RevealText from "@/components/ui/RevealText";
 import Button from "@/components/ui/Button";
 
-const DoorScene = dynamic(() => import("@/components/three/DoorScene"), { ssr: false });
-
-type Mode = "pending" | "3d" | "static";
-let cachedMode: Mode | null = null;
-
-function detectMode(): Mode {
-  if (cachedMode) return cachedMode;
-  let webgl = false;
-  try {
-    const c = document.createElement("canvas");
-    webgl = !!(c.getContext("webgl2") || c.getContext("webgl"));
-  } catch {}
-  cachedMode = webgl && !prefersReducedMotion() ? "3d" : "static";
-  return cachedMode;
-}
+type Mode = "pending" | "animated" | "static";
+const detectMode = (): Mode => (prefersReducedMotion() ? "static" : "animated");
 const noopSubscribe = () => () => {};
 
 /**
- * Cinematic opener. A 3D sage-green arched door sits in an ivory wall; as you scroll it swings
- * open and the camera walks through into a real JSF interior. Falls back to a still
- * hero when WebGL is unavailable or the visitor prefers reduced motion.
+ * Door photo (1600 × 800) and where its two leaves sit in it, in image pixels. The leaves are
+ * cut out of the same photo, so at rest the scene is exactly the picture; on scroll they swing
+ * open on their hinges to reveal the interior behind.
+ */
+const DOOR_SRC = "/images/hero/door-entrance.webp";
+/** Same photo with the glass panes made transparent, so the real room shows through the door glass. */
+const LEAVES_SRC = "/images/hero/door-glass.webp";
+const IMG_W = 1600;
+const IMG_H = 800;
+const DOOR = { x: 642, y: 83, w: 311, h: 520 };
+const LEAF_W = DOOR.w / 2;
+const pct = (v: number, of: number) => `${(v / of) * 100}%`;
+
+/** Fraction of the stage the doorway covers, used to work out how far to zoom to walk through it. */
+const DOOR_FRAC_W = DOOR.w / IMG_W;
+const DOOR_FRAC_H = DOOR.h / IMG_H;
+/** Arch: a semicircle whose radius is half the door width, expressed against the door's height. */
+const ARCH_Y = pct(DOOR.w / 2, DOOR.h);
+
+/** Alpha mask that cuts the arched doorway out of the wall photo, so the room behind shows through. */
+const ARCH_R = DOOR.w / 2;
+const DOORWAY_MASK = `url("data:image/svg+xml,${encodeURIComponent(
+  `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${IMG_W} ${IMG_H}' preserveAspectRatio='none'>` +
+    `<path fill-rule='evenodd' d='M0 0H${IMG_W}V${IMG_H}H0Z` +
+    `M${DOOR.x} ${DOOR.y + DOOR.h}V${DOOR.y + ARCH_R}A${ARCH_R} ${ARCH_R} 0 0 1 ${DOOR.x + DOOR.w} ${DOOR.y + ARCH_R}V${DOOR.y + DOOR.h}Z'/></svg>`,
+)}")`;
+
+function leafStyle(side: "left" | "right"): CSSProperties {
+  const offsetX = side === "left" ? DOOR.x : DOOR.x + LEAF_W;
+  return {
+    backgroundImage: `url(${LEAVES_SRC})`,
+    backgroundSize: `${(IMG_W / LEAF_W) * 100}% auto`,
+    backgroundPosition: `${pct(offsetX, IMG_W - LEAF_W)} ${pct(DOOR.y, IMG_H - DOOR.h)}`,
+    transformOrigin: side === "left" ? "left center" : "right center",
+    // A darker free edge reads as the leaf's thickness once it swings away
+    boxShadow: `inset ${side === "left" ? "-4px" : "4px"} 0 0 rgba(30,35,20,0.45)`,
+    [side === "left" ? "borderTopLeftRadius" : "borderTopRightRadius"]:
+      `100% ${ARCH_Y}`,
+  };
+}
+
+/**
+ * Cinematic opener: JSF's sage-green arched door in a sunlit wall. As you scroll the two leaves
+ * swing open and the camera walks through into a real JSF interior. Falls back to a still hero
+ * when the visitor prefers reduced motion.
  */
 export default function Hero() {
   const section = useRef<HTMLElement>(null);
-  const progress = useRef(0);
-  const mode = useSyncExternalStore(noopSubscribe, detectMode, () => "pending" as Mode);
-  const [ready, setReady] = useState(false);
-  const [active, setActive] = useState(true);
-  const onReady = useCallback(() => setReady(true), []);
+  const stage = useRef<HTMLDivElement>(null);
+  const mode = useSyncExternalStore(
+    noopSubscribe,
+    detectMode,
+    () => "pending" as Mode,
+  );
   const immersive = mode !== "static";
-
-  useEffect(() => {
-    const el = section.current;
-    if (!el || mode !== "3d") return;
-    const io = new IntersectionObserver(([entry]) => setActive(entry.isIntersecting), { rootMargin: "10% 0px" });
-    io.observe(el);
-    return () => io.disconnect();
-  }, [mode]);
 
   useGSAP(
     () => {
-      if (mode !== "3d") return;
+      if (mode !== "animated") return;
+      // Zoom just far enough that the doorway covers the whole viewport.
+      const walkThrough = () => {
+        const el = stage.current!;
+        const sx = window.innerWidth / (el.offsetWidth * DOOR_FRAC_W);
+        const sy = window.innerHeight / (el.offsetHeight * DOOR_FRAC_H);
+        return Math.max(sx, sy) * 1.12;
+      };
       const tl = gsap.timeline({
         defaults: { ease: "none" },
         scrollTrigger: {
@@ -56,16 +85,66 @@ export default function Hero() {
           start: "top top",
           end: "bottom bottom",
           scrub: 0.5,
-          onUpdate: (self) => {
-            progress.current = self.progress;
-          },
+          invalidateOnRefresh: true,
         },
       });
       tl.to("[data-hint]", { autoAlpha: 0, duration: 0.05 }, 0)
-        .to("[data-intro]", { autoAlpha: 0, y: -80, ease: "power1.in", duration: 0.2 }, 0.03)
-        .fromTo("[data-photo]", { scale: 1.3 }, { scale: 1, duration: 0.8 }, 0.2)
-        .to("[data-wall]", { autoAlpha: 0, duration: 0.08 }, 0.6)
-        .fromTo("[data-outro] > *", { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, stagger: 0.03, duration: 0.12, ease: "power2.out" }, 0.72)
+        .to(
+          "[data-intro]",
+          { autoAlpha: 0, y: -80, ease: "power1.in", duration: 0.2 },
+          0.03,
+        )
+        .fromTo(
+          "[data-leaf='left']",
+          { rotateY: 0 },
+          { rotateY: 84, ease: "power2.inOut", duration: 0.4 },
+          0.06,
+        )
+        .fromTo(
+          "[data-leaf='right']",
+          { rotateY: 0 },
+          { rotateY: -84, ease: "power2.inOut", duration: 0.4 },
+          0.06,
+        )
+        .fromTo(
+          "[data-leaf]",
+          { filter: "brightness(1)" },
+          { filter: "brightness(0.55)", duration: 0.4 },
+          0.06,
+        )
+        // The room is farther away than the wall, so it grows more slowly: natural parallax.
+        .fromTo(
+          "[data-photo]",
+          { scale: 1.4 },
+          { scale: 1, duration: 0.64 },
+          0.04,
+        )
+        .fromTo(
+          "[data-stage]",
+          { scale: 1 },
+          { scale: walkThrough, ease: "power2.in", duration: 0.36 },
+          0.32,
+        )
+        // By now the doorway covers the screen, so dropping the wall is invisible.
+        .set("[data-wall]", { autoAlpha: 0 }, 0.69)
+        .fromTo(
+          "[data-photo-shade]",
+          { autoAlpha: 0 },
+          { autoAlpha: 1, duration: 0.1 },
+          0.66,
+        )
+        .fromTo(
+          "[data-outro] > *",
+          { autoAlpha: 0, y: 50 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            stagger: 0.03,
+            duration: 0.12,
+            ease: "power2.out",
+          },
+          0.72,
+        )
         .to({}, { duration: 0.02 });
     },
     { scope: section, dependencies: [mode] },
@@ -79,7 +158,10 @@ export default function Hero() {
     >
       <div className="sticky top-0 h-svh min-h-[560px] overflow-hidden">
         {/* The interior revealed behind the door */}
-        <div data-photo className="absolute inset-0 origin-center will-change-transform">
+        <div
+          data-photo
+          className="absolute inset-0 origin-center will-change-transform"
+        >
           <Picture
             media="craft/arched-hall"
             alt="A villa dining hall lit through tall arched teak windows crafted by JSF Industries"
@@ -88,73 +170,127 @@ export default function Hero() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/25 to-espresso/30" />
+          <div
+            data-photo-shade
+            className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/25 to-espresso/30"
+          />
         </div>
 
         {immersive && (
-          <div data-wall className="absolute inset-0">
-            {/* Lightweight stand-in until the WebGL scene has drawn its first frame */}
-            <div
-              aria-hidden="true"
-              className={`absolute inset-0 flex items-center justify-center bg-ivory transition-opacity duration-700 ${
-                ready ? "opacity-0" : "opacity-100"
-              }`}
-            >
-              {/* Drawn to the 3D door's dimensions in centimetres: surround, frame, leaves, glazing and pulls */}
-              <svg viewBox="0 0 204 302" style={{ height: "min(64svh, 107vw)", aspectRatio: "204 / 302" }}>
-                <path d="M0 302V102A102 102 0 0 1 204 102V302Z" fill="#d9cdb8" />
-                <path d="M12 302V102A90 90 0 0 1 192 102V302Z" fill="#868866" />
-                <path d="M22 302V102A80 80 0 0 1 182 102V302Z" fill="#919371" />
-                <g fill="#bba78c">
-                  <path d="M33 220H93V33.1A69.5 69.5 0 0 0 33 93.7Z" />
-                  <path d="M111 220H171V93.7A69.5 69.5 0 0 0 111 33.1Z" />
-                </g>
-                <g fill="none" stroke="#919371" strokeWidth="3">
-                  <path d="M63 220V102A39 39 0 0 1 93 64.1M141 220V102A39 39 0 0 0 111 64.1" />
-                  <path d="M33 180.7H93M33 141.3H93M33 102H93M111 180.7H171M111 141.3H171M111 102H171" />
-                </g>
-                <g fill="none" stroke="#858768" strokeWidth="1.5">
-                  <rect x="33" y="232" width="60" height="56" />
-                  <rect x="111" y="232" width="60" height="56" />
-                  <path d="M102 22V302" />
-                </g>
-                <path d="M97 144V200M107 144V200" stroke="#b4935a" strokeWidth="2.2" strokeLinecap="round" />
-              </svg>
+          <div data-wall aria-hidden="true" className="absolute inset-0">
+            {/* The photo, sized like object-cover so door coordinates stay in proportion */}
+            <div className="absolute left-1/2 top-[8svh] aspect-[2/1] w-[max(100vw,170svh)] -translate-x-1/2 md:top-[7svh] md:w-[max(100vw,200svh,1120px)]">
+              <div
+                ref={stage}
+                data-stage
+                className="absolute inset-0 will-change-transform"
+                style={{
+                  transformOrigin: `${pct(DOOR.x + DOOR.w / 2, IMG_W)} ${pct(DOOR.y + DOOR.h / 2, IMG_H)}`,
+                }}
+              >
+                <Image
+                  src={DOOR_SRC}
+                  alt=""
+                  fill
+                  priority
+                  sizes="max(100vw, 200svh)"
+                  className="object-cover"
+                  style={{
+                    maskImage: DOORWAY_MASK,
+                    WebkitMaskImage: DOORWAY_MASK,
+                    maskSize: "100% 100%",
+                    WebkitMaskSize: "100% 100%",
+                  }}
+                />
+                {/* Plain wall above and below the photo (the door sits lower to clear the header);
+                    each band feathers a few pixels onto the photo so there is no visible seam. */}
+                <div
+                  className="pointer-events-none absolute inset-x-0 top-[-40%] h-[45%]"
+                  style={{
+                    background:
+                      "linear-gradient(to bottom, #f0e2d3 0%, #f0e2d3 89%, rgba(240,226,211,0) 100%)",
+                  }}
+                />
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-[-40%] h-[43%]"
+                  style={{
+                    background:
+                      "linear-gradient(to top, #f4eae5 0%, #f4eae5 93%, rgba(244,234,229,0) 100%)",
+                  }}
+                />
+
+                {/* The doorway: interior behind, then the two leaves on top */}
+                <div
+                  className="absolute"
+                  style={{
+                    left: pct(DOOR.x, IMG_W),
+                    top: pct(DOOR.y, IMG_H),
+                    width: pct(DOOR.w, IMG_W),
+                    height: pct(DOOR.h, IMG_H),
+                    perspective: "1400px",
+                  }}
+                >
+                  {/* Soft shadow around the opening; the room itself is the full-screen photo behind */}
+                  <div
+                    className="absolute inset-0 shadow-[inset_0_0_50px_rgba(40,25,10,0.5)]"
+                    style={{
+                      borderRadius: `50% 50% 0 0 / ${ARCH_Y} ${ARCH_Y} 0 0`,
+                    }}
+                  />
+                  <div
+                    data-leaf="left"
+                    className="absolute inset-y-0 left-0 w-1/2 will-change-transform"
+                    style={leafStyle("left")}
+                  />
+                  <div
+                    data-leaf="right"
+                    className="absolute inset-y-0 right-0 w-1/2 will-change-transform"
+                    style={leafStyle("right")}
+                  />
+                </div>
+              </div>
             </div>
-            {mode === "3d" && <DoorScene progress={progress} active={active} onReady={onReady} className="!absolute inset-0" />}
           </div>
         )}
 
-        {/* Copy painted on the wall, either side of the door */}
+        {/* Copy on the wall, either side of the door */}
         {immersive ? (
           <div data-intro className="pointer-events-none absolute inset-0">
             <h1 id="hero-title" className="sr-only">
-              JSF Industries — elevating spaces with luxury craftsmanship
+              JSF Industries — architectural woodwork, made to measure
             </h1>
-            <div aria-hidden="true" className="container-x flex h-full flex-col justify-between pb-10 pt-24 md:justify-center md:pb-0 md:pt-0">
-              <div className="md:absolute md:left-[clamp(1rem,4vw,3.5rem)] md:top-1/2 md:max-w-[30vw] md:-translate-y-1/2">
+            <div
+              aria-hidden="true"
+              className="container-x flex h-full flex-col justify-end bg-gradient-to-t from-[#f6ece0] from-[18%] via-[#f6ece0]/70 via-[32%] to-transparent to-[48%] pb-10 md:justify-center md:bg-none md:pb-0"
+            >
+              <div className="md:absolute md:left-[clamp(1rem,4vw,3.5rem)] md:top-[30%] md:max-w-[28vw] md:-translate-y-1/2">
                 <p className="eyebrow mb-4 text-teak">Est. 1989 · Tuem, Goa</p>
                 <RevealText
                   as="p"
                   trigger="load"
-                  className="font-serif text-[clamp(2.6rem,6vw,7.2rem)] leading-[0.92] text-ink"
+                  className="font-serif text-[clamp(2.6rem,5.6vw,6.8rem)] leading-[0.92] text-ink"
                 >
-                  Elevating spaces
+                  Architectural woodwork,
                 </RevealText>
               </div>
-              <div className="text-right md:absolute md:right-[clamp(1rem,4vw,3.5rem)] md:top-1/2 md:max-w-[32vw] md:-translate-y-1/2">
+              <div className="md:absolute md:text-right md:right-[clamp(1rem,4vw,3.5rem)] md:top-[30%] md:max-w-[28vw] md:-translate-y-1/2">
                 <RevealText
                   as="p"
                   trigger="load"
                   delay={0.25}
-                  className="font-serif text-[clamp(2.6rem,6vw,7.2rem)] italic leading-[0.92] text-teak"
+                  className="font-serif text-[clamp(2.6rem,5.6vw,6.8rem)] italic leading-[0.92] text-teak"
                 >
-                  with luxury craftsmanship
+                  made to measure
                 </RevealText>
-                <p className="mt-5 hidden text-sm text-stone md:block">Teakwood doors, windows &amp; bespoke carpentry</p>
+                <p className="mt-5 hidden text-sm text-stone md:block">
+                  Doors, architectural solutions &amp; custom joinery
+                </p>
               </div>
             </div>
-            <div data-hint className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 md:flex">
+            <div
+              data-hint
+              className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 md:flex"
+            >
               <span className="eyebrow text-stone">Scroll to open</span>
               <span className="relative h-10 w-px overflow-hidden bg-ink/15">
                 <span className="absolute inset-x-0 top-0 h-1/2 animate-[hint_2s_ease-in-out_infinite] bg-teak" />
@@ -164,16 +300,26 @@ export default function Hero() {
         ) : null}
 
         {/* Copy over the revealed interior (also the full hero in static mode) */}
-        <div data-outro className={`absolute inset-x-0 bottom-0 pb-12 text-ivory md:pb-16 ${immersive ? "[&>*]:invisible" : ""}`}>
+        <div
+          data-outro
+          className={`absolute inset-x-0 bottom-0 pb-12 text-ivory md:pb-16 ${immersive ? "[&>*]:invisible" : ""}`}
+        >
           <div className="container-x">
-            <p className="eyebrow mb-5 text-brass">JSF Industries · Doors &amp; windows since 1989</p>
+            <p className="eyebrow mb-5 text-brass">
+              JSF Industries · Custom joinery since 1989
+            </p>
             {immersive ? (
               <h2 className="max-w-5xl font-serif text-headline">
-                Crafted for Goa&rsquo;s finest villas, <em className="text-brass">built to last generations.</em>
+                Precision woodwork for Goa&rsquo;s finest villas,{" "}
+                <em className="text-brass">built to last.</em>
               </h2>
             ) : (
-              <h1 id="hero-title" className="max-w-5xl font-serif text-headline">
-                Elevating spaces with <em className="text-brass">luxury craftsmanship.</em>
+              <h1
+                id="hero-title"
+                className="max-w-5xl font-serif text-headline"
+              >
+                Architectural woodwork,{" "}
+                <em className="text-brass">made to measure.</em>
               </h1>
             )}
             <div className="mt-8 flex flex-wrap gap-4">

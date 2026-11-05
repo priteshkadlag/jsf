@@ -21,7 +21,9 @@ export async function POST(request: Request) {
   const { data, errors } = validateEnquiry(body);
   if (!data) return Response.json({ ok: false, errors }, { status: 422 });
 
-  const enquiry = { ...data, receivedAt: new Date().toISOString(), source: "jsfgroup.co.in" };
+  // Architects and interior designers are JSF's main audience: flag them for a quicker reply.
+  const priority = data.role === "Architect" || data.role === "Interior designer";
+  const enquiry = { ...data, priority, receivedAt: new Date().toISOString(), source: "jsfgroup.co.in" };
   const webhook = process.env.CONTACT_WEBHOOK_URL;
 
   if (webhook) {

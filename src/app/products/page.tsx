@@ -6,9 +6,9 @@ import ProductStack from "@/components/products/ProductStack";
 import { products } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Products — Teakwood Doors, Wooden Windows & Interiors",
+  title: "Products — Doors, Custom Furniture & Bespoke Interiors",
   description:
-    "Teakwood doors, wooden windows, flush, veneer and laminated doors, wardrobes, TV units, wall panelling, staircases and customised interiors — made by JSF Industries in Goa.",
+    "Doors, custom furniture, bespoke interiors, wall panelling, staircases and ceilings, made by JSF Industries in Goa.",
   alternates: { canonical: "/products" },
 };
 
@@ -17,7 +17,7 @@ export default function ProductsPage() {
     <>
       <PageHero
         eyebrow="Products"
-        title="Doors, windows"
+        title="Doors, furniture"
         accent="& interiors"
         intro="Everything we make is built at our own factory in Tuem, Goa — from solid teak entrances to complete villa interiors, with strict quality control at every step."
         media="craft/carved-door"

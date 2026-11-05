@@ -12,7 +12,7 @@ import { featuredProjects, projects } from "@/data/projects";
  * Horizontal gallery driven by vertical scroll on desktop (sticky + translateX, no pinning,
  * so it plays nicely with page transitions). Stacks vertically on small screens.
  */
-export default function FeaturedProjects() {
+export default function FeaturedProjects({ index = "03" }: { index?: string }) {
   const section = useRef<HTMLElement>(null);
   const track = useRef<HTMLDivElement>(null);
 
@@ -66,7 +66,7 @@ export default function FeaturedProjects() {
       <div className="overflow-hidden md:sticky md:top-0 md:flex md:h-svh md:items-center">
         <div ref={track} className="flex flex-col gap-16 px-[clamp(1rem,4vw,3.5rem)] py-28 md:w-max md:flex-row md:items-end md:gap-[4vw] md:py-0">
           <div className="flex shrink-0 flex-col justify-between gap-10 md:h-[72svh] md:w-[34vw]">
-            <SectionLabel index="03" tone="light">
+            <SectionLabel index={index} tone="light">
               Selected projects
             </SectionLabel>
             <div>

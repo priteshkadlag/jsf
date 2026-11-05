@@ -15,7 +15,7 @@ import { site, whyChooseUs } from "@/data/site";
 export const metadata: Metadata = {
   title: "About — A Legacy of Fine Woodwork",
   description:
-    "Founded in 1989 by Shri Jivanbhai S. Fatania, JSF Industries is a Goa-based leader in designer doors, wooden windows and bespoke interiors.",
+    "Founded in 1989 by Shri Jivanbhai S. Fatania, JSF Industries is a Goa-based leader in doors, architectural joinery and bespoke interiors.",
   alternates: { canonical: "/about" },
 };
 
@@ -26,7 +26,7 @@ export default function AboutPage() {
         eyebrow="About JSF · Est. 1989"
         title="A legacy of"
         accent="fine woodwork"
-        intro="From custom wooden doors to complete interior solutions, JSF brings sophistication, precision and reliability to every project — for homes, villas and commercial spaces across Goa."
+        intro="From custom doors to complete interiors, JSF brings precision woodwork to homes, villas and commercial spaces across Goa, working hand in hand with architects and designers."
         media="craft/facade"
         alt="A whitewashed Goan villa with wooden doors and windows by JSF Industries"
       />
@@ -41,7 +41,7 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-8">
             <ScrubText className="font-serif text-[clamp(2rem,3.8vw,3.9rem)] leading-[1.08]">
-              Founded in 1989 by Shri Jivanbhai S. Fatania, JSF has become a leader in designer doors. Our designs balance aesthetics and functionality — interiors that elevate spaces while ensuring durability and performance.
+              Founded in 1989 by Shri Jivanbhai S. Fatania, JSF is a leader in doors and architectural joinery. Our work balances good looks with performance, and is built to last.
             </ScrubText>
           </div>
         </div>
@@ -57,15 +57,13 @@ export default function AboutPage() {
           <div className="flex flex-col justify-center gap-8 md:col-span-6 md:col-start-6">
             <FadeIn>
               <p className="text-lg leading-relaxed text-ink/85 md:text-xl">
-                At JSF, we specialise in premium wooden doors and interiors that combine elegant design, premium material and
-                precise craftsmanship.
+                We specialise in doors, custom joinery and interiors, made from marine-grade ply and treated wood.
               </p>
             </FadeIn>
             <FadeIn delay={0.1}>
               <p className="leading-relaxed text-stone">
-                Our factory at Tuem Industrial Estate, Goa, allows us to produce custom solutions efficiently and maintain strict
-                quality control for every project. With decades of experience serving residential and commercial clients, JSF
-                delivers bespoke interior solutions, timely project execution and unmatched attention to detail.
+                Our factory in Tuem, Goa, lets us make custom work efficiently and check every project closely. With decades of
+                experience across homes and commercial projects, JSF delivers bespoke interiors, on time and to the detail.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -86,7 +84,7 @@ export default function AboutPage() {
             </RevealText>
           </div>
         </div>
-        <ul className="mt-16 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
+        <ul className="mt-16 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {whyChooseUs.map((item, i) => (
             <FadeIn as="li" key={item.title} delay={i * 0.06} className="flex min-h-64 flex-col justify-between gap-10 bg-ivory p-8">
               <span className="font-serif text-2xl text-teak">0{i + 1}</span>

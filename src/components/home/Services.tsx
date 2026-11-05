@@ -27,8 +27,7 @@ export default function Services() {
             </RevealText>
           </div>
           <p className="self-end text-stone md:col-span-4 md:col-start-9">
-            From custom teak doors to complete interior solutions — designed, manufactured and installed by one team, with
-            sophistication, precision and reliability.
+            The full scope of carpentry from one trusted team: designed with you, made in our factory and installed on site.
           </p>
         </div>
 
@@ -58,7 +57,7 @@ export default function Services() {
                 <span className="font-serif text-[clamp(1.9rem,4vw,3.6rem)] leading-none transition-transform duration-700 ease-[var(--ease-expo)] group-hover:translate-x-3 group-hover:text-teak">
                   {p.name}
                 </span>
-                <span className="hidden text-sm text-stone md:block">{p.short}</span>
+                <span className="hidden text-sm text-stone md:block">{p.summary ?? p.short}</span>
                 <span className="flex items-center gap-4">
                   <span className="relative h-14 w-11 overflow-hidden arch md:hidden">
                     <Picture media={p.images[0]} alt="" fill sizes="44px" className="object-cover" />

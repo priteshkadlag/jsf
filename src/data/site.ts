@@ -2,9 +2,9 @@ export const site = {
   name: "JSF Industries",
   shortName: "JSF",
   url: "https://www.jsfgroup.co.in",
-  tagline: "Elevating spaces with luxury craftsmanship",
+  tagline: "Architectural woodwork, made to measure",
   description:
-    "JSF Industries crafts premium teakwood doors, wooden windows and bespoke carpentry for Goa's finest villas. Est. 1989, manufactured at our own factory in Tuem, Goa.",
+    "JSF Industries makes doors, custom joinery and interiors for architects, designers and developers across Goa. Est. 1989, built in our own factory in Tuem.",
   founded: 1989,
   founder: "Shri Jivanbhai S. Fatania",
   phone: "+91 97639 24949",
@@ -40,12 +40,45 @@ export const nav = [
 ] as const;
 
 export const whyChooseUs = [
-  { title: "Quality-tested products", text: "Every door and frame is checked before it leaves the factory floor." },
-  { title: "Over three decades of expertise", text: "Woodworking knowledge passed down and refined since 1989." },
-  { title: "On-time delivery", text: "In-house production lets us plan, build and install to schedule." },
-  { title: "Satisfaction guaranteed", text: "We stay with a project until every detail is right." },
-  { title: "Competitive pricing", text: "Factory-direct manufacturing, without the luxury mark-up." },
+  { title: "Technically advanced", text: "In-house R&D and Goa’s first automated moulder and kiln seasoning plant." },
+  { title: "Custom designs", text: "Built to your drawings, however unconventional the design." },
+  { title: "Architectural solutions", text: "Doors, joinery, columns and ceilings that solve the architecture, not just fill it." },
+  { title: "Tailored precision woodwork", text: "Every piece made to measure and checked before it leaves the factory." },
+  { title: "Cost optimised", text: "On big projects, we engineer the joinery to bring costs down without cutting quality." },
+  { title: "On time, hassle-free", text: "One team from drawing to installation, so you don’t need to be on site." },
 ] as const;
+
+/** Home page section for architects and interior designers. */
+export const forArchitects = [
+  { title: "We handle the site", text: "Our team resolves the details on site, so you can stay at the drawing board." },
+  { title: "Any design, however unusual", text: "Custom solutions for every architectural style, including the unconventional." },
+  { title: "Cost optimised for big projects", text: "We engineer the joinery to bring costs down without cutting quality." },
+  { title: "Technically advanced", text: "In-house R&D, plus Goa’s first automated moulder and kiln seasoning plant." },
+  { title: "Made to last", text: "Marine-grade ply and treated wood, built for Goa’s coast and monsoons." },
+  { title: "On time, hassle-free", text: "One team from drawing to delivery and installation." },
+] as const;
+
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  firm: string;
+  project: string;
+  /** Slug of the project page this quote links to. */
+  projectSlug?: string;
+};
+
+/**
+ * Real quotes only, with written permission. The home testimonials section stays hidden
+ * until this list has entries (aim for 3 to 5, ideally 2 or more from architects).
+ */
+export const testimonials: Testimonial[] = [];
+
+/**
+ * Craftsmanship page "Research & development" section. Hidden until JSF supplies one or two
+ * real examples of what they have developed or tested.
+ */
+export const researchAndDevelopment: string[] = [];
 
 export const machinery = [
   {
