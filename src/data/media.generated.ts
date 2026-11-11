@@ -1201,9 +1201,9 @@ export const media = {
     "blur": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAA0AA4BaJZwAAt0AWUGkAAD++LoiSgkXYjgkpFhhwtqWAdp7THSu0wcXqCQQAAA="
   },
   "brand/logo": {
-    "src": "/brand/logo-dark.png",
-    "width": 871,
-    "height": 428,
+    "src": "/brand/jsf-logo-dark.png",
+    "width": 963,
+    "height": 340,
     "blur": ""
   }
 } as const;

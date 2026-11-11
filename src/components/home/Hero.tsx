@@ -1,28 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useSyncExternalStore, type CSSProperties } from "react";
+import { useRef, useSyncExternalStore } from "react";
 import { gsap, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 import Picture from "@/components/ui/Picture";
 import RevealText from "@/components/ui/RevealText";
 import Button from "@/components/ui/Button";
+import DoorLeaf from "@/components/home/DoorLeaf";
 
 type Mode = "pending" | "animated" | "static";
 const detectMode = (): Mode => (prefersReducedMotion() ? "static" : "animated");
 const noopSubscribe = () => () => {};
 
 /**
- * Door photo (1600 × 800) and where its two leaves sit in it, in image pixels. The leaves are
- * cut out of the same photo, so at rest the scene is exactly the picture; on scroll they swing
- * open on their hinges to reveal the interior behind.
+ * Door photo (1600 × 800) and where its doorway sits in it, in image pixels. The doorway is cut out
+ * of the photo and the two leaves are redrawn on top as vector (DoorLeaf), so they stay sharp however
+ * far the camera zooms; on scroll they swing open on their hinges to reveal the interior behind.
  */
 const DOOR_SRC = "/images/hero/door-entrance.webp";
-/** Same photo with the glass panes made transparent, so the real room shows through the door glass. */
-const LEAVES_SRC = "/images/hero/door-glass.webp";
 const IMG_W = 1600;
 const IMG_H = 800;
 const DOOR = { x: 642, y: 83, w: 311, h: 520 };
-const LEAF_W = DOOR.w / 2;
 const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 
 /** Fraction of the stage the doorway covers, used to work out how far to zoom to walk through it. */
@@ -38,20 +36,6 @@ const DOORWAY_MASK = `url("data:image/svg+xml,${encodeURIComponent(
     `<path fill-rule='evenodd' d='M0 0H${IMG_W}V${IMG_H}H0Z` +
     `M${DOOR.x} ${DOOR.y + DOOR.h}V${DOOR.y + ARCH_R}A${ARCH_R} ${ARCH_R} 0 0 1 ${DOOR.x + DOOR.w} ${DOOR.y + ARCH_R}V${DOOR.y + DOOR.h}Z'/></svg>`,
 )}")`;
-
-function leafStyle(side: "left" | "right"): CSSProperties {
-  const offsetX = side === "left" ? DOOR.x : DOOR.x + LEAF_W;
-  return {
-    backgroundImage: `url(${LEAVES_SRC})`,
-    backgroundSize: `${(IMG_W / LEAF_W) * 100}% auto`,
-    backgroundPosition: `${pct(offsetX, IMG_W - LEAF_W)} ${pct(DOOR.y, IMG_H - DOOR.h)}`,
-    transformOrigin: side === "left" ? "left center" : "right center",
-    // A darker free edge reads as the leaf's thickness once it swings away
-    boxShadow: `inset ${side === "left" ? "-4px" : "4px"} 0 0 rgba(30,35,20,0.45)`,
-    [side === "left" ? "borderTopLeftRadius" : "borderTopRightRadius"]:
-      `100% ${ARCH_Y}`,
-  };
-}
 
 /**
  * Cinematic opener: JSF's sage-green arched door in a sunlit wall. As you scroll the two leaves
@@ -239,14 +223,16 @@ export default function Hero() {
                   />
                   <div
                     data-leaf="left"
-                    className="absolute inset-y-0 left-0 w-1/2 will-change-transform"
-                    style={leafStyle("left")}
-                  />
+                    className="absolute inset-y-0 left-0 w-1/2 origin-left will-change-transform"
+                  >
+                    <DoorLeaf side="left" />
+                  </div>
                   <div
                     data-leaf="right"
-                    className="absolute inset-y-0 right-0 w-1/2 will-change-transform"
-                    style={leafStyle("right")}
-                  />
+                    className="absolute inset-y-0 right-0 w-1/2 origin-right will-change-transform"
+                  >
+                    <DoorLeaf side="right" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -268,7 +254,7 @@ export default function Hero() {
                 <RevealText
                   as="p"
                   trigger="load"
-                  className="font-serif text-[clamp(2.6rem,5.6vw,6.8rem)] leading-[0.92] text-ink"
+                  className="font-serif text-[clamp(2.6rem,5.6vw,6.8rem)] leading-[0.92] text-heading"
                 >
                   Architectural woodwork,
                 </RevealText>

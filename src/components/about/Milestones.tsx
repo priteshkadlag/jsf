@@ -5,11 +5,12 @@ import { gsap, useGSAP } from "@/lib/gsap";
 import Picture from "@/components/ui/Picture";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
-import GrainMark from "@/components/layout/GrainMark";
+import BrandMark from "@/components/layout/BrandMark";
 import type { MediaKey } from "@/lib/media";
 import { site } from "@/data/site";
 
-type Milestone = { mark: string; kicker: string; title: string; text: string; media: MediaKey; alt: string };
+/** `focus` is the CSS object-position used when the photo is cropped into the arch (defaults to centre). */
+type Milestone = { mark: string; kicker: string; title: string; text: string; media: MediaKey; alt: string; focus?: string };
 
 const milestones: Milestone[] = [
   {
@@ -41,7 +42,7 @@ const milestones: Milestone[] = [
     kicker: "Chapter four",
     title: "Partners in luxury",
     text: "JSF becomes the woodwork partner for landmark villa collections by Isprava and Vianaar — 22 villas at Moira Chapters, 10 at La Selva and more.",
-    media: "projects/moira-chapters/01",
+    media: "projects/moira-chapters/12",
     alt: "An arched teak door at Moira Chapters",
   },
   {
@@ -51,6 +52,8 @@ const milestones: Milestone[] = [
     text: `Named ${site.award.title} at the ${site.award.by}.`,
     media: "award/ceremony",
     alt: "The JSF team receiving the Business Goa award",
+    // The group stands right of the photo's centre; centre the crop on them.
+    focus: "63% 50%",
   },
 ];
 
@@ -126,7 +129,7 @@ export default function Milestones() {
           </div>
           <div className="flex items-center gap-5 text-ivory/60">
             <span data-grain-mark className="block">
-              <GrainMark className="h-20 w-20 text-brass md:h-24 md:w-24" />
+              <BrandMark className="h-20 w-20 text-brass md:h-24 md:w-24" />
             </span>
             <p className="eyebrow max-w-[14rem] leading-relaxed">
               {site.founded} — today · Every chapter carved in timber
@@ -185,6 +188,7 @@ export default function Milestones() {
                       fill
                       sizes="(min-width: 768px) 28vw, 80vw"
                       className="scale-110 object-cover"
+                      style={m.focus ? { objectPosition: m.focus } : undefined}
                     />
                     <span className="absolute inset-0 bg-gradient-to-t from-espresso/40 to-transparent" />
                     <span className="eyebrow absolute bottom-5 left-1/2 -translate-x-1/2 text-ivory/90">0{i + 1}</span>

@@ -53,7 +53,7 @@ export default function Intro() {
         {stats.map((s) => (
           <div key={s.label} className="flex flex-col-reverse pr-6">
             <dt className="mt-3 text-sm text-stone">{s.label}</dt>
-            <dd className="font-serif text-[clamp(2.8rem,5vw,4.8rem)] leading-none text-ink">
+            <dd className="font-serif text-[clamp(2.8rem,5vw,4.8rem)] leading-none text-heading">
               <Counter value={s.value} suffix={s.suffix} grouping={s.grouping} />
             </dd>
           </div>

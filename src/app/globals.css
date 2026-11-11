@@ -5,6 +5,7 @@
   --color-paper: #f1eee8;
   --color-sand: #dcd5c9;
   --color-ink: #1f2a24;
+  --color-heading: #30463a; /* Headings on light backgrounds */
   --color-stone: #565f52;
   --color-espresso: #294236; /* Jewel Green */
   --color-bark: #20352b;
@@ -40,6 +41,15 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings use the deep green instead of near-black body ink... */
+  :where(h1, h2, h3, h4, h5, h6) {
+    color: var(--color-heading);
+  }
+  /* ...except on dark sections, where they keep inheriting the light text colour. */
+  :where([class*="text-ivory"], [class*="text-white"], [class*="text-paper"], [class*="text-sand"]) :where(h1, h2, h3, h4, h5, h6) {
+    color: inherit;
   }
 
   ::selection {
@@ -186,5 +196,86 @@ html.js [data-reveal]:not([data-split-ready]) {
   }
   html.js [data-reveal]:not([data-split-ready]) {
     visibility: visible;
+  }
+}
+
+/* ── Preloader: hand plane shaving a board (see components/layout/Preloader.tsx) ── */
+.jsf-loader {
+  background: var(--color-espresso);
+  color: var(--color-ivory);
+}
+.jsf-loader .jsf-ink {
+  fill: none;
+  stroke: var(--color-ivory);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.jsf-loader .jsf-fill {
+  fill: var(--color-bark);
+  stroke: var(--color-ivory);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+.jsf-loader .jsf-hatch {
+  fill: none;
+  stroke: var(--color-ivory);
+  stroke-width: 0.7;
+  stroke-linecap: round;
+  opacity: 0.55;
+}
+/* Plane: push forward (left), lift slightly, glide back */
+.jsf-loader .jsf-plane {
+  animation: jsf-plane 2.4s infinite;
+}
+@keyframes jsf-plane {
+  0% {
+    transform: translate(32px, 0);
+    animation-timing-function: cubic-bezier(0.45, 0, 0.35, 1);
+  }
+  55% {
+    transform: translate(-32px, 0);
+  }
+  62% {
+    transform: translate(-32px, -2px);
+    animation-timing-function: ease-in-out;
+  }
+  94% {
+    transform: translate(32px, -2px);
+  }
+  100% {
+    transform: translate(32px, 0);
+  }
+}
+/* Shaving curls out of the mouth on the forward stroke */
+.jsf-loader .jsf-shaving {
+  stroke: var(--color-brass);
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: jsf-shave 2.4s infinite;
+}
+@keyframes jsf-shave {
+  0%,
+  6% {
+    stroke-dashoffset: 60;
+    opacity: 1;
+  }
+  55% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  70%,
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jsf-loader .jsf-plane,
+  .jsf-loader .jsf-shaving {
+    animation: none;
+  }
+  .jsf-loader .jsf-shaving {
+    stroke-dashoffset: 0;
   }
 }

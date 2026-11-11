@@ -69,7 +69,7 @@ const organizationJsonLd = {
   "@type": "HomeAndConstructionBusiness",
   name: site.name,
   url: site.url,
-  logo: `${site.url}/brand/logo-dark.png`,
+  logo: `${site.url}/brand/jsf-logo-dark.png`,
   image: `${site.url}/images/craft/arched-hall.webp`,
   description: site.description,
   foundingDate: String(site.founded),
@@ -94,7 +94,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <noscript>
-          <style>{`.preloader{display:none!important}`}</style>
+          <style>{`.jsf-loader{display:none!important}`}</style>
         </noscript>
         <script
           type="application/ld+json"

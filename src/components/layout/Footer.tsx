@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-6 py-10 text-xs text-ivory/50 md:flex-row md:items-center md:justify-between">
-          <Logo tone="light" className="h-10 w-auto opacity-90" />
+          <Logo tone="light" className="h-14 w-auto opacity-90" />
           <p>MSME (Udyam) registered · {site.udyam}</p>
           <p>
             © {site.name} · Est. {site.founded} · Crafted in Goa

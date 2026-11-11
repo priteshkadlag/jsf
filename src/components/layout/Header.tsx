@@ -71,7 +71,7 @@ export default function Header() {
       >
         <div className="container-x flex h-[72px] items-center justify-between md:h-20">
           <Link href="/" aria-label="JSF Industries — home" className="relative z-10">
-            <Logo tone={open ? "light" : "dark"} className="h-8 w-auto transition md:h-9" />
+            <Logo tone={open ? "light" : "dark"} className="h-10 w-auto transition md:h-12" />
           </Link>
 
           <nav aria-label="Primary" className="hidden lg:block">

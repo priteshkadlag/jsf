@@ -4,6 +4,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
+import { prepareLogo } from "./prepare-logo.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SRC = path.resolve(ROOT, "..", "JSF WEBSITE X POSTE & CO");
@@ -161,34 +162,8 @@ async function run() {
     await emit(`clients/${slugify(file.name)}`, file.abs, { maxWidth: 480, quality: 88 });
   }
 
-  // Brand logo: knock out the white background to get transparent dark + light variants.
-  const logoSrc = path.join(SRC, "LOGO & CONTACT DETAILS", "WhatsApp Image 2026-01-08 at 6.35.48 PM.jpeg");
-  const { data: raw, info } = await sharp(logoSrc).trim({ threshold: 20 }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-  const dark = Buffer.from(raw);
-  const light = Buffer.from(raw);
-  for (let i = 0; i < raw.length; i += 4) {
-    const lum = (raw[i] + raw[i + 1] + raw[i + 2]) / 3;
-    const alpha = Math.max(0, Math.min(255, Math.round(((235 - lum) / 175) * 255)));
-    dark[i] = dark[i + 1] = dark[i + 2] = 38;
-    dark[i + 3] = alpha;
-    light[i] = light[i + 1] = light[i + 2] = 244;
-    light[i + 3] = alpha;
-  }
-  const rawOpts = { raw: { width: info.width, height: info.height, channels: 4 } };
-  await fs.mkdir(path.join(OUT, "brand"), { recursive: true });
-  await sharp(dark, rawOpts).png().toFile(path.join(OUT, "brand", "logo-dark.png"));
-  await sharp(light, rawOpts).png().toFile(path.join(OUT, "brand", "logo-light.png"));
-  // The round wood-grain mark occupies roughly the left 40% of the lock-up.
-  const markSize = Math.round(info.height * 0.78);
-  const mark = await sharp(dark, rawOpts).extract({ left: 0, top: 0, width: markSize, height: markSize }).png().toBuffer();
-  await sharp(mark).resize(512, 512, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toFile(path.join(ROOT, "src", "app", "icon.png"));
-  await sharp(mark)
-    .resize(150, 150, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
-    .extend({ top: 15, bottom: 15, left: 15, right: 15, background: "#f2ece2" })
-    .flatten({ background: "#f2ece2" })
-    .png()
-    .toFile(path.join(ROOT, "src", "app", "apple-icon.png"));
-  manifest["brand/logo"] = { src: "/brand/logo-dark.png", width: info.width, height: info.height, blur: "" };
+  // Brand logo + app icons come from public/images/logo (see prepare-logo.mjs).
+  manifest["brand/logo"] = await prepareLogo();
 
   await fs.mkdir(path.join(OUT, "videos"), { recursive: true });
   for (const [name, rel] of Object.entries(VIDEOS)) {
