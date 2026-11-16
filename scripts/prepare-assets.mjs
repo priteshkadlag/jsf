@@ -49,13 +49,13 @@ const PROJECTS = {
 
 /** Single images keyed by a stable name used across the site. */
 const SINGLES = {
-  "craft/hero": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/14.jpg", 2400],
+  "craft/hero": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/14.jpg", 2560],
   "craft/teak-double-door": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/9.jpg"],
   "craft/carved-door": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/4.jpg"],
   "craft/fanlight-door": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/31__6_.jpg"],
   "craft/window-seat": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/a.jpg"],
-  "craft/arched-hall": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/4.webp", 2400],
-  "craft/arched-living": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/5.webp", 2400],
+  "craft/arched-hall": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/4.webp", 2560],
+  "craft/arched-living": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/5.webp", 2560],
   "craft/glazed-dining": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/5.jpg"],
   "craft/arched-lounge": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/c.jpg"],
   "craft/stairwell": ["DOORS & WINDOWS/WOODEN DOORS & WINDOWS/d.jpg"],
@@ -99,7 +99,9 @@ const slugify = (s) =>
 
 const manifest = {};
 
-async function emit(key, input, { maxWidth = 1920, quality = 74, extract } = {}) {
+// Quality 88: many originals are already-compressed WebP/AVIF, so a low setting stacks visible
+// artefacts on top of theirs. Never enlarges; small originals stay at their own size.
+async function emit(key, input, { maxWidth = 2048, quality = 88, extract } = {}) {
   const dest = path.join(OUT, "images", `${key}.webp`);
   await fs.mkdir(path.dirname(dest), { recursive: true });
   let pipe = sharp(input, { failOn: "none" }).rotate();
@@ -126,6 +128,21 @@ async function listImages(dir) {
     .map((f) => ({ name: f, abs: path.join(SRC, dir, f) }));
 }
 
+/** Adds pixel dimensions so selection can prefer sharp originals. */
+async function withSize(files) {
+  return Promise.all(
+    files.map(async (f) => {
+      const m = await sharp(f.abs, { failOn: "none" }).metadata().catch(() => ({}));
+      const w = m.width ?? 0;
+      const h = m.height ?? 0;
+      return { ...f, w, h, long: Math.max(w, h) };
+    }),
+  );
+}
+
+/** Long edge, in pixels, that still looks sharp full-screen. */
+const HI_RES = 1600;
+
 /** Evenly sample `max` items so every sub-folder (villa) is represented. */
 function sample(items, max) {
   if (items.length <= max) return items;
@@ -134,32 +151,48 @@ function sample(items, max) {
 }
 
 async function run() {
-  await fs.rm(path.join(OUT, "images"), { recursive: true, force: true });
+  // Only the folders this script generates; images/hero and images/logo are placed by hand.
+  for (const dir of ["projects", "craft", "doors", "factory", "award", "clients"]) {
+    await fs.rm(path.join(OUT, "images", dir), { recursive: true, force: true });
+  }
 
   for (const [slug, cfg] of Object.entries(PROJECTS)) {
-    const all = (await Promise.all(cfg.dirs.map(listImages))).flat();
-    const cover = all.find((f) => f.name === cfg.cover);
+    const all = await withSize((await Promise.all(cfg.dirs.map(listImages))).flat());
+    let cover = all.find((f) => f.name === cfg.cover);
     if (!cover) throw new Error(`Cover ${cfg.cover} not found for ${slug}`);
-    const rest = sample(all.filter((f) => f !== cover), cfg.max - 1);
-    const picked = [cover, ...rest];
+    // The cover is shown full-screen: if the chosen one is small, use the largest landscape photo.
+    if (cover.long < HI_RES) {
+      const better = all.filter((f) => f.w > f.h && f.long >= HI_RES).sort((a, b) => b.long - a.long)[0];
+      if (better) {
+        console.log(`${slug}: cover ${cfg.cover} is only ${cover.long}px, using ${better.name} (${better.long}px)`);
+        cover = better;
+      }
+    }
+    // Prefer sharp originals; top up with smaller ones only when there aren't enough.
+    const others = all.filter((f) => f !== cover);
+    const hi = others.filter((f) => f.long >= HI_RES);
+    const need = cfg.max - 1;
+    const chosen = new Set(hi.length >= need ? sample(hi, need) : [...hi, ...sample(others.filter((f) => f.long < HI_RES), need - hi.length)]);
+    // Keep folder order, so each villa's photos stay together.
+    const picked = [cover, ...others.filter((f) => chosen.has(f))];
     for (const [i, file] of picked.entries()) {
       await emit(`projects/${slug}/${String(i + 1).padStart(2, "0")}`, file.abs, {
-        maxWidth: i === 0 ? 2400 : 1800,
+        maxWidth: i === 0 ? 2560 : 2048,
       });
     }
-    console.log(`${slug}: ${picked.length} images`);
+    console.log(`${slug}: ${picked.length} images, ${picked.filter((f) => f.long >= HI_RES).length} high-resolution`);
   }
 
   for (const [key, [rel, maxWidth]] of Object.entries(SINGLES)) {
-    await emit(key, path.join(SRC, rel), { maxWidth: maxWidth ?? 1800 });
+    await emit(key, path.join(SRC, rel), { maxWidth: maxWidth ?? 2048 });
   }
   for (const [key, [rel, extract]] of Object.entries(CROPS)) {
-    await emit(key, path.join(SRC, rel), { extract, quality: 80 });
+    await emit(key, path.join(SRC, rel), { extract, quality: 90 });
   }
 
   // Client logos: keep PNG-friendly quality, constrain to a sensible size.
   for (const file of await listImages("CLIENT LOGO")) {
-    await emit(`clients/${slugify(file.name)}`, file.abs, { maxWidth: 480, quality: 88 });
+    await emit(`clients/${slugify(file.name)}`, file.abs, { maxWidth: 480, quality: 92 });
   }
 
   // Brand logo + app icons come from public/images/logo (see prepare-logo.mjs).

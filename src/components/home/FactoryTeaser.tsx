@@ -4,23 +4,24 @@ import InViewVideo from "@/components/ui/InViewVideo";
 import Counter from "@/components/ui/Counter";
 import Button from "@/components/ui/Button";
 import FadeIn from "@/components/ui/FadeIn";
+import { getContent } from "@/lib/cms/content";
+import { tx } from "@/lib/cms/text-fields";
 
-export default function FactoryTeaser({ index = "05" }: { index?: string }) {
+export default async function FactoryTeaser({ index = "05" }: { index?: string }) {
+  const { texts } = await getContent();
+  const t = (k: string) => tx(texts, `home.factory.${k}`);
   return (
     <section aria-labelledby="factory-title" className="grain relative overflow-hidden bg-bark py-28 text-ivory md:py-40">
       <div className="container-x relative grid gap-16 md:grid-cols-12 md:gap-10">
         <div className="md:col-span-5">
           <SectionLabel index={index} tone="light">
-            The factory · Tuem, Goa
+            {t("label")}
           </SectionLabel>
           <RevealText as="h2" id="factory-title" className="mt-8 font-serif text-headline">
-            Where timber becomes craft
+            {t("title")}
           </RevealText>
           <FadeIn>
-            <p className="mt-8 max-w-md leading-relaxed text-ivory/70">
-              Our Tuem facility is home to Goa&rsquo;s first automated moulder machine and Goa&rsquo;s first kiln seasoning
-              plant — technology that pairs with the hands of skilled craftsmen to deliver precision at scale.
-            </p>
+            <p className="mt-8 max-w-md leading-relaxed text-ivory/70">{t("text")}</p>
           </FadeIn>
 
           <dl className="mt-12 grid grid-cols-2 gap-8 border-t border-line-light pt-10">
@@ -40,7 +41,7 @@ export default function FactoryTeaser({ index = "05" }: { index?: string }) {
 
           <div className="mt-12">
             <Button href="/craftsmanship" variant="light">
-              Explore our process
+              {t("button")}
             </Button>
           </div>
         </div>

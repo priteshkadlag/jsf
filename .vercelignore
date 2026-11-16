@@ -1,0 +1,13 @@
+# Never upload secrets, local content or test output to Vercel.
+.env
+.env.*
+!.env.example
+/content/
+/.next/
+/node_modules/
+/tests/
+/test-results/
+/playwright-report/
+/playwright/
+/.claude/
+*.log

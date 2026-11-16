@@ -6,11 +6,22 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import Logo from "@/components/layout/Logo";
 import { useLenis } from "@/components/providers/SmoothScroll";
-import { nav, site } from "@/data/site";
+import type { Link as NavLink } from "@/lib/cms/types";
 
 const ease = [0.76, 0, 0.24, 1] as const;
 
-export default function Header() {
+export type HeaderProps = {
+  nav: NavLink[];
+  cta: NavLink | null;
+  phone: string;
+  phoneHref: string;
+  email: string;
+  siteName: string;
+  logoDark?: string;
+  logoLight?: string;
+};
+
+export default function Header({ nav, cta, phone, phoneHref, email, siteName, logoDark, logoLight }: HeaderProps) {
   const pathname = usePathname();
   const lenis = useLenis();
   const { scrollY } = useScroll();
@@ -70,13 +81,19 @@ export default function Header() {
         }`}
       >
         <div className="container-x flex h-[72px] items-center justify-between md:h-20">
-          <Link href="/" aria-label="JSF Industries — home" className="relative z-10">
-            <Logo tone={open ? "light" : "dark"} className="h-10 w-auto transition md:h-12" />
+          <Link href="/" aria-label={`${siteName} — home`} className="relative z-10">
+            <Logo
+              tone={open ? "light" : "dark"}
+              src={(open ? logoLight || logoDark : logoDark) || undefined}
+              alt={siteName}
+              className="h-10 w-auto transition md:h-12"
+            />
           </Link>
 
           <nav aria-label="Primary" className="hidden lg:block">
             <ul className="flex items-center gap-6 text-[0.82rem] xl:gap-9 font-medium tracking-wide">
-              {nav.slice(0, -1).map((item) => (
+              {/* The CTA button already covers its own link, so it isn't repeated in the bar. */}
+              {nav.filter((item) => !cta || item.href !== cta.href).map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
@@ -91,12 +108,14 @@ export default function Header() {
           </nav>
 
           <div className="relative z-10 flex items-center gap-3">
-            <Link
-              href="/contact"
-              className="hidden rounded-full bg-ink px-5 py-2.5 text-[0.8rem] font-semibold tracking-wide text-ivory transition-colors duration-500 hover:bg-teak sm:inline-flex"
-            >
-              Enquire now
-            </Link>
+            {cta && (
+              <Link
+                href={cta.href}
+                className="hidden rounded-full bg-ink px-5 py-2.5 text-[0.8rem] font-semibold tracking-wide text-ivory transition-colors duration-500 hover:bg-teak sm:inline-flex"
+              >
+                {cta.label}
+              </Link>
+            )}
             <button
               ref={toggleRef}
               type="button"
@@ -146,7 +165,7 @@ export default function Header() {
                           isActive(item.href) ? "text-brass" : "text-ivory"
                         }`}
                       >
-                        <span className="eyebrow text-ivory/40">0{i + 1}</span>
+                        <span className="eyebrow text-ivory/40">{String(i + 1).padStart(2, "0")}</span>
                         {item.label}
                       </Link>
                     </motion.div>
@@ -160,8 +179,8 @@ export default function Header() {
               exit={{ opacity: 0 }}
               className="container-x grid gap-2 border-t border-line-light py-8 text-sm text-ivory/70"
             >
-              <a href={site.phoneHref}>{site.phone}</a>
-              <a href={`mailto:${site.email}`}>{site.email}</a>
+              <a href={phoneHref}>{phone}</a>
+              <a href={`mailto:${email}`}>{email}</a>
             </motion.div>
           </motion.div>
         )}

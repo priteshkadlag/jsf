@@ -42,7 +42,7 @@ const DOORWAY_MASK = `url("data:image/svg+xml,${encodeURIComponent(
  * swing open and the camera walks through into a real JSF interior. Falls back to a still hero
  * when the visitor prefers reduced motion.
  */
-export default function Hero() {
+export default function Hero({ text: t, siteName }: { text: Record<string, string>; siteName: string }) {
   const section = useRef<HTMLElement>(null);
   const stage = useRef<HTMLDivElement>(null);
   const mode = useSyncExternalStore(
@@ -114,7 +114,7 @@ export default function Hero() {
         .fromTo(
           "[data-photo-shade]",
           { autoAlpha: 0 },
-          { autoAlpha: 1, duration: 0.1 },
+          { autoAlpha: 1, duration: 0.06 },
           0.66,
         )
         .fromTo(
@@ -123,11 +123,12 @@ export default function Hero() {
           {
             autoAlpha: 1,
             y: 0,
-            stagger: 0.03,
-            duration: 0.12,
+            // Quick, so the copy is never left half-faded if scrolling stops part way.
+            stagger: 0.02,
+            duration: 0.06,
             ease: "power2.out",
           },
-          0.72,
+          0.7,
         )
         .to({}, { duration: 0.02 });
     },
@@ -156,8 +157,11 @@ export default function Hero() {
           />
           <div
             data-photo-shade
-            className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/25 to-espresso/30"
-          />
+            className="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/65 to-espresso/65 md:via-espresso/55 md:to-espresso/40"
+          >
+            {/* The headline sits on the left on wide screens; the interior photo is bright there. */}
+            <div className="absolute inset-0 hidden bg-gradient-to-r from-espresso/60 via-espresso/25 to-transparent md:block" />
+          </div>
         </div>
 
         {immersive && (
@@ -178,6 +182,7 @@ export default function Hero() {
                   fill
                   priority
                   sizes="max(100vw, 200svh)"
+                  quality={85}
                   className="object-cover"
                   style={{
                     maskImage: DOORWAY_MASK,
@@ -243,20 +248,20 @@ export default function Hero() {
         {immersive ? (
           <div data-intro className="pointer-events-none absolute inset-0">
             <h1 id="hero-title" className="sr-only">
-              JSF Industries — architectural woodwork, made to measure
+              {`${siteName} — ${t.title} ${t.accent}`}
             </h1>
             <div
               aria-hidden="true"
               className="container-x flex h-full flex-col justify-end bg-gradient-to-t from-[#f6ece0] from-[18%] via-[#f6ece0]/70 via-[32%] to-transparent to-[48%] pb-10 md:justify-center md:bg-none md:pb-0"
             >
               <div className="md:absolute md:left-[clamp(1rem,4vw,3.5rem)] md:top-[30%] md:max-w-[28vw] md:-translate-y-1/2">
-                <p className="eyebrow mb-4 text-teak">Est. 1989 · Tuem, Goa</p>
+                <p className="eyebrow mb-4 text-teak">{t.eyebrow}</p>
                 <RevealText
                   as="p"
                   trigger="load"
                   className="font-serif text-[clamp(2.6rem,5.6vw,6.8rem)] leading-[0.92] text-heading"
                 >
-                  Architectural woodwork,
+                  {t.title}
                 </RevealText>
               </div>
               <div className="md:absolute md:text-right md:right-[clamp(1rem,4vw,3.5rem)] md:top-[30%] md:max-w-[28vw] md:-translate-y-1/2">
@@ -266,11 +271,9 @@ export default function Hero() {
                   delay={0.25}
                   className="font-serif text-[clamp(2.6rem,5.6vw,6.8rem)] italic leading-[0.92] text-teak"
                 >
-                  made to measure
+                  {t.accent}
                 </RevealText>
-                <p className="mt-5 hidden text-sm text-stone md:block">
-                  Doors, architectural solutions &amp; custom joinery
-                </p>
+                <p className="mt-5 hidden text-sm text-stone md:block">{t.subline}</p>
               </div>
             </div>
             <div
@@ -288,32 +291,28 @@ export default function Hero() {
         {/* Copy over the revealed interior (also the full hero in static mode) */}
         <div
           data-outro
-          className={`absolute inset-x-0 bottom-0 pb-12 text-ivory md:pb-16 ${immersive ? "[&>*]:invisible" : ""}`}
+          className={`absolute inset-x-0 bottom-0 pb-12 text-ivory [text-shadow:0_2px_24px_rgb(0_0_0/0.35)] md:pb-16 ${immersive ? "[&>*]:invisible" : ""}`}
         >
           <div className="container-x">
-            <p className="eyebrow mb-5 text-brass">
-              JSF Industries · Custom joinery since 1989
-            </p>
+            <p className="eyebrow mb-5 text-ivory/90">{t.outroEyebrow}</p>
             {immersive ? (
               <h2 className="max-w-5xl font-serif text-headline">
-                Precision woodwork for Goa&rsquo;s finest villas,{" "}
-                <em className="text-brass">built to last.</em>
+                {t.outroTitle} <em className="text-brass">{t.outroAccent}</em>
               </h2>
             ) : (
               <h1
                 id="hero-title"
                 className="max-w-5xl font-serif text-headline"
               >
-                Architectural woodwork,{" "}
-                <em className="text-brass">made to measure.</em>
+                {t.title} <em className="text-brass">{t.accent}</em>
               </h1>
             )}
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="/projects" variant="light">
-                Explore our projects
+                {t.cta1}
               </Button>
               <Button href="/craftsmanship" variant="outline-light">
-                Inside our factory
+                {t.cta2}
               </Button>
             </div>
           </div>

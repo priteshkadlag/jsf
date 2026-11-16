@@ -1,124 +1,61 @@
 import type { Metadata, Viewport } from "next";
-import { EB_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "@/components/providers/SmoothScroll";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import Preloader from "@/components/layout/Preloader";
-import Cursor from "@/components/layout/Cursor";
-import BackToTop from "@/components/layout/BackToTop";
-import { site } from "@/data/site";
+import { fontCss, fontVariables } from "./fonts";
+import { getContent } from "@/lib/cms/content";
+import { ogImage } from "@/lib/cms/seo";
+import { COLOR_KEYS } from "@/lib/cms/types";
 
-const display = EB_Garamond({
-  variable: "--font-display",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const { seo, settings, integrations } = await getContent();
+  const images = ogImage(seo.ogImage, `${settings.name} — ${settings.tagline}`);
+  const v = integrations.verification;
+  // Site-ownership tags from Admin → Code & tracking.
+  const other: Record<string, string> = {};
+  if (v.bing) other["msvalidate.01"] = v.bing;
+  if (v.facebook) other["facebook-domain-verification"] = v.facebook;
+  if (v.pinterest) other["p:domain_verify"] = v.pinterest;
+  const verification = v.google || Object.keys(other).length ? { ...(v.google ? { google: v.google } : {}), ...(Object.keys(other).length ? { other } : {}) } : undefined;
+  return {
+    metadataBase: new URL(settings.url),
+    title: { default: seo.titleDefault, template: seo.titleTemplate },
+    description: seo.description,
+    keywords: seo.keywords,
+    authors: [{ name: settings.name }],
+    openGraph: {
+      type: "website",
+      locale: "en_IN",
+      siteName: settings.name,
+      title: `${settings.name} — ${settings.tagline}`,
+      description: seo.description,
+      ...(images ? { images } : {}),
+    },
+    twitter: { card: "summary_large_image" },
+    alternates: { canonical: "/" },
+    formatDetection: { telephone: false },
+    ...(verification ? { verification } : {}),
+  };
+}
 
-const body = Manrope({
-  variable: "--font-body",
-  subsets: ["latin"],
-});
+export async function generateViewport(): Promise<Viewport> {
+  const { theme } = await getContent();
+  return { themeColor: theme.colors.ivory, width: "device-width", initialScale: 1 };
+}
 
-export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
-  title: {
-    default: `${site.name} — Doors, Custom Joinery & Interiors in Goa · Est. 1989`,
-    template: `%s · ${site.name}`,
-  },
-  description: site.description,
-  keywords: [
-    "doors Goa",
-    "teakwood doors Goa",
-    "custom joinery Goa",
-    "architectural joinery Goa",
-    "custom furniture Goa",
-    "bespoke interiors Goa",
-    "wooden windows Goa",
-    "arched wooden windows",
-    "door manufacturer Goa",
-    "veneer doors",
-    "laminated doors",
-    "flush doors",
-    "wall panelling Goa",
-    "wooden staircases Goa",
-    "JSF Industries",
-  ],
-  authors: [{ name: site.name }],
-  openGraph: {
-    type: "website",
-    locale: "en_IN",
-    siteName: site.name,
-    title: `${site.name} — ${site.tagline}`,
-    description: site.description,
-    images: [{ url: "/images/craft/arched-hall.webp", width: 1950, height: 1097, alt: "Arched teak windows crafted by JSF Industries" }],
-  },
-  twitter: { card: "summary_large_image" },
-  alternates: { canonical: "/" },
-  formatDetection: { telephone: false },
-};
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const { theme } = await getContent();
+  // Theme colours and fonts from Admin → Theme, layered over the defaults in globals.css.
+  const themeCss = `:root{${COLOR_KEYS.map((k) => `--color-${k}:${theme.colors[k]};`).join("")}${fontCss(theme.fonts.display, theme.fonts.body)}}`;
 
-export const viewport: Viewport = {
-  themeColor: "#e8e3db",
-  width: "device-width",
-  initialScale: 1,
-};
-
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: site.name,
-  url: site.url,
-  logo: `${site.url}/brand/jsf-logo-dark.png`,
-  image: `${site.url}/images/craft/arched-hall.webp`,
-  description: site.description,
-  foundingDate: String(site.founded),
-  founder: { "@type": "Person", name: site.founder },
-  telephone: "+919763924949",
-  email: site.email,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: `${site.address.line1}, ${site.address.line2}`,
-    addressLocality: "Tuem",
-    addressRegion: "Goa",
-    postalCode: site.address.postalCode,
-    addressCountry: site.address.country,
-  },
-  areaServed: "Goa, India",
-  award: `${site.award.title} — ${site.award.by} ${site.award.year}`,
-};
-
-export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-IN" className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
+    <html lang="en-IN" className={fontVariables} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        <style dangerouslySetInnerHTML={{ __html: themeCss }} />
         <noscript>
           <style>{`.jsf-loader{display:none!important}`}</style>
         </noscript>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c") }}
-        />
       </head>
-      <body className="min-h-svh antialiased">
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-ivory"
-        >
-          Skip to content
-        </a>
-        <SmoothScroll>
-          <Preloader />
-          <Header />
-          <main id="main" tabIndex={-1} className="outline-none">
-            {children}
-          </main>
-          <Footer />
-          <BackToTop />
-          <Cursor />
-        </SmoothScroll>
-      </body>
+      <body className="min-h-svh antialiased">{children}</body>
     </html>
   );
 }

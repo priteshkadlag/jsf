@@ -2,10 +2,10 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import Picture from "@/components/ui/Picture";
-import { clients } from "@/data/clients";
+import type { Client } from "@/lib/cms/types";
 
 /** Full logo wall: cards rise in a staggered wave, lift on hover and reveal the client's name. */
-export default function ClientWall() {
+export default function ClientWall({ clients }: { clients: Client[] }) {
   const reduce = useReducedMotion();
   return (
     <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-4 xl:grid-cols-5">
@@ -21,7 +21,11 @@ export default function ClientWall() {
           <div className="group relative flex aspect-[4/3] flex-col overflow-hidden rounded-sm bg-white transition-[transform,box-shadow] duration-700 ease-[var(--ease-expo)] hover:-translate-y-2 hover:shadow-[0_24px_50px_-24px_rgb(31_42_36/0.45)]">
             <div className="relative flex-1 p-6 transition-transform duration-700 ease-[var(--ease-expo)] group-hover:-translate-y-3 md:p-8">
               <div className="relative h-full w-full">
-                <Picture media={c.logo} alt={c.name} fill sizes="(min-width: 1280px) 18vw, (min-width: 640px) 30vw, 45vw" className="object-contain mix-blend-multiply" />
+                {c.logo ? (
+                  <Picture media={c.logo} alt={c.name} fill sizes="(min-width: 1280px) 18vw, (min-width: 640px) 30vw, 45vw" className="object-contain mix-blend-multiply" />
+                ) : (
+                  <span className="flex h-full items-center justify-center text-center font-serif text-2xl leading-tight text-ink">{c.name}</span>
+                )}
               </div>
             </div>
             <p className="absolute inset-x-0 bottom-0 translate-y-full bg-espresso px-4 py-2.5 text-center text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-ivory transition-transform duration-500 ease-[var(--ease-expo)] group-hover:translate-y-0">

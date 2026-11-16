@@ -39,3 +39,22 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# CMS content saved from /admin at runtime (back this folder up on the server instead)
+/content/
+
+# example env file is safe to commit
+!.env.example
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+/tests/.auth/
+
+.env*
+
+.env*

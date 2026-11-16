@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { Suspense, createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import { gsap, ScrollTrigger, prefersReducedMotion } from "@/lib/gsap";
@@ -11,7 +11,6 @@ export const useLenis = () => useContext(LenisContext);
 
 export default function SmoothScroll({ children }: { children: ReactNode }) {
   const [lenis, setLenis] = useState<Lenis | null>(null);
-  const pathname = usePathname();
 
   useEffect(() => {
     if (prefersReducedMotion()) return;
@@ -38,13 +37,26 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  // Reset scroll on route change and re-measure triggers once the new page has laid out.
+  return (
+    <LenisContext.Provider value={lenis}>
+      {/* Reads the URL, so it sits in its own boundary: pages rendered on demand (new projects or
+          posts) can then still prerender everything else. */}
+      <Suspense fallback={null}>
+        <RouteChangeReset lenis={lenis} />
+      </Suspense>
+      {children}
+    </LenisContext.Provider>
+  );
+}
+
+/** Resets scroll on route change and re-measures triggers once the new page has laid out. */
+function RouteChangeReset({ lenis }: { lenis: Lenis | null }) {
+  const pathname = usePathname();
   useEffect(() => {
     if (lenis) lenis.scrollTo(0, { immediate: true, force: true });
     else window.scrollTo(0, 0);
     const id = window.setTimeout(() => ScrollTrigger.refresh(), 120);
     return () => window.clearTimeout(id);
   }, [pathname, lenis]);
-
-  return <LenisContext.Provider value={lenis}>{children}</LenisContext.Provider>;
+  return null;
 }

@@ -4,535 +4,535 @@ export const media = {
     "src": "/images/projects/villa-rosa/01.webp",
     "width": 1950,
     "height": 1097,
-    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAkAA4BaJZACdAEQUKaL0+4AAP7tskkYERaXMnfO+u9+xcGauptAS9YJO9hhcTAqiJxSJ5C01/ICCc+ikU9WdDHqsFaD9t9cDMTp1AA="
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJZACdAEPhwwDOQAA/u2ySRgN1otbfwuf7f5Ivz224btFVDaBRVTkjfJdf9EIdX92RjjLQB2HxPbFGwyKccdCV3w382kAAAA="
   },
   "projects/villa-rosa/02": {
     "src": "/images/projects/villa-rosa/02.webp",
-    "width": 1800,
-    "height": 1013,
+    "width": 1950,
+    "height": 1097,
     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAkAA4BaJQAB8YHdYdN7jgAA/uJvk8W4Cezb4wZ8qJR2z54VZh4/Gc7S/37Y4R8Juc67fUMlMZqZxJ4+3CY49X5jv07pNTbiAj/oQao4mIAA"
   },
   "projects/villa-rosa/03": {
     "src": "/images/projects/villa-rosa/03.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAkAA4BaJQBOgCDllxkSAAD+yJaY67YhWyisn9TED6g4B965f/nf5/hp6PYv5KnaSRjDXQLuVUV60WRhRuTdWoCQAA=="
+    "width": 1950,
+    "height": 1097,
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA4BaJQBOgCPyAXLokAD+yEePU5GcuJi2vOMS8YGWUwP1LCTEWHx3Gk+UowaLyEECqoVGwUoWQwSJurUBIAA="
   },
   "projects/villa-rosa/04": {
     "src": "/images/projects/villa-rosa/04.webp",
-    "width": 1800,
-    "height": 1013,
+    "width": 1950,
+    "height": 1097,
     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQAAkAA4BaJYgCdAEWUNHL/5KAAP6xlHb6O6Q3TPvuL7fX8vnJY2FKFRrV+WN5mpQE1ebCjNRDmOSvsa/e5SFCZZQAAA=="
   },
   "projects/villa-rosa/05": {
     "src": "/images/projects/villa-rosa/05.webp",
     "width": 1306,
     "height": 1950,
-    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAQBACdASoQABgAPu1iqU2ppaQiMAgBMB2JYgCdAYv+7ea6lvASs4meiAD+WuVHm6oUmbMtC/ZCLQOyRsMBQ0nMr1333nL6ZKkHjlbOtJJPXCj8ob4lH73LRJATP6+jWIfL+PwVs77ksFZJHPv3/IHzfHROngLmE4V+UdIj+Ip3fek2M8M3rxCgHkTdyI/GVCiANw9EDYWDG7TAbuqQUbyvAAA="
+    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdAYv+7ea6lvASs4mhzAD+WuVHm6oUmbMtC/ZCLQOyRsMBQ0nMr1333nL6ZKkHjlbOtJJPXCj8ob4lH73LRJATP6+jWIfD6r4X6MQiySKww39/yB83x0Tp4C5hOFflHSI/iKd33pNjPDN68QoB5E3gMP4NGkWtrVp8fN3P2/SoCBQ9onHQAAA="
   },
   "projects/villa-rosa/06": {
     "src": "/images/projects/villa-rosa/06.webp",
     "width": 1337,
     "height": 1950,
-    "blur": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBACdASoQABcAPu1iqU2ppaOiMAgBMB2JQBOgZYAhuLV+num3OQvdQQAA/hZoJ5r31QMEkjCfOVAU+slJqnz9zxi3YWsKuk6B051SM6n1UtqTPDWbz5YYTBORaUwKtAF0+PX/HH3IzGIRMTLI9mVS8+HpxtSJcY21e8zznoz6YlpEFmNM0DojIAA="
+    "blur": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBACdASoQABcAPu1iqU2ppaOiMAgBMB2JQBOgZYAhuLV+mFpjEEn0xvAA/hZoJ5r31QMEkjCfOVAU+slJqnz9zxi3YWsKuk6B051SM6n1UthD00HzL4vctFIctKYFWgC6fHtqIb6+xXREClZOWlVXEKdZXSmlmPNXOL9oGFLFXagBCFaDRMz+AAA="
   },
   "projects/villa-rosa/07": {
     "src": "/images/projects/villa-rosa/07.webp",
     "width": 1300,
     "height": 1950,
-    "blur": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAABQBACdASoQABgAPu1iqU2ppaQiMAgBMB2JZADE2Yv+5Rniz0ZqrbebNy5YAP7uIdyxBwWScfOVjG1DGfyHmnwLcZP2wyh+30EOiYnCry80icas28aXqz7x/HHWLBbJQoOZVlHeTZeb1xob4U1KMf+usCiX2+pAG7ixD5thakzxCfeTVvZnpDf7XGqWAzzfwHClr+kZnMXlPVfsSbUkbRsIyxfHN7klAP1G1r6MCCyAAA=="
+    "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAACQBACdASoQABgAPu1iqU2ppaQiMAgBMB2JZADE3HAH/QYkWL2ElI4utSihQ+AA/u4h3LEHCUnx85YUbUMZ/IfafAtxk+k+UR2vklwij5H+SFGBmsHK0PLVcz66EnCbHlhmuFpNQHe4yRn3cnl1c4o4/yemLDtGmQKnRs2Y0l44Zf74yfW/7Mw3WFkRX5TDwJjma92U3kGr9H8/+dvLGem09XCv181ogqxYMR7sLYekoAAA"
   },
   "projects/villa-rosa/08": {
     "src": "/images/projects/villa-rosa/08.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAQCdASoQAAkAA4BaJZgCdABWBNAA/q+bu7nUYuRIb2O0aKtmaZ9opY3so3ukv2ZrukR46eyowFKRWWH4kh7waA+ZCPCbu0GhYAAA"
+    "width": 1950,
+    "height": 1097,
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAkAA4BaJZgCdAC5G/JwAP6xkp2TWTVAbGh8ZxWXHUdcAAJ0ndD6Iq8Vzt2oILBUWHmgfrygZ+bPyyMBJupex9pTRIAA"
   },
   "projects/villa-rosa/09": {
     "src": "/images/projects/villa-rosa/09.webp",
     "width": 1311,
     "height": 1950,
-    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZACsACLqz6MTZecSVDGxIAD+QJ1IiQHoUXwn+lgk5tEj1UFnUOzcML1oTyg7rc72/CBQ1pGwV1V6M+DNyBH03cIl1fm4x5ejY1KdLIwEe+Af1ebn0TwbWuCWN13WNbDjAzaL1TceyG58tUyAtAAA"
+    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBACdASoQABgAPu1kqU2ppaOiMAgBMB2JZACsACLqz6MTZecSVDGxIAD+QJ1IiQHoUXwn+lgk5tEj1UFnUOzcML1oTyg7rc72/CBQ1pGwV1V6M+DNyBH03cIl1fm4x5ejY1KdLIwEe/Ui6QwCkR2g6O75ccqxxctOC0GCtOEtxpVI69uBaAAA"
   },
   "projects/villa-rosa/10": {
     "src": "/images/projects/villa-rosa/10.webp",
-    "width": 1800,
-    "height": 1013,
+    "width": 1950,
+    "height": 1097,
     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAQCdASoQAAkAA4BaJZACdABV8gAA/tW2Di8YgDhJGGkyW849h7z3e6nmabBMQs3w8ocbgm/XM7IUZX+iIq+iPm+dK/dzQgD5mvSb63iAAA=="
   },
   "projects/villa-rosa/11": {
     "src": "/images/projects/villa-rosa/11.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJZACdADv18nCAAAA/rcb7BtwRYAoNBtBySAfquEDccBFACmMOcBeio9w1QlcT3an3sdxBrlBGJvui7t70tcSstlqmCUAAAA="
+    "width": 1950,
+    "height": 1097,
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJZgCdADv18nCAAAA/rcb7BtwRYAoNBtBySAfquEDccc0Vi436vAXoqkgmt43Uy/drz2yt19Q4872c+lr3pa4lZbLVMEoAAA="
   },
   "projects/villa-rosa/12": {
     "src": "/images/projects/villa-rosa/12.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQAAkAA4BaJYgCdAD2Pnc7PuL+AAD+6CP0Kv5Pg/uo+jiHSBo7haopKahKkkKho/9skz4Hg6BOrrxev46P9QxhNH7FiJunAAA="
+    "width": 1950,
+    "height": 1097,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQAAkAA4BaJYgCdAD2PndZlES4AAD+6CP0Kv5Pg/uo+jiHSBo7haopKahKkkTfgyVja+TU1a070zZp6kFpzGE0fsWIm6cAAAA="
   },
   "projects/villa-rosa/13": {
     "src": "/images/projects/villa-rosa/13.webp",
     "width": 1347,
     "height": 1950,
-    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABQBACdASoQABcAPu1iqU2ppaQiMAgBMB2JYgCdMoRwAB73nDiriq/PsygAAOIlP1wlJ8RpnGidGUZAEvhZDUguZR+E4Z2kKSuAPNEJLk8MTS0tmA3ouRQokd6aFCTxAE/mhSGAZVRRKY0oPR4vKrXUaCLw/A3ivBbbbifAMsXMCbLPiKVSakAA"
+    "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACQBACdASoQABcAPu1kqU2ppaOiMAgBMB2JYgCdMoR4GB733+Js4hlYCo+Q4IAA4iU/XCUnxGmcaJ0ZRj94LfZaD/guwmHZOf3OVF9UUdzExtOpJV1m1iN/bVDCoPI7h6KWy9D12QwXfxtZcl+yLZJzUF5vLZ6Pz4hT+gkD7tE1653AeO7bySsD44AAAA=="
   },
   "projects/amora/01": {
     "src": "/images/projects/amora/01.webp",
-    "width": 1080,
-    "height": 607,
-    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoQAAkAA4BaJbACdAfwBD4OkQGAAP4Lc76XTGhRBnwaRzMSOBisVjOqBCdyBZDKsE9dHk+vbSdLZk+zmONcMq5unAW+RqTKN8wNUxB9cPA/cMEbLhOKK3yi3tdBYAAA"
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAQCdASoQAAkAA4BaJbACdACqx03waAD+7Nv8QyW++HYCTC7Mk2f6DfcmWwxVMMHd0tf05bkfFf6SOmu1d9BKibIIPT3oXyUrLx8D6d4G57+VZ7ey7qZfL0oEtAAA"
   },
   "projects/amora/02": {
     "src": "/images/projects/amora/02.webp",
     "width": 1080,
     "height": 608,
-    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoQAAkAA4BaJaACdAYs3uPCjJ67qAAA/ps3KQo8pzlLZ6PmOMjLgKnG2HYMOvNabm1MUI7vwI0QA+veylnWTLRq/TFd/uzUs7bfFmmW4MUwAA=="
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAkAA4BaJaACdAYtpuPCTzWgAAD+mzcokSu38w56PsSXGxHvUcJYJ0Ycmiht0bxw7rhytxWKw2YDwuX+f0q+AxR+8BYcdGtkwf9qFYAAAA=="
   },
   "projects/amora/03": {
     "src": "/images/projects/amora/03.webp",
     "width": 1080,
     "height": 608,
-    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQAgCdASoQAAkAA4BaJbACdAYpRowZ+YZgAPlpBF985HRw/7ZpBXiMe4qtb6mTFoNDz5PACfqeoZcVn7muXVehzwVz2YtGF0xKFH/4BU/VaCR9GdxWU+2kTSvfS3RrKbGE1L7mxAAAAA=="
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAkAA4BaJbACdH8AqQCpLjDqQAD+7kPDtY1OxlLE1BTAIeQAIJcKltOUYMK3eHMLnP5I/QucNOXQjzyTiclC+wu2hJRPsw4ZzDBIRVKTu1Wa6tew5AAA"
   },
   "projects/amora/04": {
     "src": "/images/projects/amora/04.webp",
-    "width": 1080,
-    "height": 608,
-    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAQCdASoQAAkAA4BaJYgCdACmqmwgAP6GoNL5hKpUgiGOCeYf3XDUmM0ANuXUHLr64t+YOsQWiXf3Zl5SJ8uHcO7GiaLl6DJ5GH9Xwj+8voqZYNu50C1IV0VwAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwAgCdASoQAAkAA4BaJbACdAYrdVcC1FJ2AAD+eRPhhBdYY+EZCYHsVC7fs5b9X8fvOkxkjodvq6BK4pf1DrTOK7ZrFBwwtq1GfmKgJXRjVLshg2T11RPNHgZnWEIqlXP970QBuTYAAA=="
   },
   "projects/amora/05": {
     "src": "/images/projects/amora/05.webp",
-    "width": 1080,
-    "height": 608,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAkAA4BaJQBOgB09INQInmAA/mc3fFxtoys5hPcHDkWllmLVDxV1fb6pec26oL0XTYVRaevVoMhTL84jGmVev6a25Z0wzspPEfLeZu0Hk1OIAAA="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAkAA4BaJQBOgCE7OLYMBAAA/urCfYsapRy6SH5h9hfvcy8Ly+goLKpv/583AqI05GXI89aiLDFzkwUfn3RxNo73iuMAAAA="
   },
   "projects/amora/06": {
     "src": "/images/projects/amora/06.webp",
-    "width": 1080,
-    "height": 608,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAQCdASoQAAkAA4BaJbACdAD6H/iFOAD+7kPDtY1OxlTsaMI7UIHKnL/o9u/tn7Od5lwXnvwhJcRH5skP1ERgwt/TwrqOzFcnWZt3jILAdr4Cg3m9chcRu3/vGAAA"
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoQAAkAA4BaJYwCdAEf1iWRGW8AAP7Tz6ZpCiF4AcOLEgbmoPEllxPlv6PE2HeDp00u5U9PPGRA4mpegjNAAA=="
   },
   "projects/amora/07": {
     "src": "/images/projects/amora/07.webp",
-    "width": 1080,
-    "height": 607,
-    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAkAA4BaJaACdADjW7JdST/AAP7MH8C3C5bEDGnCoT/sJEMDvmKa5GBkywe7dlesB20DbxwbRfbR2qKqHajOazMg0l0NjniTAUI9puIAAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAQCdASoQAAkAA4BaJQBOgBJVSzwA/uslq7DxXzapNeN+GmRRE7cUB0kMz+5aevaYj4zDJH78j28A2109C2pyTIGeb9FOcG6lFTR/OegAAA=="
   },
   "projects/amora/08": {
     "src": "/images/projects/amora/08.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwAgCdASoQAAkAA4BaJbACdAYrdVcC1FJ2AAD+eRPhhBdYY+EZCYHsVC7fs5b9X8fvOkxkjodvq6BK4pf1DrTOK7ZrFBwwtq1GfmKgJXRjVLDrKdntsvT+Wp1hwKDecNH85NlsKeAAAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAkAA4BaJQBOgB8mpm7iyQAA/uq9bZRrEPq6xvqzEKhbpW4T8BAgaMkF4E9mBEpXwR1bXrVmtV3Q0qDTSnNvk7v5TBGIMKjCks59YRAAAA=="
   },
   "projects/amora/09": {
     "src": "/images/projects/amora/09.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoQAAkAA4BaJYwCdAEf1iWRGW8AAP7Tz6ZpCiF4AcOLEgbmoPEllxPlv6PE2HeDp00u5U9PPGRA4mpegjNAAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQAgCdASoQAAkAA4BaJaACdAD7WJONLrPAAPk3quK7xd3VnMHYcKKjIHhGktCn8aSlHLk9FsYLQcPtq2Ug5DspXe1z06gyk29N9CmWOC6Lfs1UyZzsSgZFqMFsnySFuAAAAA=="
   },
   "projects/amora/10": {
     "src": "/images/projects/amora/10.webp",
-    "width": 720,
+    "width": 1920,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBACdASoQABgAPu1iqU2ppaQiMAgBMB2JbACdL1ABOxS8ZahZPHpO0AD8gvK++e9tZOaA+NDs4wZ3jivWYcSDs4lvHPeS7QA6TFkioFvGIcIsY2MvT4qtHEJ55347dewMmYv4/RCClQ+4WDRYjhvMHKkdildKLOSNac8sA8yGJhzsax6R3hNyTOAp9ngB/OBHCC5vWu8JXTCY6Lv5RfRzdbgAAA=="
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAkAA4BaJZACdAYstbSq76X9wAD4WcbBnxDU3kPi3zg6BHNV3O+I3uAPZHoWLVAEXuvxxt5EFZESTlzY3r4+wsCL/zEiKhHhAp/HeAAAAA=="
   },
   "projects/amora/11": {
     "src": "/images/projects/amora/11.webp",
-    "width": 720,
+    "width": 1620,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAADwAwCdASoQABgAPu1iqU2ppaQiMAgBMB2JQBOgMXXb1f0jo42BAfcoAP60yCC/3/7gnFZd3BPK0EH0VilwVspJml/Tc3dc20T3OZJ1Aqh1th3MFqLPBaDW7wrud5P56R9cx3O2u6M0zpfCnQXgdQCYX7Pch0kqYRz2vA4IWfXS8Fw2D3XXds9MqVkvt82AmmnelsCIBPpAhQd3VhIjT0LAAyx072AA"
+    "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABwAgCdASoQAAsAA4BaJZACdAYuHvSGYI3XM6gAAPRkLRPM3sGyyWxAvqUOKNDwAumCVuhepOs/PTNwQESioiZ4tnKUx4pygR4we8WXBo3mjTDw9leQBjU0yjY2CNlBdFl5JBGUztsGsSAA"
   },
   "projects/amora/12": {
     "src": "/images/projects/amora/12.webp",
-    "width": 720,
+    "width": 1620,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoQABgAPu1orU6ppiSiMAgBMB2JYwCdACHQ7Vmk5orBH8AA/tL7oQrbCJ7yO5Y48X38lzOdIFKaQ4iAtHppD4YXsx+CwdFM0cp9J2Wpu1lv+HaNjdhMjCaptPk2zvPC+S4UEfju0qlaHuub0OCmFYsAAAA="
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAsAA4BaJYwC7ADQNV7YAP6rrV6jwvtSXjTQ0DJ0jS8y6dT0GTZ8XOX6TvL3RNx7NxbNafMfxLGz0RChHevnckIdLQAA"
   },
   "projects/amora/13": {
     "src": "/images/projects/amora/13.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAkAA4BaJZACdAYstbSq76X9wAD4WcbBnxDU3kPi3zg6BHNV3O+I3uAPZHoWLVAEXuvxxt4/GlJIuRsTL0FGCo4JNOTjYPVug3L0QAAAAA=="
+    "width": 1620,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAsAA4BaJYwCdADHZ9viQDwAAPw2EZ5RkqbxOt//xeSIbtH/SUjkc9a/Q/KKTWcGM1T+QAY5IBisHnBD/dJkhxd5f2fky1PVjnjlgi5/hSAAAAA="
   },
   "projects/amora/14": {
     "src": "/images/projects/amora/14.webp",
     "width": 1620,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAsAA4BaJYwC7ADQNV7YAP6rrV6jwvtSXjTQ0td1vbawO29PwGTZ8XOX6TvL3RNx7NxbNafMfxLGz0RChHevnckIdLQA"
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAsAA4BaJaACdAC4qGJxzpAAAP7R/rIUf1r4uscDOV+EAakXud6Au3VsMmlOHlCaWFZ8Z4OBSULjasGXO+HKZSwPVGuv6e5QwAAA"
   },
   "projects/amora/15": {
     "src": "/images/projects/amora/15.webp",
     "width": 1620,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAsAA4BaJaACdAC4mujo6koAAP7R/rIUf1r4uscDOV+EAakXud6Au3VqY38HLZUoeCmmisD17RBj7SzaNFgr6o11/T3KGAAAAA=="
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJQBWABl1T31JzgAA/ib7qNCyL6GG91cSRZsmbNSa4AxsuPVh4Gmig8FGum/zU7yoD9Wk9Q2z1BfL6J4VQhTA0AA="
   },
   "projects/amora/16": {
     "src": "/images/projects/amora/16.webp",
     "width": 1620,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJQBWABl1T31JzgAA/ib7qNCyL6GG91cSRZsmbNSa4AxsuPVh4Gmig8FGum/zU7yoD9Wk9Q2z1BfL6J4VQhTA0AA="
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAsAA4BaJYwCdAD8fAGAzgAA/fmc2hfZz4sOLXqfXKZ23yrYtFV8txeu0AWH2jMH36l1nwHzHu6m9PHZgyAl4SgYIiXFAPEYZ+yYa4AAAA=="
   },
   "projects/moira-chapters/01": {
     "src": "/images/projects/moira-chapters/01.webp",
-    "width": 1440,
+    "width": 1920,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwAgCdASoQAAwAA4BaJbACdMn8BXakAX93AAD9+1EBFfKhmTnw48PyM/Z1hTidIXoG0pHd92RRO6BX7kUecxPp1shvPQuijHTuSIRA0Fz9/sF+puqjxUgmoTcmpLqZon1xaJIf3AAAAA=="
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJYgCdAEQIkyPIAD+yPeFEOT6OdclmkvNiOOIilKGk1ZmfVOF91fubFz8mJq7T/SflWZNKQFA2Xp6nvi9lQAA"
   },
   "projects/moira-chapters/02": {
     "src": "/images/projects/moira-chapters/02.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJYgCdAEQIkyPIAD+yPeFEOT6OdclmkvNiOOIilKGk1ZmfVOF91fubFz8mJq7T/SfrkWsR4Eqc4Dsmx217AAA"
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAkAA4BaJYwAAv0yhyubOAD+k9h0TRnMZ0CVV+qIEpckdJLo6BUi8Uzg2B0enljnda8N/gOZM/x3EHCvjYhNyilKV3hhhXCn+XsAAAA="
   },
   "projects/moira-chapters/03": {
     "src": "/images/projects/moira-chapters/03.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABwAQCdASoQAAkAA4BaJQAALLkyAAD+k9h5W0ZzvfO4PYHmrd6qd1SyFtvs2RCfqdB4heHcrtdLZXiffLx7FfefuJBE1hbOESeMEYHzVA1/ZIAA"
+    "width": 1080,
+    "height": 1920,
+    "blur": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAABwBACdASoQABwAPu1iqU2ppaOiMAgBMB2JQAFgAGpHiZftFft+ed9/NjdgYADiWpCh/y7at5lNlgJ03817h92dR2mu+lSeHFGiZkSoGEqDjw6w0kySn+GCfvAWjWLYipGare/U6Xw/eCryzEM/KX2deRhpHeQwvlNPCfgcLVYTfMnAIWI8cLCRIkktlFPXxyb0xohVy8xfG2UtgNwNRIVkYtUAa3kIuosTo/ZVcrJQKXkodhg27L8xk+9r08+GFg3058THfAA="
   },
   "projects/moira-chapters/04": {
     "src": "/images/projects/moira-chapters/04.webp",
-    "width": 1080,
-    "height": 1920,
-    "blur": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAABwBACdASoQABwAPu1iqU2ppaOiMAgBMB2JQACw0jVjxMv2hNCGQD1uMTrfLADiWpCiAaMHSDugAsOEDFBXKiG6l453vIIqAZ4kwyoNRQk+lIZD4Q4YoaJZG5Oy3xEZKKpt8/GRPr4pIs8/oWmznxn9rlLV6JNlKD+FW7cv7UTfoBj1Z5nlpXx8ohXqVn7AEMzRCrl5i+NspbAbgaiQrIxaoA1vMGotkzLfyia2SgUvD9SeDPI9auTxKl/nwwsG+nPiY74A"
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAkAA4BaJYwCdACVo0O0AAD80O7qD3S9VdvNpG7LL6SJrrLsQ3+nxgCPCJs2yRSL3V2xNlWwjavthgA+B09+GjKUU4FFtwM6wN8AAAA="
   },
   "projects/moira-chapters/05": {
     "src": "/images/projects/moira-chapters/05.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAkAA4BaJYwCdACVo0O0AAD80O7qD3S9VdvNpG7LL6SJrrLsOuo5v1ucFOD2k6DjL+7fZNx9QV81UOuqTzPKNHlIpwKLbgZ1gb4AAAA="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoQAAkAA4BaJYgCdACzrtbqjgAA4ni/CkX99MjjkmIZoE1cP6snuuZnJubr63hsDE4ngQysNW4f+YUrnVSneYwjp05nfZQjTSiQbJVWWkU1flDtGeYE4AAA"
   },
   "projects/moira-chapters/06": {
     "src": "/images/projects/moira-chapters/06.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAQCdASoQAAkAA4BaJYgCdACzmlBfaADOOG4Y1R2pGgLIWG0cjyAScoW4lN8PzDtBLyZ1XKU0HOGQkANHn2+3wE3OI9ZD6ReH9WcAjeftO5iHqD5Wogl+eMdJ96UAAAA="
+    "width": 1080,
+    "height": 1920,
+    "blur": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABQBACdASoQABwAPu1iqk2ppaQiMAgBMB2JQBOmUABiUSpi7lHGwz4+BGYAAP6PjGf8p4pdUIfdD4Rnu/jCtrlUP6hkor4CzvYGNehNbMbDCtngMymJpikdNhRGmY+pF1tqMHjOFV6l/bbgVqsbhaL7EaTT+DekMAd48SE3WtiMFr23VehyK3lxh+OyzwL0sNoJ5x3lSWMpV1boH5AAAA=="
   },
   "projects/moira-chapters/07": {
     "src": "/images/projects/moira-chapters/07.webp",
-    "width": 1080,
-    "height": 1920,
-    "blur": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABQBACdASoQABwAPu1iqU2ppaOiMAgBMB2JQBOj+ABZrg7FBgB3Qh4tTkwAAP6PjGf8p4ogZ5Zz5zvV/tGByWdhrmHK9QsxqaE03f7IP+gsmKAG73D4DheppsKI0zHtuyN5gYuKugkZn14umNt3ouSDvbv6W/pythi8nTHHX8N8wI9Lc3WrlF/XGex36hjDWzsF1MoiK/0B9hMppw4AAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAkAA4BaJYgCdAYvDvKiQrMAAM4LxkgP8VLpDqPDful04o+nERNP1NuvXsxv7Aj4WvsAjUvBX/fpnaa/19LFbwNUUUi94/Pdxy2b6W5GgAAA"
   },
   "projects/moira-chapters/08": {
     "src": "/images/projects/moira-chapters/08.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAkAA4BaJYgCdAYvXuiTSgAAzgvGSKzee9HAg8hpazmH7T3UnxSsq1qI2GjFLzmd9+4GMg3siqQi8+Xb7+zB3cKjrZ53Adnu45bN9LcjQAAA"
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABQAgCdASoQAAkAA4BaJYgCdAYsjwhqVepPPgAA/seAZO+ya3FPLYMeUMrv4iTqrcnQYuNjEbfx3m4/ukzvZG5Wpj3wGqF+biK8xHaIEajSH0e/AAA="
   },
   "projects/moira-chapters/09": {
     "src": "/images/projects/moira-chapters/09.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABwAgCdASoQAAkAA4BaJYgCdAYrTwhvCdkHqQwAAP7HgGN1yU1qdbQ7smPHGXWjUNATYBStV6kj0pvvB7feUl5WfQ4IBrZwjtFeYimKBbG7KuJtcAA="
+    "width": 1280,
+    "height": 1920,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoQABgAPu1iqk2ppaQiMAgBMB2JZwDCgCHgCmSURXzvLZurMAD+7bziSseNthT/VPnhscKoy8rRJvXiZsdpusMpvncaSFs5HAwhHMoNrunDrgEeAAA="
   },
   "projects/moira-chapters/10": {
     "src": "/images/projects/moira-chapters/10.webp",
-    "width": 1280,
-    "height": 1920,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZwDCgCHgCmSURXzvLZurMAD+7bziSseNthT/VPnhscKoy8rRJvXiZsdpusMpvncaSFs5HAwhHMoNrunDreYIAAA="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAkAA4BaJaACdADPKC7NaxAA/vSYh+aa2/sJ2VFOCsN8IC77L0cYBOiKDEYbBZ/daw/h/+480M8GukPyJausnDCVgG21caT+PhTSZj3egGmTB9v4AA=="
   },
   "projects/moira-chapters/11": {
     "src": "/images/projects/moira-chapters/11.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAQCdASoQAAkAA4BaJaACdADNimwgAP70mHueP3+wnZUU4KwZU2+4Uoi8egV8MVsxGnsvZogKfElAq5CmMzmiFB5WC7P1oCZO/hB4cud8ZaTMe70A0yYPt/AAAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAkAA4BaJZQCdAYstK3zP/y4AAD+1ivH7CXnzjc53cCej1nnQ0HqKsI1RHQ0nHlmx1W8Yu7qpiLQ0nqmhvCVPu4YwdADSpIpfCPnOiRUYAAA"
   },
   "projects/moira-chapters/12": {
     "src": "/images/projects/moira-chapters/12.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQAgCdASoQAAkAA4BaJZQCdAYstK3zP/09fAAA/tYrx+wl5843Od3Ano9Z50NB6irCNUR0NJx5ZsdVvGLu6qYi0NJ6pobwlT7uGMHQA0qSKXwj5qs/9wAA"
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACwAQCdASoQAAkAA4BaJQBOgB5ao/wAAP7UVnVaM2+wjznADKCEYZ9++8lQDekKmfGitFTq0rtxuAXkoo5fYNjAJD0rBLD3TDAMIhvGNMwLfc5EgMrMe1MgAAA="
   },
   "projects/moira-chapters/13": {
     "src": "/images/projects/moira-chapters/13.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACwAQCdASoQAAkAA4BaJQBOgB5ao/wAAP7UVnVaM2+wjznADKCEYZ9++8lQDekKmfGitFTq0rtxuAXkoo5fYNjDOWqlHftllhPaOx0ITPTd7a9fSfD6xvaAAAA="
+    "width": 1440,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwAgCdASoQAAwAA4BaJbACdMn8BZB2lFqTIAD9+1EBFfKhmTnw48PyM/Z1hTidIXoG0pHd92RRO6BX7kUecxPp1shvPQuijHTuSIRA0Fz9/sF+puqjxUgmoTcmpLqZon1xaJIf3AAAAA=="
   },
   "projects/moira-chapters/14": {
     "src": "/images/projects/moira-chapters/14.webp",
-    "width": 1800,
-    "height": 1013,
+    "width": 1920,
+    "height": 1080,
     "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAQCdASoQAAkAA4BaJbACdAEPQ7OwSgAA/uuvB3Fe5298S4/H28MPhdGEA53JRim+605OKAtcOJn3ZlFUXNgn8Z69R0Y/dU/xXYTUwBUuEabCAKA866sUMdb0HFfP8Njx6IotAAA="
   },
   "projects/moira-chapters/15": {
     "src": "/images/projects/moira-chapters/15.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABwAgCdASoQAAkAA4BaJagCdDiAByb3b5erCsoAAPlYfBeOVoT47Xp6LTHyQlcaGr62v+ziR0tPxoHVOyY41cKSuMtzKr57bXCfVamsE4FcbprAzmeU9MaGdXfvTLgwAAA="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABwAgCdASoQAAkAA4BaJaACdDiABybHb5erCsoAAPlYfBeOUoT47Vh6LTHyPkdtvoQAz/p6RktNxoDoxOcEauFJXGW5lOOl4L+NYF7l6YwOl2UXMg2hhPeZASYF1c/wAAA="
   },
   "projects/calisto-beleza/01": {
     "src": "/images/projects/calisto-beleza/01.webp",
-    "width": 1280,
-    "height": 720,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAkAA4BaJbACdEf/gfQYvPMzAAD+tC4GgD8x47ane95ZjOIj8gGkxqiai39gxNkkKtHeSEsoQRWk9kMdqi565XBeCLV4QATUsEPl/c5Vgs3na9PmAAAA"
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAkAA4BaJYgCdIExgqi5vKuAAP70Cf2bwYvFBafMmDATUqFTXLLk1w1PbjehGGT8Rv4IlnYqsvnP8/z8EV9kNQlquDfkJSBcX4lqvuuNsSHlpTXhWwAA"
   },
   "projects/calisto-beleza/02": {
     "src": "/images/projects/calisto-beleza/02.webp",
-    "width": 1800,
-    "height": 1012,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAkAA4BaJYgCdIExgqi5vKuAAP70Cf2bwYvFBafMmDATUqFTXLLk1w1PbjehGGT8Rv4IlnYqsvnP8/z8EV9kNQlquDfkJSBcX4lqvuuNsSHlpTXhWwAA"
+    "width": 1280,
+    "height": 1920,
+    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdMoAluRWCvdCDm/b/OaISoAD+s3AZomqcZV+mGMf0/ooj9u7yZFy0SaMN+h4izUH+DZ7qZ/LLtc6Pt3xmHeSsclHS8bJcpqLv9qkjwHix0dhg/3gVa8xlg5P2m8j+S1ifYwknSekPlznMYJguQPHsbVfPBR7wh5SK6zpM/JHwoN88C4cME4Wu84poAAA="
   },
   "projects/calisto-beleza/03": {
     "src": "/images/projects/calisto-beleza/03.webp",
-    "width": 1800,
-    "height": 1012,
+    "width": 1920,
+    "height": 1080,
     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAkAA4BaJQBOgBtKrZVQAP7UXl/twFBI5EZIYP1WoVsfY/x89NSOIkJAg3KnqRhIxXgteZhc3it0JYHXb0OBCsTKxhgA"
   },
   "projects/calisto-beleza/04": {
     "src": "/images/projects/calisto-beleza/04.webp",
-    "width": 1800,
-    "height": 1012,
-    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJQBOgCHvXLnHRgAA/t6e/cePQlDAo4pJt/GHmBQMWT5AALniFItcR4Eeo8wr4vfvesAvA4RhkDHzJgAAAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAkAA4BaJQBOgCHwtF9jggAA/t6e/cePQlDAo4pJt/Lm9u3G8zxGV0SBnY2FgeZUdVW37VuGxhbUuOT8zi2DwAA="
   },
   "projects/calisto-beleza/05": {
     "src": "/images/projects/calisto-beleza/05.webp",
     "width": 1280,
     "height": 1920,
-    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoQABgAPu1iqk2ppaQiMAgBMB2JQBOmUABcZabcW9L3zzl0AAD92WQMGv/W9iKL9OwHQxbXlxg1sy73APFQGmLF0V9IK4mbZ6g38RVK3QcsNTmndAxf3vZYDsKgG9Ja6LBzpTAZpjCrzscpyJgNvH+CQURBiYQecxp1dKkBiyfAAA=="
+    "blur": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JQBOgZYAsG+R3krs/1GyH4AD8odE3K08ZNComqAkjaLqM5+E4BbGVJ9XR4wjiUhWZG44op5WFBICAQkK/2P++HZrvkgBGGfrcfL2XC4YBsk+UssjOKhXAY+90sA7kc1cZePtwjFy9rxZnfx0rKEs3QY8Bg4O6Lv1vmF/2TQ76FYIh8AAAAA=="
   },
   "projects/calisto-beleza/06": {
     "src": "/images/projects/calisto-beleza/06.webp",
-    "width": 1800,
-    "height": 1012,
-    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAkAA4BaJZACdAEVcbLhAggAAP4I3mj1+m+WHd/kHhEEJF+XdWCfjTJxCa5v2V0OuJNECKlhRsXlQRFD4KNNPhJiRRWGheHvyYYA"
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAkAA4BaJQBOgBuxxSvwQoAA/tPnfplwE3HsJrP1Q88Zt+uGiWoYX+M6d9B00XN7P13Y3LgYduau/oEswq8nytIn0L1DiJBfjAAA"
   },
   "projects/calisto-beleza/07": {
     "src": "/images/projects/calisto-beleza/07.webp",
-    "width": 1800,
-    "height": 1012,
-    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAkAA4BaJZACdADGnWCwDcAA9qKJWx4pKEFBueKCqkvqEIKUaYC6meZ+p16i3/dD3eveVkfdMld/1Xw3DJddK4KaDO8DkXvL1Qt2FuYAAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAkAA4BaJZgCdAEVrOAHLTAA/ppvGO5PvkafMPJoooYDsfAbzcq9W8iGVbM/DTywt/8Uh0HQJoLt8VFVdGHPd+HaL4Aw0YlpCmz3SLaxQAAA"
   },
   "projects/calisto-beleza/08": {
     "src": "/images/projects/calisto-beleza/08.webp",
-    "width": 1800,
-    "height": 1012,
-    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwAgCdASoQAAkAA4BaJZACdIExgryfScSg0AD+t8XWoA75eOyuerdXoGkX80hlOhkvNxu3VPjG+VNAgeb+QnvKIgWz2wJ0EpzvrnszJcIRBVVBf3T4tN3gxDuMeOGK3mny3OAA"
+    "width": 1280,
+    "height": 1920,
+    "blur": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JQBWF4AA0RpPGtKRc9LQ32AAA/sTTOcws0zObLZB+0u8PLz2BUr1LB1ij5f6JdKP4vMI9lcWk2qH8jPcr9fa+ozpQsicdCveu103DIPrMrujD77T/p89Y2QOSOnX66VmetCAA"
   },
   "projects/calisto-beleza/09": {
     "src": "/images/projects/calisto-beleza/09.webp",
-    "width": 1280,
-    "height": 1920,
-    "blur": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JQBOgMYEZW4vx2Nk31bRD74AA/rMrf1BgSMhbAzpAaLDBJrrG+Ut8yIU+v8WvZe1VcLG3cyb6K0hb/3qRX0SQQrlKNT4u4d39FpHtZorC875SLuPXOH1VR9oKisrgDotFRT8vGOzVvgwSXD84QMO7pT3TNzrTLs8YwCUReerQAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAkAA4BaJbACdAYs3tSRUGOAAAD+6vNHSdQLz55tT+cFxp6dx7Kq4KjxKBI1KwyxdYcOOvbnO5CPiLi6g/c2zAi/3FxThqLEbxgi5pX9yl/07RjrQAAA"
   },
   "projects/calisto-beleza/10": {
     "src": "/images/projects/calisto-beleza/10.webp",
-    "width": 1800,
-    "height": 1012,
-    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJQBOgBpFm5hkKAD991MEcv3FLxIddzUVknL1LhlGEyT0WDDXMGv/qHl9621r+9+vLqPd5TV8PBsPF2knAAAA"
+    "width": 1280,
+    "height": 1920,
+    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAABQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JagCdBagR+gvcZQdz3gJJGgQgAP7qedxP/5JglcxbX0XZQOZNl+MUo0BNB4r2xGzoiT/eNrGfIO59RF/He300UPAb/tQ3EUahuIkwxyYGGEpbdKPT7Kx8miicpBAViPNH6VYTjjQsekFXTlvgV7Pwy/54JhTUQDe0FQwDVyMXf8qGi8v5hX8yDE+sg019uhPau//z6s3XOpIAAAA="
   },
   "projects/calisto-beleza/11": {
     "src": "/images/projects/calisto-beleza/11.webp",
-    "width": 1800,
-    "height": 1012,
-    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAkAA4BaJQBOgB3uMzPeAAD+33Mm6a0akcJQeqFkXcXrcx7Mmltk1HEiblZhF7sWqrYOCs+HGU7He8WMXOTqcDyYAA=="
+    "width": 1280,
+    "height": 1920,
+    "blur": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JQBOgMXwZW4v8Uw2PDEq6/xAA/rMrf1BgR7PQOOeeS7u8arrG+Ut8yIH6RDjrfen3Y2FvAQt8wcM4TNkCFa1gWfpO2rcDtnn1YlRErHuQi+FIBTVc3cKqPtAjgne7QczlbTaqGvlY/C3eI3dyDvFdfEAPc7hwLlNevLkLkHgAAA=="
   },
   "projects/calisto-beleza/12": {
     "src": "/images/projects/calisto-beleza/12.webp",
-    "width": 1800,
-    "height": 1012,
-    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAkAA4BaJYwCdAELlrfdfLwAAM4kK2B/5+6wKGxpztcGaghvV6ZnZ29dliEcxnVwxZxa2aNnk+/XE0kp+NaYeW9H0Fd5N+6AAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJYgCdADSLNzDIUAA/fdTBHL9xS8SHXc1FZJy9IUkRwFWOR750DmANfKDRlEDIibpnRKVYQvHn0KYOX00bgAA"
   },
   "projects/calisto-beleza/13": {
     "src": "/images/projects/calisto-beleza/13.webp",
-    "width": 1800,
-    "height": 1012,
-    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAkAA4BaJYgCsAECv3AtVAAA+pIy5VMA4LFG2VaJTONvugFci1FNoXEcCKdYc9ZSxAB4frZyI3CS/i4V0FcXgAA="
+    "width": 1280,
+    "height": 1920,
+    "blur": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABwBACdASoQABgAPu1iqk2ppaQiMAgBMB2JYwCdAYwS4TdW56RF8Vl3gW93AAD+52gUUOwT5ZErghO6ZkDiLw2ASXYv16Fx4a7f+rCBtZIiK7NmuZh6WqzKSzFXapZ/KNkNOhnEpn/RdTd25cTCr+avVv62rSRBBxfk1LP+HjmDsZlHcB5H23J2iHhqe3dem5LMWSWjzgA="
   },
   "projects/calisto-beleza/14": {
     "src": "/images/projects/calisto-beleza/14.webp",
-    "width": 1280,
-    "height": 720,
-    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAkAA4BaJZgCdAD0WG92iAD+8nIWd15i/9gegDR2zrUFmS6gtN62Z8QuEiAT3VbVANVqAwdjHQhSliCfeRAGpdevpGyE3rxDaFp7jPAAAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA4BaJQBOgCGY3LTqgAD+33Mm6a0JidpI9/7cwJhuyk1Vy5JsXXABeloaJYapy91fqW5FGRxBSWIu86BtAAA="
   },
   "projects/calisto-beleza/15": {
     "src": "/images/projects/calisto-beleza/15.webp",
-    "width": 1280,
-    "height": 720,
-    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAkAA4BaJZACdAC9AnfpBkAA/t2oJZLgy0j2JZ3s8BIPqJKZYDcUSxvbENlpPusZgVmrpdLpk07iGaVeTVVG60jdwW/BsCNbuugcIAAAAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAkAA4BaJYwCdAERC6xxjF4AAM4kLx0fFE+jFuYJzRrj+gPYB5L7rO6UbeJYerIqQNYeb7IDGYHpKu4KWkGL9cb6NtB3bgAAAA=="
   },
   "projects/calisto-beleza/16": {
     "src": "/images/projects/calisto-beleza/16.webp",
-    "width": 1280,
-    "height": 720,
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAkAA4BaJQBOj+AQVZJ0u3ALJAD+rctMQP6iximyH41uX9CQVloI15q9aTYbM9lhHQJTBmf6OhEaH9XGeAN27fLNIuTS6HrIyyLwHqQaAAAA"
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAQCdASoQAAkAA4BaJbACdAEJSSFnQAD5QTzVcWOv1Gb6PRaOgYudrlFsS+Nym/mlUXdYbzH7ujo8jO3oupBXaSowfmncE/LuOoLMwjYtM/ut27GjZQqdPcgAAA=="
   },
   "projects/mandrem/01": {
     "src": "/images/projects/mandrem/01.webp",
-    "width": 1080,
-    "height": 607,
-    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQAAkAA4BaJQBOgMXX5Mp0GPyeAADiYyHqD02Vj2+mHU70/tfpNOEym6rXaC3UeozuxE25ofzenfYI9BBB6pf4LwVhkAo1b02wGCW3vOYyIzLuRetF23ppgAA="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQAAkAA4BaJYgCdAEfH9aIAP7n4h4GaaRWFjKtbNW1umScMuXOWqdCbUItrtfmYw4P5sGdSIzAwVhnfqxtntI1Nb0oAA=="
   },
   "projects/mandrem/02": {
     "src": "/images/projects/mandrem/02.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQAAkAA4BaJYgCdAEfH9aIAP7n4h4GaaRWFjKtbNW1umScMuXOWl7ja20FYmnPTklTmwZ1IjMDBWGd+rG2e0jU1vSgAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAkAA4BaJQBOgCPapq0jaEAA/l9MbVnCTAlp8uQuIzsiTQtvrtlth8FpOq7LI0FKehLQztCxmL/lHxdPTDnby4g0wvqD5M2lvaAA"
   },
   "projects/mandrem/03": {
     "src": "/images/projects/mandrem/03.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA4BaJQBdgCKaWrXkAAD+CQZSkdxXr7kTG1G621OOLx+ZyG7z8yTwnQE/qwMNAxF+5CpDhM/2D625OozAAAA="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA4BaJQBdgCKZncDQgAD+CQZSkdxXr7kTG1G621OOLx+Zxtrz8y8fWQLDlN8sjr7ZpIwL2ebKwCiQ4i7tcAA="
   },
   "projects/mandrem/04": {
     "src": "/images/projects/mandrem/04.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQAQCdASoQAAkAA4BaJbACdADVDTgA/vATbQupffdx/VTtN0Rpp3W+d1GcO7D7He4WQLgEsnsTo5xH997Dyzd18hm9eVOPtevLcYkfOuDqT/0kMmreQAAA"
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAQCdASoQAAkAA4BaJZgC7AEF3i54AP5brEw1mvoV2jCzUAQ0GGNdrqLdomzP2Qj9P3U249KQ9/rq1dNsaJTxx/y4YD88cI7rJwK+QauUC/z4HeAAAA=="
   },
   "projects/mandrem/05": {
     "src": "/images/projects/mandrem/05.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAkAA4BaJYgCdAEDH8uDRwMAAOH3X4TpnPC6RAxxQPxY46u8km87rgDXCOeQ+ug2mCMXixLaIM5eXqaO3f3y63fD9Hb5yQAAAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJZACdAD0UlYYfAD+l5D7Hgw3EJq3UpcHEQKQaHKiEb5qTu9XNRvu0+mIAgQ3/1td+8Rh5bdxpKML7pDnJSIwYJLxwAAA"
   },
   "projects/mandrem/06": {
     "src": "/images/projects/mandrem/06.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAkAA4BaJZACdAD2OVuKcRDAAP7WIr7rNyHnHifrz5TBNAdXxq1RZqqh9rRxSBZewWMAFV7sNR1BvoD352GEVEypkobqUgAAAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAkAA4BaJZACdAD2OVqeKaAA/tYi1Kjf2Xa5XMc6q1eAcQ0ptXHHy5HPXlkhpDUJKRv9JTSU6ml3YbW+wwiomVMlDdSkAAA="
   },
   "projects/mandrem/07": {
     "src": "/images/projects/mandrem/07.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwAgCdASoQAAkAA4BaJbACdG1/Atn8N3h1eQQAAP6b7Exw2ddg/vRRnNMBHvajMszgK48sBBabIHqXoeaPXKRLvvTMXbypU1yQE2j4FvcmvEv4rO6wAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoQAAkAA4BaJbACdG1/Atn70uPw8qAA/pvsTHDZ12D+9FGc0wEe9qM7FjSwy0AnqWG0fSo579gpiItnaZsLs5j2I+Am0fAt7k14l/FZ3WAAAA=="
   },
   "projects/mandrem/08": {
     "src": "/images/projects/mandrem/08.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJYwCdAEN8jWrzxAA/f0v30muheS1JudeEdBAR7OB9jS7M3X0PN4m4lJh5wNnAJiAioFNZekjOLVOZzdi3ILMcdREujokAAA="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAQCdASoQAAkAA4BaJZACdH8AD+EhAcQA/pvREmz4NGP4ZcL/uAC9j72+F7m6xh5c/RYdtDCSn0kWIS9IVjj4VUdEGB6j4QGauwsRQfmPtHkMSuOukWaOWobxJebJYIAAAA=="
   },
   "projects/mandrem/09": {
     "src": "/images/projects/mandrem/09.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAkAA4BaJbACdAYuvhtifKAA/u4m62OedT1+naaGaPmIBztMKw5VrcbKZSqyvUVkuK8Bz5rougOm/ZigauGMzoPthkRIS12PPEYbSuOYx1AA"
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAQCdASoQAAkAA4BaJQBdgBnylbPAAPaojg41XzP7y/Fs0b8y3OM5hN0xkSQ9f1mKOwBxA4FRERo3erqc8WqDqJd3rsvzKWBt06YEZwxegwgA"
   },
   "projects/mandrem/10": {
     "src": "/images/projects/mandrem/10.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAQCdASoQAAkAA4BaJZgCsAYr7V3jejAA/DQM9fWouRH6TmzBq7zrMQOlMkuQXeyfMBHhWctanVn55F5435VLlwxcOJQYHOonN4dv2zkYHTsf7KrBjcSvzrmwzLKgQwAAAA=="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJZQC7AYtBdnUVIAA/rN0Ja1ysnQYympYtZvDsjYFWmpKJ57/vJrfohj1tG3aCqaIf2PZHN8/JaPDbVbVIAAA"
   },
   "projects/mandrem/11": {
     "src": "/images/projects/mandrem/11.webp",
-    "width": 720,
+    "width": 1920,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADwAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JYgAAPTdG3YReMSLWDMcAAPcM9i+oCCd0KBzbGCr4UtJfXwneoUqsK8t6EsfTM528ymSU4txmOmA39B8XH/Tm+ybmr0SCJ49U6qqTlmSz4FpMFUz6j+eSFixcrt/IW3VRj/Vo8QfhYNIAAAA="
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAkAA4BaJZACdAEU9zexYVIAAP7oM6vGd+Cx0upQBLKisDQUUlDYmWoVRZJMUa6BQfYY2nr/p/QYwR6LEl723bu7IPa19T6cC38o5HWApDsH+HAAAA=="
   },
   "projects/mandrem/12": {
     "src": "/images/projects/mandrem/12.webp",
     "width": 1620,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwAgCdASoQAAsAA4BaJbAAD5Gu1KKpgPrZEAD+eSImP0wkkNephCyhd99Bq7DyKDuNgUZxslZxhXsDOclmIPhbN4NeKTvGxQbtXP4xzZ/Nbbm/S2svq7X99RjB0+sql0AAAA=="
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoQAAsAA4BaJbAAD5Ju1JcGRuyzK4gA/nkiJmNNnAJYHA96A361tTI2t3ZyQY5Vzp4NAGacAbw6Hgdrc1uADo9KgH+QADHDkRknZwCWLtGu3cF/fUYwdPrKpdAAAA=="
   },
   "projects/mandrem/13": {
     "src": "/images/projects/mandrem/13.webp",
     "width": 1620,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwAgCdASoQAAsAA4BaJQBOgO4AzR4n6fYRyzYAAMrmJhRMP1vSlD8L+SrfLaPK6X05MIvJVzGRbrqVYM824QUbmH0nOm5YF8BP3WGjQGb0MjF6D4s3WiAA"
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQAgCdASoQAAsAA4BaJQBOgO4AzR26R8EzKgAAyuYmFEw/W9T8vwv5Kt8to8rpfTkwdcskefMWw7LpQDDOca1Wi7T6w2Ju98Hzad1xTqFFPlPyfo6okAAA"
   },
   "projects/mandrem/14": {
     "src": "/images/projects/mandrem/14.webp",
-    "width": 720,
+    "width": 1620,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYwC06Yxstl3eLa5q/Ggrzu3wAOI0WLBcfErCspOTgFxJEKgK0a8yNuEhB/2+3uTlw3WgNN93l/sij71JaxPK/yzPpMsic0yJQc4tKVVTIrohTQCwrh19K4bIN5hxVuaj4ErR+phy9/wgSHIo6R7uIljv45lUla4qQISOHdhE3yR6ZAKgVfYkeSRemXAsAAA="
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQAgCdASoQAAsAA4BaJQBOgMWR7Ozedk2ffUgA+OUyc+x8NzkpUSU5Koo/8ysD/NtFBtcP2W+iWYCKik2J9W95jMqSiYpAphjxZf3EUoksWtQlGjGl2QAA"
   },
   "projects/mandrem/15": {
     "src": "/images/projects/mandrem/15.webp",
     "width": 1620,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAsAA4BaJQBOgBU9zvUnTPrAAPzF0EcUVIaFyI1asQAqCDQVlYfvwNslI72U82kAH/Kgrh1/R8eS1OJ2Nwg/QjckVxhX0rXokJwAAAA="
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAsAA4BaJQBOgBoM3pcAAM1zxUM0qc58xIShT0QWTLe7LinRoW0oeik705qlhwn394uGHDnAuQkBLhu5yA3uWF72AWAA"
   },
   "projects/mandrem/16": {
     "src": "/images/projects/mandrem/16.webp",
     "width": 1620,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAsAA4BaJQBOgB0+xcgpLgAA/ocE9tmrNnUEtruy/BLVsiTd1V9guWq14fbZnJBbT0PW1hwwTtEyn2t69CXtaveVHLQnke5rbAAA"
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAsAA4BaJZACdACyFv8YAAD+6lo6Toz1CiVl3a4Pz+AIfDFn2b/pn6+1uRJNh1M90mDpyT/slTIvrOo21cFZR2CQ2pjsef+JpJR8JIAAAA=="
   },
   "projects/vitalda-serenity/01": {
     "src": "/images/projects/vitalda-serenity/01.webp",
     "width": 1080,
     "height": 720,
-    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAsAA4BaJQBOgB+X/Y1xnDwcwAD+sbcbaUOPwRvUCHkbGpR3Lb8jDTYVM/1d9mwiPTYkXQTCzDrWwxb1is9xjMnvqSekgee1Da3wFqRDNABaL8AAAA=="
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAsAA4BaJQBOgB+X/Y1xnDvlAAD+sbcbaUOPwRvUCHkbGpR3Lb8jDTYVM/1d9mwiPTYkXQTCzDrWwxb1is9xjMnvqSekgee1Da3wFYQbA41ojIAAAA=="
   },
   "projects/vitalda-serenity/02": {
     "src": "/images/projects/vitalda-serenity/02.webp",
     "width": 1080,
     "height": 607,
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAkAA4BaJZACdAD5QF2VSiXgAOJ0dp1DzChiOgIz5eZydrdhRueQcgndGawPPTHepUbLMfh9QkRs81n8tuZDUmR5LRAci6zyTiIxBVjzVrgA"
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAkAA4BaJZgCdADxIh2qs+gAAOJ0dp1DzChiOgIz4bPcpliuogfvof/hLCGh1XuorGcnhXD7iNknT5fdEmOKQbO2m4/GcQRIVJAj9Kw9mwAA"
   },
   "projects/vitalda-serenity/03": {
     "src": "/images/projects/vitalda-serenity/03.webp",
     "width": 1080,
     "height": 608,
-    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJQBOgBeaL3NUcAD+39KkSMh4XwSiv8IHaru7jHGsq37MJCoxALjWrhMYc/8qQvXZnrXS+Vn2B7ZQIwz9gUAA"
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJQBOgBeQpxSZoAD+39KkSMh4XwSiv8IHaru7jHGsq37MJCoxALjko6PeU6c2ReX8LpwIrGWXsjCMM/YFAAAA"
   },
   "projects/vitalda-serenity/04": {
     "src": "/images/projects/vitalda-serenity/04.webp",
     "width": 720,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYwCsABhfvg5dkaxDCu/+8AD+xsnfEd1YeJuZ4R5Fwmo7s7Ec4cBDLlEJ6gZtoWwA4yEBCozCxInmtuDNjCM39DNXtPvTPUSRVmscRCoiqdGR5vn+dYTRaGHeUbdMtYrfbz3TIXmcaeAAAAA="
+    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JQBWAAwv3wcuyNYhhXf/eAAD+xsnfEd1YeJuZ4R5Fwmo7s7Ec4cBDLlEJ6gZtoWwA4yEBCozCxInmtuDNjCM39DNXtPvTP6wQdA1WxYgpkiJNSFQ0cE+gxaSXjdzXL8MMwbIxz+w+emjgAAA="
   },
   "projects/vitalda-serenity/05": {
     "src": "/images/projects/vitalda-serenity/05.webp",
     "width": 720,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZgCdABdLL8TgKBJVlp1XAAD8xo9izr99hUiNZrHv0xWGkG3cBNP4T2qTxw+gCABj+aRNYH1iFumJGZWl3PBV47WKBZ5TstfZTZvlRjgqLnS8rbdsI/wu4vHp18mIxB6tIhGT4QELtWP4GAAzpaWKwvVWFSx3GN8AAA=="
+    "blur": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JZgCdAA8Uu15nAjo9hiQAAPzGj2LOv32FSI1kf7lzGvttRMmgSoF7fHDdjpJGtFfGVYzdvgMcTcO+FBdpdzwVePg0MyN6of+XuL/mg0PwVVbF+d8RVzZicOfcxF15LHVWmLekpml6gicWnVQQ1RlG9chhJoAA"
   },
   "projects/vitalda-serenity/06": {
     "src": "/images/projects/vitalda-serenity/06.webp",
     "width": 1080,
     "height": 608,
-    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQAAkAA4BaJYwCdAEfB/UzSFBiAAD+1zxfDK4ZPeSTAVdJT7e5BJzawgPw8Y7LOM4mo0dJhEnuUfMEqeZ6YhhmACHXmTgQ4AAAAA=="
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQAAkAA4BaJYwCdAEfB/U1wMY/AAD+1zxfDK4ZPeSTAVdKF5ckqHQNh8EHWrJkdaXv6JwczmOYTDmUQwTPDlA8jduzgwk4EOAAAA=="
   },
   "projects/vitalda-serenity/07": {
     "src": "/images/projects/vitalda-serenity/07.webp",
     "width": 720,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwAwCdASoQABgAPu1iqU2ppaQiMAgBMB2JQBOgAxumIMeGVNo6V0iAAP6zPzjy2bQjMdaTauA63KpVnLlCcgJXAARb/SxUDAMcxOycHdWRZ+3wKhpTLwPqz6yE9ALltAWUkjjW20zbEDNTuJnaElpxo5RMvBGsR+aPTSMHvMfTaCfN1wyex5giW5ELoAAA"
+    "blur": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwAwCdASoQABgAPu1iqk2ppaQiMAgBMB2JQBOgAxumIK9wdFwpcioAAP6zPzjy2bQjMdaTfnDiCSyDHrc43VkujTdG/inAZiHxnWYpc6MC/j7hgoFnzs+sbeb/zvFRUhpmW4ZQaE2CHsQSDuJnaElbVIXXu6lqqtkJbCZaSjq8IYQtRPq4cj2Uz72WMAAA"
   },
   "projects/vitalda-serenity/08": {
     "src": "/images/projects/vitalda-serenity/08.webp",
     "width": 1080,
     "height": 607,
-    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAkAA4BaJQBOgCPgZv++TAAA+RjyiEGkXOgK+Xzz2QST0yD9c/AxdiS4KRiMZWXgJIShkQ2Zglccn9NW/cWgAAA="
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQAAkAA4BaJQBOgCPgcEGbtozAAPkY8ohBpFzoCbXxNfZIUHTFlsDF2Pf7yzVVLQJX88jn3rXq2BYIw9dq/RJgAAA="
   },
   "projects/vitalda-serenity/09": {
     "src": "/images/projects/vitalda-serenity/09.webp",
     "width": 1080,
     "height": 608,
-    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAkAA4BaJQBdgMWgRmqAAP7rE92Bry609kordd9sX8TGWaGWegdULdneEc9WlQ7/3F4PsGvc+9/6su4TZF2AAAA="
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJYwCdAYtBFkI9QAA/usT3YGvLrT2Sit132xfxMZZoZZ6B1QpdCaXNzerbSi0onAfBzWpHJNZ7RGRmJAAAA=="
   },
   "projects/vitalda-serenity/10": {
     "src": "/images/projects/vitalda-serenity/10.webp",
     "width": 1080,
     "height": 607,
-    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJYgCdAED6LyPGAD+3x1Wa8wtdc3BxlAogpnrt5S+6+/DRJDiZTakKPqKP69nDUpSx+EFPI3tiMUQhSF5RT4NoAA="
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJYgCdACY/BZTAAD+3x1Wa8wuH7Xgjr+A+soDJpZh3X34aJIcTKbUZfzhhVUAQ1K0oK3sHy1EXKA0Z0o3JvojwAA="
   },
   "projects/vitalda-serenity/11": {
     "src": "/images/projects/vitalda-serenity/11.webp",
     "width": 1080,
     "height": 608,
-    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJYgCdAEfQswCAAD+yhf8JSuFImLNltl9HgZmjD2zaWF7NxAUaNSI9T1iHCAqxPGp2FpO0bVlNX9B9V55l8y7AAA="
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJYgCdAEfQswCAAD+yhf8JSuFImLNltl9HgZmjD2zaWF7NxAUaNSI9T1iHCAqxPGp2FpO0bVkeMhg+q88y+ZdgAA="
   },
   "projects/vitalda-serenity/12": {
     "src": "/images/projects/vitalda-serenity/12.webp",
     "width": 720,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JQBOmUABlcouOXOWUm2dwAAD+jxeE34pSghxwqf88lda5plgg95not0HZ4HguQUqB8HqueHny6pD80We0sbo5xaj2x5daNoucP0WRHPW4UIRPXhWjrWQmWyp0xxZZfNgIgCmFxZ4ltAAA"
+    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADwAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JQBOmUABlcouOXOWQkscgAP6PF4TfilKCHHCp/zyV1rmmWCD3mei3QdngeC5BSoHweq54efLqkPzRZ7SxujnFqPbHl1o2i5w/RZEc9bhQhE9eFaOtYi5suGw+Iqw5Z7RBn7qBLhcWeJbQAAA="
   },
   "projects/vitalda-serenity/13": {
     "src": "/images/projects/vitalda-serenity/13.webp",
     "width": 1080,
     "height": 608,
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAkAA4BaJYwCdAEW0/1okD3UgAD+senweOhoCEztcBE3BO34KZ/8WAK7KU0pkGRHro+I7FqlIuit/grrtbPlejA+6jqIV17URQp2fdwIAAAA"
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAkAA4BaJQBOgCLaf60SB7qQAP6x6fB46GgITO1wETcE7fgpn/xYArspTSmQZEeuj4jsWqUi6K3+Cuu2QAjRJkEsvjOCOahKhTs+7gQAAA=="
   },
   "projects/vitalda-serenity/14": {
     "src": "/images/projects/vitalda-serenity/14.webp",
@@ -544,19 +544,19 @@ export const media = {
     "src": "/images/projects/casa-de-almedia/01.webp",
     "width": 1080,
     "height": 1350,
-    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdL1yBhAEFYOGme0W2PAD4/avh1/6MxwQC5FK2bO7OVu2mtZsyNB/7H2RYBk4DySYTjeQIvNa/FpmGBGfHJNt5LJcvaQ/5+5yMeCZ+aTELOgw0xtzaYTz0rlWYXDsCe4yocCEFly0uqAAAAA=="
+    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdL1yA6Tk6dSme2FEAAPj9q+HX/ozHBALkasdZykvfU/q/aZtVRiElti/TqwzqRYncZrndExduGmnt7x5PWYr2Vn3LlMTv0WjdtH/5lhm4gfrJV4GJS4O4Tjif2Wr+2QzIBIWWvk0UAAA="
   },
   "projects/casa-de-almedia/02": {
     "src": "/images/projects/casa-de-almedia/02.webp",
     "width": 1080,
     "height": 1350,
-    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdL1yrgBQs230F/6lNawAAzj6T5SatbKwkvwNz+x7rbM14ROcThvj0rvM7MSt09M8rtdpjuwdYKgynxkukEzctSreTHlD31Utqi8qyQLKKA5lwqxKfQtmfgYcL9xQ7yihm3B4SiPxEhq1RuFAA"
+    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdL1yBnc582m7QmZ3eAOJ+rgZMAWSTirju9gepH1A+7z5YWwaPUL4wXhKvCKAiytOieQXf5c4mFp/kjICdIdkQ0ZSVekP+BYzMO83q2suz7ulMKn+HkvFTFDdVg6Ec7Ra9G5144cCo6rb/XzgA"
   },
   "projects/casa-de-almedia/03": {
     "src": "/images/projects/casa-de-almedia/03.webp",
     "width": 1080,
     "height": 1350,
-    "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdMoACn0YgDK7l85QAAPaZI3ALtC5z97oq3njD/a+wq/TRn9v8mmCAFw94IGzaiC9Pzc6rSswuukGkPczA2LoxffXkrInw62WriysBA+ziamfXZMrUgAA="
+    "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdMoAvQBU6MQAeRjMuwAD2mSC16SIQq3DXAI3tyoMNfoWz9owxkWLa61OOibBk90wlo2AmzPOIHoFkuZgbF0YvvryVkT4dbLIGwj1pGVF6BJYuNKAAAAA="
   },
   "projects/casa-de-almedia/04": {
     "src": "/images/projects/casa-de-almedia/04.webp",
@@ -568,211 +568,211 @@ export const media = {
     "src": "/images/projects/casa-de-almedia/05.webp",
     "width": 1080,
     "height": 1350,
-    "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JYgCdAYxY3mKwAVoAtjW0aAAA/lkrfd5P0VCxuwC6et/eNR23LGhsL8/5gGLkX6btVyH0x0+Yz4Q29pXjjCNNZJDENdZllJ8VxEwXF78kA7j7QBgts9srbwE0jRlu2L/qbl8rHabPeLuQLJsgmAkOBMAAAA=="
+    "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JYgCdMoAlvBffXdfqR79j4+6AAP5ZK33eT9FQsbsAunrf3jUdtyxobC/P+YBi5F+m7Vch9MdPmM+ENvaV44wjTWSQxDXWZZSfFcRMFxecscIML1Qo1o7qwE6W9Etp0T5MocBZZ8Ykg/6DHsBIQbjV4ZwAAA=="
   },
   "projects/la-mandarina/01": {
     "src": "/images/projects/la-mandarina/01.webp",
-    "width": 2400,
-    "height": 1600,
+    "width": 2560,
+    "height": 1707,
     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAsAA4BaJQBOgCEoX+WUFAD+l5GELcsQidKrnJXJHG2HiaPH6jEFSMxiDcXf9v1kxwKsjaQYrwZCb6H8jXfSYNnU1LyfKgA="
   },
   "projects/la-mandarina/02": {
     "src": "/images/projects/la-mandarina/02.webp",
-    "width": 1800,
-    "height": 1200,
-    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQAAsAA4BaJYwC06EO6Uhb8RSQAP7wRrtAqUCok+5TnxcVAxcs40+vDRYi0zslNtzJljmhaYoGW8TaDe7KR+lHUkCUAA=="
+    "width": 2048,
+    "height": 1365,
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJYwAAucf9ZnTvagA/vBGu0CpQKiT7lOfFxUDFyzjT68NFiLTOyU23MmWOaFpigZbxNoN7spH6UfTF/ogAA=="
   },
   "projects/la-mandarina/03": {
     "src": "/images/projects/la-mandarina/03.webp",
-    "width": 1800,
-    "height": 1199,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAsAA4BaJbACw7DcpEU5XogA/qvUlEoqaItAnrWjNb8/0izNqq62Ht5UrmUXaY3I2r0vGe3j9wEBkbDpoLCacfr117ZK0pzF9yt3n09aByyAAAA="
+    "width": 2048,
+    "height": 1364,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAsAA4BaJbACw7DcpEU5XogA/qvUlEoqaItAnrWjNb8/0izNqq62Ht5UsEwOcxEasV3BN4V7K9JFATXfKUNDaI1SwPp648/ly/77VuT/kGUAAAA="
   },
   "projects/la-mandarina/04": {
     "src": "/images/projects/la-mandarina/04.webp",
-    "width": 1800,
-    "height": 1199,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAsAA4BaJYwCdAYwS9v0ffQMAAD+rSSuW39bsV+AUdc+QpcTIJduViKbPVq468L+ieDMJpBntQiOahxPcAxXDsaPgLAm78Tz4DwotNkr4/YzYOzXAQAA"
+    "width": 2048,
+    "height": 1364,
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAsAA4BaJQBOgMYOeZ0UTqYA/q0krnuvyOI44APaOPYySddXhbHtWDw8PzbDHZEtUMbYW5K62nWJluM8WA8JcQWvQ3Dqrox39nWUTOp9BKLkX+kcAA=="
   },
   "projects/la-mandarina/05": {
     "src": "/images/projects/la-mandarina/05.webp",
-    "width": 1800,
-    "height": 1199,
-    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAsAA4BaJYwCdAECmY0GcyAA/vFjE4As0BhSyLtZXqV0SkbUtcnxI0E4hkmW1cpQdLZSZ/Fk0dNpZo0k5JmSHkIvPaxJXDRuR3oAAAA="
+    "width": 2048,
+    "height": 1364,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAsAA4BaJYwCdAECmY0GcyAA/vFjE4As0BhSyLtZXqV0SkbUtcnxI0E4hkmW1cpQcwX5lXRZ4xhFVxApM546zAvjCUII+tlycHgA"
   },
   "projects/la-mandarina/06": {
     "src": "/images/projects/la-mandarina/06.webp",
-    "width": 1800,
-    "height": 1200,
-    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAwAgCdASoQAAsAA4BaJYwCdADdprK0DrtgAAD3dSW2SfW9Td3y6ygaj88+3dxSSSVRVeMrbXeF6wQ2CGC/BFJFqU3fIl/i+AA="
+    "width": 2048,
+    "height": 1365,
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAwAgCdASoQAAsAA4BaJYwCdADdprJdp5m3AAD3dSW2SfW9Td3y6ygaj88+3dxSSSVRVeMrEZAvoXx+XhQ/IQBO+RL/F8AA"
   },
   "projects/la-mandarina/07": {
     "src": "/images/projects/la-mandarina/07.webp",
-    "width": 1800,
-    "height": 1200,
-    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAsAA4BaJZQC7ADJOpHxwAD+lDaNwuVJEwnMJWQJli3kZIqfxWrFfnsEgaISHeye0LyOQKeSbEQ2ArSberYLvRAAAA=="
+    "width": 2048,
+    "height": 1365,
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJZQC7ADJO2AmJ4AA/pQ2jcLlSRMJzCVkCZYt5GSKn8VqxX57BIGiEh3sntC8jkCnkmxENgK0m3q2C70QAA=="
   },
   "projects/la-mandarina/08": {
     "src": "/images/projects/la-mandarina/08.webp",
-    "width": 1800,
-    "height": 1200,
-    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAsAA4BaJZQAAmjGn39aoAD+j7b5ZK4vUUrXhhXG4ErP53obNsMEittLcoeJEpM78RQq0sMCPlQjvs03L2Cwhj9vL0XwLz3y8AAA"
+    "width": 2048,
+    "height": 1365,
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAsAA4BaJZQAAq+bs+EPLpAA/o+2+WSuL1FK14YVxc0a5r+5IkfHlKrRdAZZJcMV9CrSwwI+VCO+zTcvYLCGP28vRfAvPfLwAA=="
   },
   "projects/la-mandarina/09": {
     "src": "/images/projects/la-mandarina/09.webp",
-    "width": 1800,
-    "height": 1200,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoQAAsAA4BaJQBOgMX6rAQtvng2AAD85OfK5j5BtRAPj7BOxAkPJJBSPbw27dxWynmU9qjkiEn2CuXt4TEhY49CMK4ASpSF9N1V0tkpw7xaCNwaQAA="
+    "width": 2048,
+    "height": 1365,
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAsAA4BaJQBOgMXSrHBAsu6IAAD85OfD9xsBNeie0dVXAmLXMoS8cgOW/Gt0cn475brynFd83x7L60n01MQiV17sRawxfk4Xat2w4h4tR1Y4IoAAAA=="
   },
   "projects/la-mandarina/10": {
     "src": "/images/projects/la-mandarina/10.webp",
-    "width": 1800,
-    "height": 1200,
-    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoQAAsAA4BaJQBdgBKeMwwAAP5hEEspi23zPfFOb5aADrSF4YKLYWYfmuRKl3Y+WLkJh/ospWW9Zlu6oXv/Zj3K946As44AAAA="
+    "width": 2048,
+    "height": 1365,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoQAAsAA4BaJQBdgBKeMwwAAP5hEEspi23zPfFOb5aADrSF4YKLYWYfmuRKl2X+zZfgNamLc5ZlOzQO4XZHMZybnI2VLLYAAAA="
   },
   "projects/la-mandarina/11": {
     "src": "/images/projects/la-mandarina/11.webp",
-    "width": 1800,
-    "height": 1200,
-    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAsAA4BaJQBOgCBzFvfBcgAA4nAFss1poXTGJMKDjHoHvUL7QGIkDbjbCuDYRyf/Ql78MtfWVfJlgnqSK7JYAEo0Lc97Gal47d4es7+QAA=="
+    "width": 2048,
+    "height": 1365,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAsAA4BaJYwCdAEDmLe+C5AA4nAFss1poXTGJMKDjHoHvUL7QGIkDbjbCuDYRyf/Ql78MtfWVfJlgnqSK7JYAEo0Lc97Gal47d4es7+QAA=="
   },
   "projects/la-mandarina/12": {
     "src": "/images/projects/la-mandarina/12.webp",
-    "width": 1800,
-    "height": 1200,
+    "width": 2048,
+    "height": 1365,
     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAQCdASoQAAsAA4BaJQBOgAyvgUOAAPFHT5e0CnWVvVfdeuhSvG8Es3BIjWN4Sd0o+iPB2eojtjujk0swqSb622OB6Xo+YZ8qyECnjV6HgAAA"
   },
   "projects/la-mandarina/13": {
     "src": "/images/projects/la-mandarina/13.webp",
-    "width": 1800,
-    "height": 1200,
-    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJZwAAlzzha5dqUwA/t9h4KjXDeukedav+i6yFdxJBh510OmlWbJ/ExTG8fC+KD78uBO74hgY2Vyx0fJklyLEOAA="
+    "width": 2048,
+    "height": 1365,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJZwAAlzzha5dpsAA/t9h4KjXDeukedav+i6yFdxJBh510OmlWbJ/ExTG8fC+KD78uBO74hgY2Vyx0fJHAYlg8AA="
   },
   "projects/la-selva/01": {
     "src": "/images/projects/la-selva/01.webp",
     "width": 1200,
     "height": 1797,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAADQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JbACdMoAvQTQgrhP6Y9SQC/KGviv4QAD+sdQ+6FsVV9q7HqoCWHLHf5cCYQmSOTW46s7HLDDLIRMninKEKMOHziAWn+nF+d0TZxwM5mcT0dy3B7lWg24HMVqTIgwDLU2JZ/TBTpaZtvfATgk6rvEIMYyNCf/llRnf78gwNIq61TzACHugWOqBUHXumMbuS5eaTU6/s1tS5SW6MJwZQAAA"
+    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAADQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JbACdMoAvQTQgrhH9eHHysMIA+FF9AAD+sdHYObm1ggiN4GywBL0ry6Bp2qDrHCgTojQu2gjiMtIS2NvWVbCZz+0KKunF+d0TZxwM5mbwS4lsG9Lxl1IKqtsVQpU5v/sBTT/tTb8WmWDjUkb1vS+2afRf/HAogr+F8i5PuYYGkVdZW6wC9QENatNK1qYnHQG1ms4GWzR2tOtyu2yzTskSQAA="
   },
   "projects/la-selva/02": {
     "src": "/images/projects/la-selva/02.webp",
     "width": 1080,
     "height": 1440,
-    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JYgCdMoABrS2ofpJnddoAAP5ojUye6dHS5j3g3EEnFiR03pdnX1z5mzXJKy9susx1tHpphDq8pmVMxI5fbJ6em1BjW4qmrXFF27Q1+9j8+6znVcoWu92OghXyIjr0q8mR+gYuOZdgup3ls8Q3l4UIX1Ho5ZVCyM1X4bzuMXubbM0IAAA="
+    "blur": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYgCdMoADES3SldIEWJfucAD+aI1MnunSLzFSt5PKTXrBguoeK8/WSIyOt5hhE22ji+hOjO8zJrvh3mzjxHaSndY6cR5PKqGv3sfn3Wc6rlBQBGJ1cABLBw1Va3DE9BQ32A+QLXGWceHKpqeAo430rgM/M/FtsoevqCDnKrYpoAAA"
   },
   "projects/la-selva/03": {
     "src": "/images/projects/la-selva/03.webp",
-    "width": 1080,
-    "height": 1440,
-    "blur": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JbAALAAHCMSJ1ExOOdLuAAMyNLjfB4eBOYKTbKoJ36f2NI4fCxgWoCRyuZPDqUkqRwPDoqnVAxnfXzi/ipql7XNsI42/c4d2xTQaDHJo5PhESkNv0Od9H1njHKOgziFrZrzkfFKAkMjrl3/tLzg4EWnBNGtAA"
+    "width": 1200,
+    "height": 799,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAsAA4BaJZACdAEQ1GqdG2oAAP7f+tdkQTKJUBlXFTHRhA5IqaKaB03VbR4LGc5+Rme3piwfDXiI/twm77D4nFU8SRT9b+Lrpf4pO6x5ZmwcwJjoaAAA"
   },
   "projects/la-selva/04": {
     "src": "/images/projects/la-selva/04.webp",
-    "width": 591,
-    "height": 1032,
-    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAwBACdASoQABwAPu1iqU2ppaOiMAgBMB2JZgCdMoACs9hOnaUbLYXPagAAziJofMlm9DXXTC6laKtVhdFGSiG3uiCdFwWzB9+/DkbxWJu413VSzCC9zpPhLYYZZ3aJ/KUfzcRGoEa15jOcWDN5BOSCq/136opdmPrFH4dKjhmxD1sjRlOSjyWnqQEGFLdaELbUGnj1LEDZtaISTVcTZkDvQAA="
+    "width": 1200,
+    "height": 1800,
+    "blur": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBACdASoQABgAPu1iqU2ppaQiMAgBMB2JYgCdMoADKmDSrYDgPZ4dd3aRgAD+AoMUQQRd9XCKc+L9Io1G3oxDouQMHaw22cGYlp1LybW2F99VEmuf8lYKaKIotwB1fCShV4XMo3t5O3G6Lnp0lcVNz0hVdGguSi0LHjXVXOSFC2PhFtdL4NLX0IpIAAAA"
   },
   "projects/la-selva/05": {
     "src": "/images/projects/la-selva/05.webp",
     "width": 1200,
-    "height": 800,
-    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAQCdASoQAAsAA4BaJbACdADRnwdXsYAA/grVM+cpaDrwdmXlj7NYJgPZEkDaxRa11w9F7a33bwr8eldTomq13sigkPB7qYykB6QJhoDLOB6YK1J8UXop26NMzkK5IOF0BajflpSTetQLIk+AAA=="
+    "height": 1797,
+    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAACwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZgCdLwAVdy27QonMZOjG94Fd9pUAAP7qjR53PDa05PDqeNgLv8j2uXMbznlMYeQXw9iwB5RZxQsVt+4geqmNPxTq/H89mZaUt3Fl4yWD5sN/aVpLaxzgJl/6r36k7bZ1AEK2YeLtpaEiosMDjUCFdlA7kawGg+w5s+MHIxv5NY1AAAA="
   },
   "projects/la-selva/06": {
     "src": "/images/projects/la-selva/06.webp",
     "width": 1200,
-    "height": 1800,
-    "blur": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBACdASoQABgAPu1iqU2ppaQiMAgBMB2JYgCdMoADKmDSrYDgPZ4dd3XpAAD+AoMUQQRd9XCKc+L9Io1G3oxDouQMHaw22cGYlp1LybW2F99VEmuf8lYKaKIotwB1fCShV4XMo3t5O3G6Lnp0lcVNz0hVdGgmqhPtXadpjRkKW2fJ1mL1Vj7GYa+AAAAA"
+    "height": 1797,
+    "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdMoAltRNg5oirBIXbSO5UAMhdyg26TrXBGHESVgIvu2J7UhnIqmR7SitaEGkeNjTh7SM6B3tJfut7N+wlcQNwdop5PRQjma5b+LMaifFm7+YQIwqb7dXvYe8/Ww1ux4LSOf9vQjQizahuTpTt7uAAAA=="
   },
   "projects/la-selva/07": {
     "src": "/images/projects/la-selva/07.webp",
     "width": 1200,
-    "height": 800,
-    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoQAAsAA4BaJZgCdAEeg/74ruQMmQAA/lSGx9htq8sOZyMmg+h3b3QlSOgkTy03C+k5I065hmMIC0OLKOEs9UL/CaB1rEKK5+UM2zjF6sn8Rz4UcAYAAA=="
+    "height": 1797,
+    "blur": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABQBACdASoQABgAPu1kqk4ppaQiMAgBMB2JYgCdMoMrZCD0smI7Z2HHW+oAAPx5N2VPVv/Mb/Pu/aeT4QCkzEXB0FuKU5riWN689IA04uKjsIDXMS3kFFAg2x5Y2jhMQSqTv0ibGA4bJZNdm4R3Oz2Mitrk9BDZYE5xmu4TSVuiQQePZEVGv8ko7zDLqgmwpS7AVyJT8Uo9gAAA"
   },
   "projects/la-selva/08": {
     "src": "/images/projects/la-selva/08.webp",
     "width": 1200,
-    "height": 800,
-    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAsAA4BaJQBOgCFsrvaoFdWAAP7rXRGOBaSqQVrbfmx1FeD5XzKI2Q9UsZH7KPtIduT62s0Msili5xNKqhoYi37jCaYEATd9hAAA"
+    "height": 1800,
+    "blur": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAADwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JbAC06YyA3K/5QebGiJhfP6VcEOe1/AAA/up8gHxbXnGXppoRiLN1hl8aP6XYDTihvPVxz0c/qe/BpMPgd1vQR2g6Qu1X1SqcBbqf05JdXKGEy1HZ3z9X1sbq+BaINk5vwPe1kkUyIKFFBAJSPwB7FFl1720n9ZYrQ4mF9pttobhz3yqhe/mHW/1YQwd7Pu1/d/cpoC5wAA=="
   },
   "projects/la-selva/09": {
     "src": "/images/projects/la-selva/09.webp",
     "width": 1200,
-    "height": 1800,
-    "blur": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBACdASoQABgAPu1iqk2ppaQiMAgBMB2JQBOgBA2GYEQbNv2pbbxcAAD9vGFGTF2qnokX33r994TNi0L89knkcqmF1FK9xYv6v7BgyV82xCG75Zpvi/KLGquDjxWGx9cukr5O4bot93663IB5/KhDh4DU/dkYXWs7W4SSDk4PVwQ25fPzE2P2V5T5FrJgp7PFUCEDtK0AAA=="
+    "height": 1799,
+    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBACdASoQABgAPu1iqU2ppaQiMAgBMB2JQBYdhFD6nFChxl6uL/d7AAD+jxgLUVX4piigjX4+f+41lNXsdxXVaK6BWqGo960WQsKxF7uHPCjTI/J5XEXzn2HgxWDLM8hkdE1VLX676UZZ8iVRPCpdzL0fkA3LGjrLc+nDrxDWTAHPpvEEt1gA"
   },
   "projects/la-selva/10": {
     "src": "/images/projects/la-selva/10.webp",
     "width": 1200,
-    "height": 800,
-    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAQCdASoQAAsAA4BaJbACdADJGQ89a6AA/pt/2Yw8VFKZTS9HFHCWTdMkcwQUrOI9yBXZNxc+Perc+SD5AmKFQze+0D/N4BqmvlYPrwChVqWJMIyJ8KY67EKXw/leoWCaZgAA"
+    "height": 1800,
+    "blur": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAQBACdASoQABgAPu1kqk4ppaQiMAgBMB2JZACw7YxE3kYH/6UQo/B7AAD286rgGi+5QrGsYmbWlxotVDpMZoG9o8mVZLAaDKwcdxOi9mRfH29d2tDRfLj5oUKnxP9lL6DE2l1AXHvnx98IA9TpjfEM5+xSJ+GSQHiSgfjJohMFwswHtjHsUGor8kAjBveTgFTWnnWpYAZYIAAA"
   },
   "projects/la-selva/11": {
     "src": "/images/projects/la-selva/11.webp",
     "width": 1200,
-    "height": 1801,
-    "blur": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAABQBACdASoQABgAPu1iqU2ppaQiMAgBMB2JQBOmUABs1bEJqz/0XRWgXPMgAP7TMc5ififzpz45TcQmk0GAb66xT312AWJlEexC33a669xdNziyVm+9f3g4lU07VvcyvD5N+4a0PAM1Tw27IusU4zCjTyJzKZBkHT1MHhAT0TYIFmHpZqzcOtt+OqDz4GNlOegBzIlibEAAAA=="
+    "height": 1800,
+    "blur": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBACdASoQABgAPu1iqk2ppaQiMAgBMB2JQBOgBA2GYEQbNv2pbbxcAAD9vGFGTF2qnokX33r994TNi0L89knkcqmF1FK9xYv6v7BgyV82xCG75Zpvi/KLGquDjxWGx9cukr5O4bot93663IB5/KhDh4DU/dkYXWs7W4SSDk4PVwQ25fPzE2P2V5T5FrJgp7PFUCEDtK0AAA=="
   },
   "projects/la-selva/12": {
     "src": "/images/projects/la-selva/12.webp",
     "width": 1200,
-    "height": 800,
-    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAsAA4BaJbACdAYubq6NLdMhwAD+AwuYit2cQvYCVmtSRsqE+kkXv6IImcObWr9DLfu0DGuGG/sYvFnaWVuO5moX3Zg0KbHlCPyzPgFIoq+ub2AAAA=="
+    "height": 898,
+    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABQAgCdASoQAAwAA4BaJbACdAYtzvSM+7HggsAA/r+zsYT8p6b2fFhE/B35fQ9qajQMhZGxT3Xd8Rt4cQFd3upiDf+jzL5yQ7s5M3kyf1dTuqaqaMFuAZ/cNWgtuKS5SjRJqDzZAAA="
   },
   "projects/la-selva/13": {
     "src": "/images/projects/la-selva/13.webp",
     "width": 1200,
-    "height": 800,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAsAA4BaJagCdAD8WpZa9rr4AP6sQD1StvFQm0iXk2tLXvtHmHtNOS4BFR71mR7IQCgKVrhGw1UkHFKefRWnnZpx4pbq6TIaGj5n1xcz4Xu9dUWlLQgA"
+    "height": 1801,
+    "blur": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABQBACdASoQABgAPu1iqk2ppaQiMAgBMB2JQBOmUABs1bEJqz/pKkiCPBUAAP7TMc5ififzpz45TcQmk0GAb/RHZtgZEoU3XGE5N0vn5ZFJdHYHTm21/eDiVTTtW9zK8Pk37hrQ8A4VIpYiVXTYSTCiuzelGB4/SbgBLMk+vPd6RgTpLSuOMX8UAaRAnDG/Sd0Mx/9w0AA="
   },
   "projects/la-selva/14": {
     "src": "/images/projects/la-selva/14.webp",
     "width": 1200,
-    "height": 800,
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAsAA4BaJaACdAEQ9Oo7/CwnQAD9/IFdWxa1WgbudoY9F5DYOxTmhh7RxtYVzFC4wKSEeQNRJTRXo8n5vOvTPyq20QSI0P3LIpbZY5ofgAAA"
+    "height": 1800,
+    "blur": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JQBYdg+ppTWTpoIP7yhCkKAAA9rMwvr+gonI5Q9W259MHuuuDLvFN/oNAZ27k3V4mJYihG0BFr/pVO9AIySV46G3XzMBZR0QpU0p2Qrcb1oD4viHc1qpk9xyZi0DLjyu4T5ciU2hFz2MEHkirj7HWWT81PNkMMgwAAA=="
   },
   "projects/la-selva/15": {
     "src": "/images/projects/la-selva/15.webp",
     "width": 1200,
-    "height": 800,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQAgCdASoQAAsAA4BaJZACdAYvryp9Bf4fBAAA/uhK8rkdDNKtFvqND2a5OOxobCF6bmH4UtDtMtiDJmrjeOxRK3paUbpju4K662xpICck4XOYJqnzk7+cduJKcAAA"
+    "height": 801,
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAsAA4BaJYgCdADxF2A/rkHAAP7f61GG7E3r6gbiEM01v9XC+Tl0EIdvicYSQmr1gasrIhxFolTaFg76strbqj1eDXS5h7yAAA=="
   },
   "projects/la-selva/16": {
     "src": "/images/projects/la-selva/16.webp",
     "width": 1200,
-    "height": 800,
-    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAsAA4BaJZgCdAD0g72LwAD+t9dAzTjM6eRsaHHgkpaWo6y2P/WpfiF8toRmrZhYpsT4ETzAOdtEQiUuEDnZymJScPTpfY98AAAA"
+    "height": 1814,
+    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAABwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JagCdAd0jhAUMksPW+4CjvGOBoAD+tAl0CyN1Q6EnFnoWO/ngg3qQptiCKj9IHex2YdEpNE0nPY3mE56KTXbqVk3ow9+AaCjEsS6YDNRlhkG1/lZnPvunn+Q1+XOKVjNmptBaKm3YX5XcSrVPWoicUL7IGazTEhNNMpwgm3QMocC9sCA4kl+xZ/M7mIf/GQAAAA=="
   },
   "projects/la-caleta/01": {
     "src": "/images/projects/la-caleta/01.webp",
     "width": 1200,
     "height": 1798,
-    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAACQBACdASoQABgAPu1iqU2ppaQiMAgBMB2JYgCdMoAltxeQ5NR7CxP5CAZfpwAA/up2KPQr8BX6iZBnlq8wycdOCHGdoyK3HygnGSYYPuMGbpJhwndwUHh/1iLSgU8/Y2azlgoqOy+5SJywAfgrLg24nSaK2Bh47sFB5kiEa3mHhbh2lVsye2kawKC0xSvCj6JBqkkFXUJWy6Wl4AA="
+    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAACQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdMoAltxeQ5NR7Cq8HWUwHnAAA/up2KPQr8BX6iZBnlq8wycdOCHGdoyK3HygnGSYYPuMGbpJhwndwUHh/1iLSgU8/Y2azlgoqOy+5SJywAfgrLg24nSaK2Bh47sFB5kiEa3mHhbh2lVsye2kYyX/vvko7Onu/a3CiSJFn9vKbAAA="
   },
   "projects/la-caleta/02": {
     "src": "/images/projects/la-caleta/02.webp",
     "width": 1200,
     "height": 800,
-    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAwAgCdASoQAAsAA4BaJaACdAEYG3/ux40+AAD+mErtWWanYzS2jksPbsZZmMOpY0JKtTtV1/mqE8piqNk8Yh4OOaJM/IAA"
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAwAgCdASoQAAsAA4BaJaACdAEYG3/ux40+AAD+mErtWWanYzS2jksPbsZZmMOpY0JKtTtV1/mqE8pl2wCFGU3iA68zyuCAAAA="
   },
   "projects/la-caleta/03": {
     "src": "/images/projects/la-caleta/03.webp",
     "width": 1200,
     "height": 800,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAsAA4BaJZgCsADbgaQKSAAA/rXfmoGhS9whybltZ1IW5qz9YAgK7eOX0r7urRh1jfMbHQafzIGgu6BAEhUyCO9sS++uY6euV8ZIfG5JPCioAAA="
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAsAA4BaJZgCsAELgD6ybXgAAP6135UDZhwsoTzUG/cq6tT8AuKsWIaCi0cDqD7izbMTAp1beI6zmmTbvU6NnAVLPqDwdb1xN1yEinAUNwoqAAA="
   },
   "projects/la-serrade/01": {
     "src": "/images/projects/la-serrade/01.webp",
     "width": 1200,
     "height": 799,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAsAA4BaJQBOgMV9tRmJvjcAAP39IS1asvboDCGDqEwnsRVIBZPH3JJoUdlYtAwml/QpAF5N849izQQsxnpOpjt9H80Jj6M23WIzVcpVeT9nblCZ8gAA"
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAsAA4BaJQBOgfgDHeLUZiN8kAD9/MYmBSk5plbN5D7GJzNpUKYf0lUHU97CtAbOgQfo+QhlFVI/AyNU5XZdxyCn5+8qR346oSyrtgCd2Iw3JWoTPkAA"
   },
   "projects/la-serrade/02": {
     "src": "/images/projects/la-serrade/02.webp",
     "width": 1200,
     "height": 799,
-    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAsAA4BaJZACdADp5icIAMAA/gPCWqzxrXdHFZSaQpnQhI0q7BnuyOfXn32zlESdHAol5ovD2ZoYCG4c2yMlEw2rTtAujYKeREyinyuAAA=="
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAsAA4BaJZACdADhaErOnJAA/gPCWqzxrXdHM1LETczp03The7v8xMDe5h/RqbplJvLts1gJgR3aic63h/VH6R05PTs4z4uGr2UJvo7wAA=="
   },
   "projects/la-serrade/03": {
     "src": "/images/projects/la-serrade/03.webp",
@@ -784,79 +784,79 @@ export const media = {
     "src": "/images/projects/la-serrade/04.webp",
     "width": 1200,
     "height": 799,
-    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAsAA4BaJQBOgB350+IOQoAA/tQ1Fl6e8UBdyHu/kB6e/We8AN3spt3ExupMWgXcIu6T98DOE9MH3EG+g+LlCbsDAAAA"
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJQBOgB350+JQJ+AA/tQ1Fl6e8T/6Ty9qLZA9Osu3XXUxS+bx8SreYW0keiWo2HJzuEj8FGoPi5Qm7AwAAA=="
   },
   "projects/la-serrade/05": {
     "src": "/images/projects/la-serrade/05.webp",
-    "width": 720,
-    "height": 1081,
-    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdMoAlwBe58U8Vj+W3/DgkAAD+WS8FKwdPwmKZqgH4Hw1QVuRw+Tzhw8ntRH3CyOmuxbJtzHEk0hAD+QXSteLb1Iol+ONXi0DBb7K3wh3P3WkiB6zsGBaZyfSCsGzrlwwNEMPM5nCFQz02y6+w5r0KJcC8WZ93h1+uypE6aoHaFAA="
+    "width": 1200,
+    "height": 1802,
+    "blur": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JQBdgBDXFNAoA96+A1SfRNVHAAP7ujydjHj3t0ZhxzGg6EowMbxpMWlxu7mdoquOktBdFJ8VK0e9HVWKMICQ3iJ3ggvDEM3OvOQ9uTDurFH3vScuR6+HeBhSOnwAA"
   },
   "projects/la-serrade/06": {
     "src": "/images/projects/la-serrade/06.webp",
     "width": 1200,
-    "height": 1802,
-    "blur": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZQC7AYyeu3/CzrXNXksfhX/AAPyGySTJUDIjUJQRjTUUH7VbeVjXUz8WmgHuyq76/NHrgoRBJhmAAsMvE2swKJKgfmAPwYE4DofVKWEy1D7OVi+NmZPVhF6rx8KCXTBAVeoXXVcDdKouB3UkTtPcAAA="
+    "height": 799,
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQAgCdASoQAAsAA4BaJZACdAYuln52VP+jYAAA/tKb1OpfqLeE3Bfmy3js74e1VzgEW0rvuL2pNe07vXSecaqL63JhGjgb8lvAuW6W0VxYNls4Erl2TQAA"
   },
   "projects/la-serrade/07": {
     "src": "/images/projects/la-serrade/07.webp",
     "width": 1200,
-    "height": 799,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAsAA4BaJQBOgCKJ4PQDm9kAAP7e0p1g5Um7cWM+xadtmADfO5HF7uCxk+sGa6InQ5ic8vDIh4tt6V8u8jCnd+kf4XbzV1KKU7LbBoiyyY7eBE3YGAAA"
+    "height": 1802,
+    "blur": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZQC7AYx2uzPnOvyF04eKosAA/IbJH6dnhx/Aerg5XYrnqGeFPP83e/gVSTrz90vr3HS8giIaXc2WcA2UPPpjQlxP0qT4MCbL+A9mGzaEBRB5vSiG/IkVyElkd88ZkSe6ePtU11CzTHtZoUU5u+4AAAA="
   },
   "projects/la-serrade/08": {
     "src": "/images/projects/la-serrade/08.webp",
-    "width": 1200,
-    "height": 799,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAsAA4BaJQBOgBZUdvrB3MAA/urspZ2DgPR3EVNxHz+8l1yeeWvBhIS3DF7hnX5qSbSHHRAfmaNNY0oafm4qVv3GOVD2NEMiIto5P0usfMmAAAA="
+    "width": 720,
+    "height": 404,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJQBWABdelTTYAAD+uEPKb+/ftdiLfncCOBWNPSgxnc8EAq2OpvVhz3L41ZV+rezg31dFKCQARRPKFhchibZFXrAXmEwA"
   },
   "projects/la-serrade/09": {
     "src": "/images/projects/la-serrade/09.webp",
     "width": 720,
-    "height": 1081,
-    "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAACQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdL1yVh25apGZNIgykSjKvvQAA/e88dj8dyHFVCbk1fiKWJeyPtWwzwW+ygs6tzSEZgtOcB2jgTA2OClsh047co6BQ4faKBI3g8Q4KR4ZY3ylZLgGbGjm6a4v1BVJfunE42VbTMfYEXiDXhmNIipQUYdjIL4Y96UHqmugu/HzQjO3t0OEAAAA="
+    "height": 480,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAsAA4BaJYwCdACpBOf1SgAA/KPQDsjFh0r6Mh1oxNWXLGgtyvURZ8kDwYWhCIusq84NROd1F6LOzVbYorOYO92NchWY0i1qc99Vxnp00dgAAAA="
   },
   "projects/la-serrade/10": {
     "src": "/images/projects/la-serrade/10.webp",
     "width": 720,
-    "height": 480,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABQAgCdASoQAAsAA4BaJYwCdAYvhOYjI51zVQAA/moN8gUGdEQ0yUZ9KSUm63CgTdDbpoSKCb3uSPaOE4p/cgC0xbjBkQ25jvXK+INWGDaes1bZYEtIdyhfoAA="
+    "height": 1081,
+    "blur": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZQCdMoAluRL/b5J+XDFqXYwA/paY93hJRMurxyv5+Esv+IT66j76AFsHx1qNWKsPVttjC+ORH0UfVL6UVE+CbyuHbnh0Unvh7Dbcp11QvUGxqensleW7LeHzFPGICHkeR5xW7+SIpUr5NIYP+aXm1k/H+bCLcdmsS4AA"
   },
   "projects/la-serrade/11": {
     "src": "/images/projects/la-serrade/11.webp",
     "width": 720,
     "height": 480,
-    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAQCdASoQAAsAA4BaJQBOgBriTd7+QAD+1z0Dpozw3u1+lIOXRAoYzRBqvttUyTdB/dQMIoS6i4T8PpNMryszjScRJPPFLmnhIPY0uLrdsFsTJaJKTHo0yJuwMAAA"
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAsAA4BaJYgCdADvcTjDGAD+kQ1ZGS2gEE9poqz8a/XvRxs5SzE8doBYriY/Q1k20IJ9p2oZU2wCErsIJC6gSUgPIQn8d7lopDk30d4AAA=="
   },
   "projects/la-serrade/12": {
     "src": "/images/projects/la-serrade/12.webp",
     "width": 720,
     "height": 404,
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAQCdASoQAAkAA4BaJZACdADwDLj7AAD5UKNQ75+yIpIXyigovS5QybZ9Rt9g1ecCPS3Y4Vp4wKPZLImAgepe8J3sj9FhuXTGv+hKO9qXEOn1BQbGeAAA"
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAkAA4BaJZACdAEfW5a6AAD5Tg0P1KwVy66WZeKx0Re87Q7CYlbZhaPBo+OYIRyDnG64zw6Ev1/0RZ384d6AglxjtCUd7UuIdPqCgcCgAA=="
   },
   "projects/la-serrade/13": {
     "src": "/images/projects/la-serrade/13.webp",
     "width": 720,
     "height": 404,
-    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAkAA4BaJZACsADRNwrpn8AA/uoy/LhsNcssuMJr9KmcFS8zUxzUwt/AfN9wyybPWO5LHVq8RVrhsq81kYvhkJb3KVlAAAA="
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAkAA4BaJZACsADROMFZEQAA/uoy/LhsNcssuMJr9KmcFS86lrCrjAkhcbiLHABApoKmOfnlgwe1fYa4vOLZZuB/z1qw9AAAAA=="
   },
   "projects/la-serrade/14": {
     "src": "/images/projects/la-serrade/14.webp",
     "width": 720,
     "height": 1081,
-    "blur": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABwBACdASoQABgAPu1iqk4ppaQiMAgBMB2JagCdMoRwAdDQjfBb5JT2MogyoAD5HpOtWsQAzgs1S20SBXov4GmEOa/cHd3FVLVQEOK/H9Fm4e7KNDjrXDzERsvvy2O+l9T9VwNz+CJql49aF+b5XsJY1J56D8dMnJFl0V4xkR3HAc4cL/UeAvOm342u056VIuw/KxhPvhSTC9injAAAAA=="
+    "blur": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAAAwBACdASoQABgAPu1iqk2ppaQiMAgBMB2JagCdMoRwABagVoNCt3UHzQAA+R6US4h9QxrdjDX2df25c5bLT8lbK15mIE7eS6MRK/anRgJCNfrTrW4VrIJrwCmSCT7D8WIjvW9NeJRgv9WqhTe554JWG6/FyRL61h+p3DoiZ38oeL5BFTriBnLYnhSEGmYqtF9PLRO5rJVZpoAEy/xQAA=="
   },
   "projects/villa-luvia/01": {
     "src": "/images/projects/villa-luvia/01.webp",
     "width": 700,
     "height": 907,
-    "blur": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JYwCw7BAW0ZG8t2+oAADdvTC0advlWGU80bUBIEyYn94XyXP4gntONDBGxB4PVc/UyrFY41AxoPiGOlovtriy2oP72FjwhvO45EPRwiAJbeyfE1hpc/SybZ4cAAAA"
+    "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAACwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JZQCw7BAW0ZG8t2+oAADdvTC0advlWGU80bUBIEyYn94UbapDLaeQ1EX9YvJl11MtUGEgAGSD4hjpaL7a4stqD+9hY8IbzuORD0cIgCW3snxNYaXP0sm2eHAAAA=="
   },
   "projects/villa-luvia/02": {
     "src": "/images/projects/villa-luvia/02.webp",
     "width": 1000,
     "height": 500,
-    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQAAgAA4BaJaACdAYtBlM2FicMgADMiL7G3lVVZSsixdJyeS7zpa4zN6iMPOrB7oJpvhQpXMHjoTHsdODfihbrbqiwiUgAAAA="
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABQAgCdASoQAAgAA4BaJaACdAYtBlM2FlRG1gAAzIi+xt5VVWUrIsXScnku86WuMzeojDzqwe6Cab4UKVzB46Ex7HTg10Qt/eXQWAJwAAA="
   },
   "projects/villa-luvia/03": {
     "src": "/images/projects/villa-luvia/03.webp",
@@ -868,13 +868,13 @@ export const media = {
     "src": "/images/projects/villa-luvia/04.webp",
     "width": 700,
     "height": 907,
-    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoQABUAPu1kqU2ppaOiMAgBMB2JYwCdACIL2s7Lre1iObLmCxo8AP5Yh20/2qAWOpLCCjnou7BDg3oQIzcpzcLxScLSWyxehuUf3X6nBDnw5jd66JNw7BQGTS0opngLjyX9zALmmAYBWb54teeyD41SLdTfG34jt5/LgS7+A/SgAA=="
+    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBACdASoQABUAPu1iqU2ppaQiMAgBMB2JYwCdACIL2s7LfIvXfQNrT+AA/liHbT/aoBY6ksIKOei7sEODehAjNynNwvFJwtJX6lcfnbekSdLn+epj8IcIS0QeACWWEoSJC+cmUZzDyzt7u2P3PZtxpKtS6dEctLWZPyIf/Cay5JwL8AAAAA=="
   },
   "projects/villa-luvia/05": {
     "src": "/images/projects/villa-luvia/05.webp",
     "width": 700,
     "height": 907,
-    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYwCsAf6Ul7EdxoQ5VEbUAADJSp/V4aBKNDMJOl+vb9yvKmBOyN13o7E2gp54EcJ/ckB0vqAngim4PQgAv5pcLppcL0+TxbvfV03PzftZrRN1FFbM7OGhP6Fe2SJV/hZncHpcYBEuuU5u/BfyNgAA"
+    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYwCw7f6Ul7EdxoQ5VEbUAADJSp/V4aBKNDMJOl+vb9yvKmBOyN13o7E2gp54EcJ/ckB0vqAngim4PQgAv5pcLppcL0+TxhdYLjgb2/yTuBP5TyKD/fgruMH39qMD/pkgbyRcre0TEQmwey4S+AAA"
   },
   "projects/villa-luvia/06": {
     "src": "/images/projects/villa-luvia/06.webp",
@@ -892,25 +892,25 @@ export const media = {
     "src": "/images/craft/teak-double-door.webp",
     "width": 720,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBACdASoQABgAPu1iqU2ppaQiMAgBMB2JbACdL1ABOxS8ZahZPHpO0AD8gvK++e9tZOaA+NDs4wZ3jivWYcSDs4lvHPeS7QA6TFkioFvGIcIsY2MvT4qtHEJ55347dewMmYv4/RCClQ+4WDRYjhvMHKkdildKLOSNac8sA8yGJhzsax6R3hNyTOAp9ngB/OBHCC5vWu8JXTCY6Lv5RfRzdbgAAA=="
+    "blur": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAAAwBACdASoQABgAPu1iqk2ppaQiMAgBMB2JbACdL1ABOxS8ZiPkE121/PAA/ILyvvnvbWTmgPjQ7OMGd44r1mHEg7OJbxz3kuz6cKQbIFo9DylseSAqBouwYMoebtA4e/tuMYi/H6IPj8RdIfO9xn4BYcOIrYocmS9jKlsZljhZMe46yLgY6w/pS7z2fJugQRzxQmXrTrO1rvCV0wmOi7+UX0c3W4AA"
   },
   "craft/carved-door": {
     "src": "/images/craft/carved-door.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAQCdASoQAAkAA4BaJZACdH8AD5U/smgA/pvREmz4NGP4ZcL/uAC9j72+F7m6xh5c/RYdtDCSn0kWEuD9Vj7xK8YA0KJ39EPI/OWjjUYtFYa+NeV6OWobxJebJYIAAAA="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAQCdASoQAAkAA4BaJZACdH8AD+EhAcQA/pvREmz4NGP4ZcL/uAC9j72+F7m6xh5c/RYdtDCSn0kWIS9IVjj4VUdEGB6j4QGauwsRQfmPtHkMSuOukWaOWobxJebJYIAAAA=="
   },
   "craft/fanlight-door": {
     "src": "/images/craft/fanlight-door.webp",
     "width": 1280,
     "height": 1920,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZwDCgCHgCmSURXzvLZurMAD+7bziSseNthT/VPnhscKoy8rRJvXiZsdpusMpvncaSFs5HAwhHMoNrunDreYIAAA="
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoQABgAPu1iqk2ppaQiMAgBMB2JZwDCgCHgCmSURXzvLZurMAD+7bziSseNthT/VPnhscKoy8rRJvXiZsdpusMpvncaSFs5HAwhHMoNrunDrgEeAAA="
   },
   "craft/window-seat": {
     "src": "/images/craft/window-seat.webp",
     "width": 1080,
     "height": 1350,
-    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdL1yrgBQs230F/6lNawAAzj6T5SatbKwkvwNz+x7rbM14ROcThvj0rvM7MSt09M8rtdpjuwdYKgynxkukEzctSreTHlD31Utqi8qyQLKKA5lwqxKfQtmfgYcL9xQ7yihm3B4SiPxEhq1RuFAA"
+    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdL1yBnc582m7QmZ3eAOJ+rgZMAWSTirju9gepH1A+7z5YWwaPUL4wXhKvCKAiytOieQXf5c4mFp/kjICdIdkQ0ZSVekP+BYzMO83q2suz7ulMKn+HkvFTFDdVg6Ec7Ra9G5144cCo6rb/XzgA"
   },
   "craft/arched-hall": {
     "src": "/images/craft/arched-hall.webp",
@@ -922,19 +922,19 @@ export const media = {
     "src": "/images/craft/arched-living.webp",
     "width": 1280,
     "height": 1920,
-    "blur": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAABQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdMoAluBWCuaCN/IJYLSEAAP6zcAmiapxlX6YYx8gT+8ofIXWeBJOA728etv4sy1lDFk4hRhr4pLIaR97OGS+zwl85WooZqH+D8hXcgPWJ89h+f5uSKoxXX5J+0nkeh5PIi0knJ9MSoQM9sXqGmbYYZiK9lCDLJTDeHozKaKz5GHrmVX6RXSwptRl5hgAAAA=="
+    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdMoAluRWCvdCDm/b/OaISoAD+s3AZomqcZV+mGMf0/ooj9u7yZFy0SaMN+h4izUH+DZ7qZ/LLtc6Pt3xmHeSsclHS8bJcpqLv9qkjwHix0dhg/3gVa8xlg5P2m8j+S1ifYwknSekPlznMYJguQPHsbVfPBR7wh5SK6zpM/JHwoN88C4cME4Wu84poAAA="
   },
   "craft/glazed-dining": {
     "src": "/images/craft/glazed-dining.webp",
-    "width": 1800,
-    "height": 1013,
-    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA4BaJQBdgCKaWrXkAAD+CQZSkdxXr7kTG1G621OOLx+ZyG7z8yTwnQE/qwMNAxF+5CpDhM/2D625OozAAAA="
+    "width": 1920,
+    "height": 1080,
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA4BaJQBdgCKZncDQgAD+CQZSkdxXr7kTG1G621OOLx+Zxtrz8y8fWQLDlN8sjr7ZpIwL2ebKwCiQ4i7tcAA="
   },
   "craft/arched-lounge": {
     "src": "/images/craft/arched-lounge.webp",
     "width": 1080,
     "height": 1350,
-    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdL1yBhAEFYOGme0W2PAD4/avh1/6MxwQC5FK2bO7OVu2mtZsyNB/7H2RYBk4DySYTjeQIvNa/FpmGBGfHJNt5LJcvaQ/5+5yMeCZ+aTELOgw0xtzaYTz0rlWYXDsCe4yocCEFly0uqAAAAA=="
+    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZgCdL1yA6Tk6dSme2FEAAPj9q+HX/ozHBALkasdZykvfU/q/aZtVRiElti/TqwzqRYncZrndExduGmnt7x5PWYr2Vn3LlMTv0WjdtH/5lhm4gfrJV4GJS4O4Tjif2Wr+2QzIBIWWvk0UAAA="
   },
   "craft/stairwell": {
     "src": "/images/craft/stairwell.webp",
@@ -946,42 +946,42 @@ export const media = {
     "src": "/images/craft/stair-window.webp",
     "width": 1347,
     "height": 1950,
-    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABQBACdASoQABcAPu1iqU2ppaQiMAgBMB2JYgCdMoRwAB73nDiriq/PsygAAOIlP1wlJ8RpnGidGUZAEvhZDUguZR+E4Z2kKSuAPNEJLk8MTS0tmA3ouRQokd6aFCTxAE/mhSGAZVRRKY0oPR4vKrXUaCLw/A3ivBbbbifAMsXMCbLPiKVSakAA"
+    "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACQBACdASoQABcAPu1kqU2ppaOiMAgBMB2JYgCdMoR4GB733+Js4hlYCo+Q4IAA4iU/XCUnxGmcaJ0ZRj94LfZaD/guwmHZOf3OVF9UUdzExtOpJV1m1iN/bVDCoPI7h6KWy9D12QwXfxtZcl+yLZJzUF5vLZ6Pz4hT+gkD7tE1653AeO7bySsD44AAAA=="
   },
   "craft/courtyard": {
     "src": "/images/craft/courtyard.webp",
-    "width": 1800,
-    "height": 1013,
+    "width": 1950,
+    "height": 1097,
     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAkAA4BaJQAB8YHdYdN7jgAA/uJvk8W4Cezb4wZ8qJR2z54VZh4/Gc7S/37Y4R8Juc67fUMlMZqZxJ4+3CY49X5jv07pNTbiAj/oQao4mIAA"
   },
   "craft/teak-stair-window": {
     "src": "/images/craft/teak-stair-window.webp",
     "width": 1200,
     "height": 1801,
-    "blur": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAABQBACdASoQABgAPu1iqU2ppaQiMAgBMB2JQBOmUABs1bEJqz/0XRWgXPMgAP7TMc5ififzpz45TcQmk0GAb66xT312AWJlEexC33a669xdNziyVm+9f3g4lU07VvcyvD5N+4a0PAM1Tw27IusU4zCjTyJzKZBkHT1MHhAT0TYIFmHpZqzcOtt+OqDz4GNlOegBzIlibEAAAA=="
+    "blur": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABQBACdASoQABgAPu1iqk2ppaQiMAgBMB2JQBOmUABs1bEJqz/pKkiCPBUAAP7TMc5ififzpz45TcQmk0GAb/RHZtgZEoU3XGE5N0vn5ZFJdHYHTm21/eDiVTTtW9zK8Pk37hrQ8A4VIpYiVXTYSTCiuzelGB4/SbgBLMk+vPd6RgTpLSuOMX8UAaRAnDG/Sd0Mx/9w0AA="
   },
   "craft/verandah": {
     "src": "/images/craft/verandah.webp",
     "width": 1200,
     "height": 1797,
-    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAADQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JbACdMoAvQTQgrhP6Y9SQC/KGviv4QAD+sdQ+6FsVV9q7HqoCWHLHf5cCYQmSOTW46s7HLDDLIRMninKEKMOHziAWn+nF+d0TZxwM5mcT0dy3B7lWg24HMVqTIgwDLU2JZ/TBTpaZtvfATgk6rvEIMYyNCf/llRnf78gwNIq61TzACHugWOqBUHXumMbuS5eaTU6/s1tS5SW6MJwZQAAA"
+    "blur": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAADQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JbACdMoAvQTQgrhH9eHHysMIA+FF9AAD+sdHYObm1ggiN4GywBL0ry6Bp2qDrHCgTojQu2gjiMtIS2NvWVbCZz+0KKunF+d0TZxwM5mbwS4lsG9Lxl1IKqtsVQpU5v/sBTT/tTb8WmWDjUkb1vS+2afRf/HAogr+F8i5PuYYGkVdZW6wC9QENatNK1qYnHQG1ms4GWzR2tOtyu2yzTskSQAA="
   },
   "craft/facade": {
     "src": "/images/craft/facade.webp",
-    "width": 1800,
-    "height": 1012,
+    "width": 1920,
+    "height": 1080,
     "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAkAA4BaJYgCdIExgqi5vKuAAP70Cf2bwYvFBafMmDATUqFTXLLk1w1PbjehGGT8Rv4IlnYqsvnP8/z8EV9kNQlquDfkJSBcX4lqvuuNsSHlpTXhWwAA"
   },
   "craft/corridor": {
     "src": "/images/craft/corridor.webp",
     "width": 1337,
     "height": 1950,
-    "blur": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBACdASoQABcAPu1iqU2ppaOiMAgBMB2JQBOgZYAhuLV+num3OQvdQQAA/hZoJ5r31QMEkjCfOVAU+slJqnz9zxi3YWsKuk6B051SM6n1UtqTPDWbz5YYTBORaUwKtAF0+PX/HH3IzGIRMTLI9mVS8+HpxtSJcY21e8zznoz6YlpEFmNM0DojIAA="
+    "blur": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBACdASoQABcAPu1iqU2ppaOiMAgBMB2JQBOgZYAhuLV+mFpjEEn0xvAA/hZoJ5r31QMEkjCfOVAU+slJqnz9zxi3YWsKuk6B051SM6n1UthD00HzL4vctFIctKYFWgC6fHtqIb6+xXREClZOWlVXEKdZXSmlmPNXOL9oGFLFXagBCFaDRMz+AAA="
   },
   "craft/bedroom": {
     "src": "/images/craft/bedroom.webp",
-    "width": 1800,
-    "height": 1012,
+    "width": 1920,
+    "height": 1080,
     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAkAA4BaJQBOgBuxxSvwQoAA/tPnfplwE3HsJrP1Q88Zt+uGiWoYX+M6d9B00XN7P13Y3LgYduau/oEswq8nytIn0L1DiJBfjAAA"
   },
   "craft/wall-panelling": {
@@ -994,31 +994,31 @@ export const media = {
     "src": "/images/craft/wardrobe.webp",
     "width": 1620,
     "height": 1080,
-    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAsAA4BaJaACdAC4mujo6koAAP7R/rIUf1r4uscDOV+EAakXud6Au3VqY38HLZUoeCmmisD17RBj7SzaNFgr6o11/T3KGAAAAA=="
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAsAA4BaJaACdAC4qGJxzpAAAP7R/rIUf1r4uscDOV+EAakXud6Au3VsMmlOHlCaWFZ8Z4OBSULjasGXO+HKZSwPVGuv6e5QwAAA"
   },
   "craft/staircase": {
     "src": "/images/craft/staircase.webp",
     "width": 1200,
     "height": 1798,
-    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAACQBACdASoQABgAPu1iqU2ppaQiMAgBMB2JYgCdMoAltxeQ5NR7CxP5CAZfpwAA/up2KPQr8BX6iZBnlq8wycdOCHGdoyK3HygnGSYYPuMGbpJhwndwUHh/1iLSgU8/Y2azlgoqOy+5SJywAfgrLg24nSaK2Bh47sFB5kiEa3mHhbh2lVsye2kawKC0xSvCj6JBqkkFXUJWy6Wl4AA="
+    "blur": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAACQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdMoAltxeQ5NR7Cq8HWUwHnAAA/up2KPQr8BX6iZBnlq8wycdOCHGdoyK3HygnGSYYPuMGbpJhwndwUHh/1iLSgU8/Y2azlgoqOy+5SJywAfgrLg24nSaK2Bh47sFB5kiEa3mHhbh2lVsye2kYyX/vvko7Onu/a3CiSJFn9vKbAAA="
   },
   "craft/ceiling": {
     "src": "/images/craft/ceiling.webp",
     "width": 1200,
     "height": 800,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAsAA4BaJZgCsADbgaQKSAAA/rXfmoGhS9whybltZ1IW5qz9YAgK7eOX0r7urRh1jfMbHQafzIGgu6BAEhUyCO9sS++uY6euV8ZIfG5JPCioAAA="
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAsAA4BaJZgCsAELgD6ybXgAAP6135UDZhwsoTzUG/cq6tT8AuKsWIaCi0cDqD7izbMTAp1beI6zmmTbvU6NnAVLPqDwdb1xN1yEinAUNwoqAAA="
   },
   "doors/laminated-1": {
     "src": "/images/doors/laminated-1.webp",
     "width": 1600,
     "height": 1600,
-    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJZACdAD2MEqvMxwAAP7e7H3Y2VZ8el1d6wbo/3YUVeYrKpr/ZZrNMYpBmxCvEuQkT+ARmEUQyn6z/+Qac0Z/v1ObdmQAAAA="
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQABAAA4BaJZACdAD2MEqv0UwA/t7sfdjZVnx6XV3rBuj/dhRV5isqmv9lms0xikGbEPiETIrixz7hJ8Gd6IX2YgTOzNjZ0Zv4mH4AAAA="
   },
   "doors/laminated-2": {
     "src": "/images/doors/laminated-2.webp",
     "width": 1024,
     "height": 1536,
-    "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQAwCdASoQABgAPu1iqU2ppaQiMAgBMB2JQBOgA9juXAMMG0fXXQAA/eqQLT2ZSK3xV2Nv37MqvOSvXuuB2c8IGpB7mrUi+T9LrsfmHxJNXvapsl5OGbPQ1IEdkzi8TKru3TRxPxymGsJdAICNZyEAAAA="
+    "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwAwCdASoQABgAPu1iqU2ppaQiMAgBMB2JQBOgA9juXAMMGu2eAAD96pAtPZlIrfFXY2/fsyq85K9e64HZzwgakHuatSL5P0uux+YfEk1e9qmyXk4Zs9DUgR2TOLxMqu7sG5JETymGsJdzumjECGs5CAA="
   },
   "doors/laminated-3": {
     "src": "/images/doors/laminated-3.webp",
@@ -1030,67 +1030,67 @@ export const media = {
     "src": "/images/doors/laminated-4.webp",
     "width": 1024,
     "height": 1536,
-    "blur": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JQBOmUABqC4WPkcUyNSDOAAD+uAGyrAa3pcwCd9QtvveS4QjVjAzyfXo9DmDnAzxiwwl/+wgAhMleigd62vR+fscbaF6FGviXNtqCGxGjNgvIFK5dzgmTq3kjYgAA"
+    "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JQBOmUABqC4WPkcUyNSDOAAD+uAGyrAa3pcwCd9QtvveS4QjVjAzyfXo9DmDnAzxiwwl/+wgAhMleigd62vR+fscbaF6FGviXNtqCGxGjNhJGNh8+/NBh0o7tqOMAAAA="
   },
   "doors/veneer-1": {
     "src": "/images/doors/veneer-1.webp",
     "width": 736,
     "height": 1104,
-    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZACdMoR3AClZhcR7lDr3ykAAzj4wNLV3YzpMWuM0HKs2oPYQMjD8Lwi1ICqJlIDxy+HPscTheKUcocc1/llU/akfp1BB7TdinEA51RqijHNRGxPdhTYptQKUxlv8CvpsQURFd9O7DK6AAAA="
+    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZACdMoR3AClZhcR7lDrl68AAzj4wNLV3YzpMWuM0HKs2oPYQMjD8Lwi1ICqJlIDxy+HPscTheKUcocc1/llU/akfp1BB7TdinEA51RqijHNRM7rzm4nUV0uGKK1Sm9KRTGd4Txoli7TAAAA="
   },
   "doors/veneer-2": {
     "src": "/images/doors/veneer-2.webp",
     "width": 1086,
     "height": 1448,
-    "blur": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOmUGRtiSl1sv3JGPPAAPz2KL6JSXU6U2/b5ECf7FZdBTRn/F/LQDRfe2+nhp8fabQX/ZNKnERbekjKdOORD+gg6jGR64JVzz2Bnfxqi1QinbHlkYxIeyz4aKxjAad3gpnWJAAAAA=="
+    "blur": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOmUGRtiSl1sv4COIdoAPz2KL6JSXU6U2/b5ECf7FZdBTRn/F/LQDRfe2+nhp8fabQX/p03mLadIWFI1Wxvk6UgP1gwkYoXPXBsDuPbcPIWqEU7Y8sdYC/oadIfhJwY2RZByJrgAAAA"
   },
   "doors/veneer-3": {
     "src": "/images/doors/veneer-3.webp",
     "width": 1024,
     "height": 1536,
-    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBACdASoQABgAPu1iqk2ppaQiMAgBMB2JYwCw7CHw3ciFeRYfeH0wAAD89MT9eSlAxjG97k0tlhzmK2AzXucHXY8q0iH0ibsw+DkG8J521Dz78+pE/fa2d+aQMQ7e65mdrPldtEdmvW53QQAAAA=="
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYwCdACHw3ciFeRYfeH0wAAD89MT9eSlAxjG97k0tlhzmK2AzXucHXY8nJ+sesnf7Pe/90dwEbDW72buS+Ycf/xo/Nntge6iAH0UBzaDi8mDcQAA="
   },
   "factory/craftsman": {
     "src": "/images/factory/craftsman.webp",
     "width": 941,
     "height": 1672,
-    "blur": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAAAwBACdASoQABwAPu1iqU2ppaOiMAgBMB2JZgCdMoAlwQwfCqdZtjRbPAAA/sXy7PQFQuM97S6X6T4BX2BOi/vo/h9vaSGHVFIrjVLC7jF/Y5XWpPTUw8+JpS3GVW4uYm78TSItCm676rGAmB7ws769kCj8IvfhlWr7Vua8UjiQO2+e1nT7S6gy8TRpWy7A8W3NKqoCYVphm/YWDTnz59mNzscl8Xkj5aQnl2jS66+s+gcn+R+AAA=="
+    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAQBACdASoQABwAPu1iqU2ppaOiMAgBMB2JZgCdMoAlvAwfCBNYrCvDQAD+xfLd1FkwZ7zCCXeD4XyN943ivru0QZHznXwtlaLmC17spH/nQ/HSxIKwicDvl97RW2mjm78TSItCm676q+ZRTTws76BrhEM4vdQiOmMh4MeKRxFp2UN6bNtgnIeZ+bfLOZt96wPazpkTnMpQs92vxy627TICg2bEJCHMCCvj6aIKObcYBaYgAAA="
   },
   "factory/frames": {
     "src": "/images/factory/frames.webp",
     "width": 978,
     "height": 1608,
-    "blur": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADwAwCdASoQABoAPu1iqU2ppaOiMAgBMB2JQBOgZYJzcLUT9zzTwjQAAN3yJIzGox5IDawlwbY+AXnmG1L9vXYhvC/k7F/jJ3TjTdjPEPtlSTQoeRk9lAmXmCtHJ0UwFCH9YaRKFshI8IA3xVySKDgpzdHPfaEGh2edg8x+q1rJGpRx/mTJP3jLN4Uwp305egHK8Uz8CX3zbzEoikbNMKI1SGKC86p/2BeSZ/eMAAA="
+    "blur": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADwAwCdASoQABoAPu1iqU2ppaOiMAgBMB2JQBOgZYJzcLUT9zzTwjQAAN3yJIzGox5IDawlwbY+AXnmG1L9vXYhvC/k7F/jJ3TjTdjPEPtlSTQoeRk9lAmXmCtHJ0UwFCH9YaRKFshI8IA3xVySKDgpzdHPfaEGh2edg8x+q1rJGpRx/mTJP3jLN4Uwp305egHK8Uz8CX3zbzEoikbNMKI1SGKC86p/2BeSdPW/AAA="
   },
   "award/ceremony": {
     "src": "/images/award/ceremony.webp",
     "width": 1280,
     "height": 854,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAsAA4BaJbACdLoAAfvOIduIAP4EV8IZJO/H4oj2Hqv/ukIFHO+13UGlWJ7K6Ai6lMscY/Aiunn+8zpjP/jEaufOvML99Ghe6bfjtH2m+zzAAAA="
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAsAA4BaJbACdLoAAgNBTWRMAP4EV8IZJO/H4oj2Hqv/ukIFHO81OfaR99fwjG1NqzCalDctHaC0QjAk//xiNXPnXmF++jQvdNvx2j7TfZ5gAAA="
   },
   "factory/moulder": {
     "src": "/images/factory/moulder.webp",
     "width": 497,
     "height": 447,
-    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACwAQCdASoQAA4AA4BaJZgCdAEHCMtwAP7v9Xfygwtrk0NGFgNQfGdLGy9Eb+EqhdIijS7LU/eiXFy8diiGP730KZ5enFdlePI4afcPvellgnbNgtRJyQH8AAA="
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQAA4AA4BaJZgCdAEHAv2IAAD+7/V38oMLa5NDSGVcWVO4mS7ZJhJ7ZvEMNEMUEVL08RvYpK5ZMuyjm3AfB3cqtXwbciLybpOICkvEcir+/VoLcAA="
   },
   "factory/kiln": {
     "src": "/images/factory/kiln.webp",
     "width": 502,
     "height": 442,
-    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAA4AA4BaJaACdAEVUxHMsgD+m4Jx00tgnHtd75JgjOJnxE5fTslAZBpkIkvYVpL9kug/pDJXLac5kR92b1t9SQcxMLRN+zlAAA=="
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAA4AA4BaJaACdAEVUxHMsgD+m4Jx00tgnHtd75JgjOKNjr75JUaUAICkbaVu+cu+r91ZtOjXtvoEk2PKO0SwzTr0RGy5N+zlAAAA"
   },
   "clients/ambience": {
     "src": "/images/clients/ambience.webp",
     "width": 225,
     "height": 225,
-    "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoQABAAA4BaJZwAAucUDfXQAP74sAq2H0u98c4rJ0nVoJPTtgG8ihs0Ra2G8UkQhajjlY3zXm4DAMJoAAA="
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQABAAA4BaJZwAAucUsY6SOAD++LAKth9LvfHOKydJ1aCT03TXkluQBTzlMZMRs1N90vY0HcFlaIAA"
   },
   "clients/anand-bose-construction": {
     "src": "/images/clients/anand-bose-construction.webp",
     "width": 200,
     "height": 200,
-    "blur": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoQABAAA4BaJaQAAudmhNYIAAD++K+uSjXqusON51nfgYAA"
+    "blur": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoQABAAA4BaJaQAAudmhNL8AAD++K+uSjXqusON51ix2oAA"
   },
   "clients/ayd": {
     "src": "/images/clients/ayd.webp",
@@ -1114,7 +1114,7 @@ export const media = {
     "src": "/images/clients/isprava.webp",
     "width": 405,
     "height": 371,
-    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQAA8AA4BaJZQAD4uu0hydAVo+AAD++LowwZhovQgoUMwUWHo8OU/djAVwoYRXRi7nmy4Oil99Oa97fNtlyDQVSNtyevpWOfgAAA=="
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQAA8AA4BaJZQAD4tO0hydAVo+AAD++LowwXO4vQAoUCvUUFo8OU/djAVgkYCc6AIHmy4Nj11qNJErfNtlxiP9RP3rPX0rHPwAAA=="
   },
   "clients/jaibhuvan-group": {
     "src": "/images/clients/jaibhuvan-group.webp",
@@ -1126,7 +1126,7 @@ export const media = {
     "src": "/images/clients/micpl.webp",
     "width": 480,
     "height": 431,
-    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQAgCdASoQAA4AA4BaJaACdAYrJK2GFKgAAP71dVfGwnG5DoWHPg8cmCez/9xt+OfuYpQTM38/zgoXW+C1NY1DvyAgyK5UWiimRY4C0UToKwq6imu+JKviBpJTv7de+2giOGGFwAA="
+    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQAgCdASoQAA4AA4BaJagCdAYrJK2GFKgAAP71dVfGwnG5DoWHPg8cmCez/9xt+OfuYpQTM38/zgoXW+C1NY1DvyAgyK5UWiimRY4C0UToKwq6imu+JKviBpJTv7de+2giOGGFwAA="
   },
   "clients/mopa": {
     "src": "/images/clients/mopa.webp",
@@ -1144,7 +1144,7 @@ export const media = {
     "src": "/images/clients/nanu-estates.webp",
     "width": 480,
     "height": 191,
-    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAYAA4BaJZQAAt1VzZooAAD+556Z3ZV387xiDspZbgG4SUcqGZf4kK0rTNZZsOq74byXyeGbCSRzxvwSiy0GBIIAAA=="
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAYAA4BaJZQAAt1Vm9aAAP7q5WjJYrEpfjEHZSy3ANwko5UMy/xIVpWmayzT8dmQ58/99ZXJVIuOGI5FfiFngAA="
   },
   "clients/prime-builders": {
     "src": "/images/clients/prime-builders.webp",
@@ -1162,37 +1162,37 @@ export const media = {
     "src": "/images/clients/rita-mody-joshi.webp",
     "width": 480,
     "height": 201,
-    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQAAcAA4BaJZwAD4APsl5gOWyOAAD++Lk3pbYqlS8lPWUSk0BkL9oUYw6rtAeL/jJSaMW4urDxVa0fAOhOKJHTBP/EXBPgAAA="
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQAAcAA4BaJZQAD4APsl5gOWyOAAD++Lk3pbYqlS8lPWUSk0BkL9oUYw6rtAeL/jJSaMW4urDxVa0fAOhOKJHTBP/EbCz4AAA="
   },
   "clients/sharda-mandir": {
     "src": "/images/clients/sharda-mandir.webp",
     "width": 480,
     "height": 482,
-    "blur": "data:image/webp;base64,UklGRjQBAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSHMAAAABcBvbtqqcj9OQk7m7Z9RAqCUQudfAkMGvAIuI3HtwfdJCREwAAKgSLXHUiCpBjpzfxIOPkH3TXxkA0Tfrywv1hem9U6TenKE2T1nkGQx5+jWeUoDHIVuyLSQwP1huJgDpO+2axL9xThprQBaMxV43r8M/AFZQOCCaAAAAcAMAnQEqEAAQAAOAWiWoAnR/CCAbYAWl9mdYoBiuHttLplngAP6NzQ+xH6fTBj0Q33p3dEFUyLGucBUWPpj/dzHqvp+d1QziHuFkOWkiO3hrtHQpLChqA9IQegoa2jpXkDDUikoZCMEKZJKesHLrlgu2t4obRhxpcu2EZpzj0dYjzABnZPCwv4XHzgd3HorfrJY8VkXvD5jwAA=="
+    "blur": "data:image/webp;base64,UklGRjIBAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSHMAAAABcBvbtqqcj9OQk7m7Z9RAqCUQudfAkMGvAIuI3HtwfdJCREwAAKgSLXHUiCpBjpzfxIOPkH3TXxkA0Tfrywv1hem9U6TenKE2T1nkGQx5+jWeUoDHIVuyLSQwP1huJgDpO+2axL9xThprQBaMxV43r8M/AFZQOCCYAAAAEAMAnQEqEAAQAAOAWiWoAnR/CCACBL0EAxXD22l0zk4gAP6N5K+h3qneLQ6RPI7hzswAzIsa5wUklDBHA8Gujfp+d1QziIGXgxxxkSMdyratjbg4zZAGppVFXRajYWIgSBZOepmZ12euReUDYopyhVbxQ7ww2X/3lmAndgQxuCtnnSWPwzrqGw59IKomG66m8BBegN93hAA="
   },
   "clients/silver-sand-serenity": {
     "src": "/images/clients/silver-sand-serenity.webp",
     "width": 306,
     "height": 181,
-    "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAABwAQCdASoQAAkAA4BaJaWDrAGIAAD+8nbMBX/9LH80rHv5qRghF8Ld1vkY4XpKxsxaaKCaYIbgAAAA"
+    "blur": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAABwAQCdASoQAAkAA4BaJaWDrAGIAAD+8nbMBX/9LH80rHv5qRfDXhbut8jHC9JWNmLTRQTTBDcAAA=="
   },
   "clients/una": {
     "src": "/images/clients/una.webp",
     "width": 225,
     "height": 225,
-    "blur": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAABwAQCdASoQABAAA4BaJYwC7AGIQAD+7OpGDg1L/CZP6LkVUiMM6wAA"
+    "blur": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAABwAQCdASoQABAAA4BaJYwC7AGIQAD+7OpGDg1L+hbSzt3T7k/RGAAA"
   },
   "clients/urban-alchemy": {
     "src": "/images/clients/urban-alchemy.webp",
     "width": 480,
     "height": 408,
-    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwAgCdASoQAA4AA4BaJaQAD4p/KRY/R8e/gAD+CdONR77oENHrPkKMyIKNLfPQPmUGsgAFXKPO0O/eupxtrI5mVFluc6Ntbbfedt2hFbafkhjdF+3eQVOI3JrUrr5/+cIlJOL6j6N3IOKJWK92Siw1ZhBiAyCvlUArwBsSkS4lWycAAAA="
+    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAQAgCdASoQAA4AA4BaJaQAD4ifJ5Y/Pve4AP4J041HtMb3SY6+PjPEzk5/89A+ZQavy7VH+20H59ms+T2sjmZSdWRjo21tt95h0TrD01o6w4Wixhz/04jcmfMCvn/5wiUk4ljIvxn9O7yFi+Xyiw1ZhBlNR6rVeufj3L9ESdfslvoAAAA="
   },
   "clients/vianaar": {
     "src": "/images/clients/vianaar.webp",
     "width": 400,
     "height": 400,
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAQCdASoQABAAA4BaJQBOgBhBdOfugAD+pf6nUoL+sc8M5P4l8XW/B26e71DbGoRAtmW13HLnzSpNOjZWIiMbQg7OJtGyiDq18Z4EuOmKQ4S8g+MbQAAA"
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAQCdASoQABAAA4BaJQBOgBih33CpQAD+pf6nUoL+sc8M5P6FEuUgoYWunGB51gP3BNqHfQdAzt3mykanVkOHvoJ0rLWbYHIe6X6nT34sMJf9OT9V8AAA"
   },
   "clients/vision-dempo": {
     "src": "/images/clients/vision-dempo.webp",

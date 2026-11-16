@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { products } from "@/data/products";
 import { projectTypes, roles, validateEnquiry, type FieldErrors } from "@/lib/contact";
-import { site } from "@/data/site";
+
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -40,7 +40,7 @@ function Field({ name, label, type = "text", error, required, autoComplete }: { 
   );
 }
 
-export default function ContactForm() {
+export default function ContactForm({ phone, email }: { phone: string; email: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<FieldErrors>({});
   const [message, setMessage] = useState("");
@@ -81,7 +81,7 @@ export default function ContactForm() {
       form.reset();
       setStatus("sent");
     } catch {
-      setMessage(`Something went wrong. Please call us on ${site.phone} or email ${site.email}.`);
+      setMessage(`Something went wrong. Please call us on ${phone} or email ${email}.`);
       setStatus("error");
     }
   }
@@ -102,7 +102,7 @@ export default function ContactForm() {
             <h2 className="mt-6 font-serif text-headline">
               Thank you. <em className="text-teak">We&rsquo;ll be in touch.</em>
             </h2>
-            <p className="mt-6 max-w-md text-stone">Our team usually replies within one working day. For anything urgent, call {site.phone}.</p>
+            <p className="mt-6 max-w-md text-stone">Our team usually replies within one working day. For anything urgent, call {phone}.</p>
             <button type="button" onClick={() => setStatus("idle")} className="link-underline mt-10 text-sm font-semibold">
               Send another enquiry
             </button>

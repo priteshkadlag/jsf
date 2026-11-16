@@ -4,9 +4,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Picture from "@/components/ui/Picture";
 import { useLenis } from "@/components/providers/SmoothScroll";
-import type { MediaKey } from "@/lib/media";
+import type { ImageRef } from "@/lib/media";
 
-type Props = { images: MediaKey[]; name: string };
+type Props = { images: ImageRef[]; name: string };
 
 /** Masonry gallery with a keyboard-accessible lightbox. */
 export default function Gallery({ images, name }: Props) {

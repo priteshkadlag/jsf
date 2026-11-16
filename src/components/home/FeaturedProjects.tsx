@@ -6,13 +6,20 @@ import { gsap, useGSAP } from "@/lib/gsap";
 import Picture from "@/components/ui/Picture";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { Arrow } from "@/components/ui/Button";
-import { featuredProjects, projects } from "@/data/projects";
+import type { Project } from "@/lib/cms/types";
+
+type Props = {
+  index?: string;
+  projects: Project[];
+  total: number;
+  text: Record<string, string>;
+};
 
 /**
  * Horizontal gallery driven by vertical scroll on desktop (sticky + translateX, no pinning,
  * so it plays nicely with page transitions). Stacks vertically on small screens.
  */
-export default function FeaturedProjects({ index = "03" }: { index?: string }) {
+export default function FeaturedProjects({ index = "03", projects: featuredProjects, total, text: t }: Props) {
   const section = useRef<HTMLElement>(null);
   const track = useRef<HTMLDivElement>(null);
 
@@ -67,16 +74,13 @@ export default function FeaturedProjects({ index = "03" }: { index?: string }) {
         <div ref={track} className="flex flex-col gap-16 px-[clamp(1rem,4vw,3.5rem)] py-28 md:w-max md:flex-row md:items-end md:gap-[4vw] md:py-0">
           <div className="flex shrink-0 flex-col justify-between gap-10 md:h-[72svh] md:w-[34vw]">
             <SectionLabel index={index} tone="light">
-              Selected projects
+              {t.label}
             </SectionLabel>
             <div>
               <h2 id="featured-title" className="font-serif text-headline">
-                Villas we&rsquo;ve <em className="text-brass">opened up</em>
+                {t.title} <em className="text-brass">{t.accent}</em>
               </h2>
-              <p className="mt-6 max-w-md text-ivory/65">
-                Doors, windows and carpentry for Goa&rsquo;s most considered homes — in partnership with developers like
-                Isprava and Vianaar.
-              </p>
+              <p className="mt-6 max-w-md text-ivory/65">{t.text}</p>
             </div>
           </div>
 
@@ -91,7 +95,7 @@ export default function FeaturedProjects({ index = "03" }: { index?: string }) {
               <div className="relative aspect-[3/4] overflow-hidden arch md:aspect-auto md:h-[58svh]">
                 <div data-card-img className="absolute inset-y-0 -inset-x-[12%]">
                   <Picture
-                    media={p.cover}
+                    media={p.images[0]}
                     alt={`${p.name} — ${p.scope.toLowerCase()} by JSF Industries`}
                     fill
                     sizes="(min-width: 768px) 32vw, 100vw"
@@ -102,10 +106,10 @@ export default function FeaturedProjects({ index = "03" }: { index?: string }) {
               <div className="mt-6 flex items-start justify-between gap-6">
                 <div>
                   <p className="eyebrow text-brass">
-                    {p.developer} · {p.location}
+                    {[p.developer, p.location].filter(Boolean).join(" · ")}
                   </p>
                   <h3 className="mt-2 font-serif text-[clamp(1.8rem,2.6vw,2.6rem)] leading-none">{p.name}</h3>
-                  <p className="mt-2 text-sm text-ivory/60">{p.scale ?? p.scope}</p>
+                  <p className="mt-2 text-sm text-ivory/60">{p.scale || p.scope}</p>
                 </div>
                 <span className="font-serif text-xl text-ivory/40">{String(i + 1).padStart(2, "0")}</span>
               </div>
@@ -117,7 +121,7 @@ export default function FeaturedProjects({ index = "03" }: { index?: string }) {
             className="group flex shrink-0 flex-col items-start justify-center gap-6 border-t border-line-light pt-10 md:h-[58svh] md:w-[24vw] md:border-l md:border-t-0 md:pl-[3vw] md:pt-0"
           >
             <span className="font-serif text-[clamp(2.4rem,4vw,4rem)] leading-none">
-              All {projects.length} <br />
+              All {total} <br />
               <em className="text-brass">projects</em>
             </span>
             <span className="flex h-16 w-16 items-center justify-center rounded-full border border-line-light transition-colors duration-500 group-hover:bg-brass group-hover:text-espresso">

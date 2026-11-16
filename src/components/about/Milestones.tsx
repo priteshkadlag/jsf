@@ -42,7 +42,7 @@ const milestones: Milestone[] = [
     kicker: "Chapter four",
     title: "Partners in luxury",
     text: "JSF becomes the woodwork partner for landmark villa collections by Isprava and Vianaar — 22 villas at Moira Chapters, 10 at La Selva and more.",
-    media: "projects/moira-chapters/12",
+    media: "projects/moira-chapters/13",
     alt: "An arched teak door at Moira Chapters",
   },
   {

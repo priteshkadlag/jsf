@@ -11,9 +11,16 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  experimental: {
+    // Admin saves send whole sections (e.g. every blog post) in one request.
+    serverActions: { bodySizeLimit: "5mb" },
+  },
   images: {
+    // Images uploaded through the admin when the site runs on Vercel Blob storage.
+    remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],
     formats: ["image/avif", "image/webp"],
-    qualities: [75],
+    // 85 for site photography (see Picture), 75 for small admin thumbnails.
+    qualities: [75, 85],
     deviceSizes: [640, 828, 1080, 1440, 1920, 2560],
     minimumCacheTTL: 60 * 60 * 24 * 30,
   },

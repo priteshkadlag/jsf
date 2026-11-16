@@ -10,7 +10,7 @@ import { Arrow } from "@/components/ui/Button";
 import { products } from "@/data/products";
 
 /** "What we do" index. On desktop a floating arched preview follows the cursor. */
-export default function Services() {
+export default function Services({ text: t }: { text: Record<string, string> }) {
   const reduce = useReducedMotion();
   const [active, setActive] = useState<number | null>(null);
   const x = useSpring(useMotionValue(0), { stiffness: 160, damping: 22, mass: 0.6 });
@@ -21,14 +21,12 @@ export default function Services() {
       <div className="container-x">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
-            <SectionLabel index="02">What we do</SectionLabel>
+            <SectionLabel index="02">{t.label}</SectionLabel>
             <RevealText as="h2" id="services-title" className="mt-8 font-serif text-headline">
-              Woodwork for every threshold
+              {t.title}
             </RevealText>
           </div>
-          <p className="self-end text-stone md:col-span-4 md:col-start-9">
-            The full scope of carpentry from one trusted team: designed with you, made in our factory and installed on site.
-          </p>
+          <p className="self-end text-stone md:col-span-4 md:col-start-9">{t.text}</p>
         </div>
 
         <ul

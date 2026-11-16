@@ -3,10 +3,10 @@
 import { useRef } from "react";
 import { gsap, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 import Picture from "@/components/ui/Picture";
-import type { MediaKey } from "@/lib/media";
+import type { ImageRef } from "@/lib/media";
 
 type Props = {
-  media: MediaKey;
+  media: ImageRef;
   alt: string;
   className?: string;
   sizes?: string;

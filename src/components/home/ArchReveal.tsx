@@ -9,7 +9,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
  * The arched window, JSF's signature: an arch-shaped aperture grows on scroll until the
  * interior fills the screen, then the brand's own words about the arch appear over it.
  */
-export default function ArchReveal({ index = "04" }: { index?: string }) {
+export default function ArchReveal({ index = "04", text: t }: { index?: string; text: Record<string, string> }) {
   const section = useRef<HTMLElement>(null);
 
   useGSAP(
@@ -55,17 +55,17 @@ export default function ArchReveal({ index = "04" }: { index?: string }) {
           data-arch-title
           className="pointer-events-none absolute inset-x-0 top-[12svh] z-10 flex flex-col items-center px-4 text-center md:top-[14svh]"
         >
-          <SectionLabel index={index}>Signature</SectionLabel>
+          <SectionLabel index={index}>{t.label}</SectionLabel>
           <h2 id="arch-title" className="mt-6 font-serif text-display">
-            The <em className="text-teak">arched</em> window
+            {t.titleStart} <em className="text-teak">{t.accent}</em> {t.titleEnd}
           </h2>
         </div>
 
         <div data-aperture className="arch relative h-svh w-full overflow-hidden motion-reduce:rounded-none">
           <div data-aperture-img className="absolute inset-0">
             <Picture
-              media="craft/arched-living"
-              alt="Light pouring through a tall arched teak window into a villa living room"
+              media={t.image}
+              alt={t.imageAlt}
               fill
               sizes="100vw"
               className="object-cover"
@@ -74,10 +74,9 @@ export default function ArchReveal({ index = "04" }: { index?: string }) {
           <div data-arch-shade className="absolute inset-0 bg-gradient-to-t from-espresso/85 via-espresso/30 to-transparent" />
           <div data-arch-quote className="absolute inset-x-0 bottom-0 pb-14 text-ivory md:pb-20">
             <div className="container-x grid gap-8 md:grid-cols-12">
-              <p className="eyebrow text-brass md:col-span-3">Arched windows by JSF</p>
+              <p className="eyebrow text-brass md:col-span-3">{t.quoteLabel}</p>
               <blockquote className="font-serif text-[clamp(1.9rem,3.6vw,3.6rem)] leading-[1.08] md:col-span-8">
-                &ldquo;More than an architectural feature — a carefully crafted portal that invites nature inside and bathes
-                interiors in soft, filtered light. Each curve is a deliberate pause.&rdquo;
+                &ldquo;{t.quote}&rdquo;
               </blockquote>
             </div>
           </div>

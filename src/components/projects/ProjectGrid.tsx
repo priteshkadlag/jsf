@@ -4,14 +4,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import Picture from "@/components/ui/Picture";
-import type { Developer, ProjectWithImages } from "@/data/projects";
+import type { Project } from "@/lib/cms/types";
 
-type Filter = "All" | Developer;
-
-export default function ProjectGrid({ projects }: { projects: ProjectWithImages[] }) {
-  const [filter, setFilter] = useState<Filter>("All");
+export default function ProjectGrid({ projects }: { projects: Project[] }) {
+  const [filter, setFilter] = useState("All");
   const reduce = useReducedMotion();
-  const filters: Filter[] = ["All", "Isprava", "Vianaar"];
+  // One filter per developer that appears in the list, in order of first appearance.
+  const developers = [...new Set(projects.map((p) => p.developer).filter(Boolean))];
+  const filters = developers.length > 1 ? ["All", ...developers] : [];
   const visible = filter === "All" ? projects : projects.filter((p) => p.developer === filter);
 
   return (
@@ -63,8 +63,8 @@ export default function ProjectGrid({ projects }: { projects: ProjectWithImages[
               <Link href={`/projects/${p.slug}`} data-cursor="View" className="group block">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-t-[999px] transition-[border-radius] duration-[1.2s] ease-[var(--ease-expo)] group-hover:rounded-t-[24px]">
                   <Picture
-                    media={p.cover}
-                    alt={`${p.name}, ${p.location}`}
+                    media={p.images[0]}
+                    alt={[p.name, p.location].filter(Boolean).join(", ")}
                     fill
                     sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
                     className="object-cover transition-transform duration-[1.4s] ease-[var(--ease-expo)] group-hover:scale-105"
@@ -73,7 +73,7 @@ export default function ProjectGrid({ projects }: { projects: ProjectWithImages[
                 <div className="mt-5 flex items-start justify-between gap-4">
                   <div>
                     <h2 className="font-serif text-3xl leading-tight transition-colors duration-500 group-hover:text-teak">{p.name}</h2>
-                    <p className="mt-1 text-sm text-stone">{p.scale ? `${p.scope} · ${p.scale}` : p.scope}</p>
+                    <p className="mt-1 text-sm text-stone">{[p.scope, p.scale].filter(Boolean).join(" · ")}</p>
                   </div>
                   <span className="eyebrow mt-2 shrink-0 text-teak">{p.developer}</span>
                 </div>

@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Picture from "@/components/ui/Picture";
 import { useLenis } from "@/components/providers/SmoothScroll";
-import type { MediaKey } from "@/lib/media";
+import type { ImageRef } from "@/lib/media";
 
-type Props = { src: string; poster: MediaKey; title: string; className?: string };
+type Props = { src: string; poster: ImageRef; title: string; className?: string };
 
 /** Poster with a play button that opens a full-screen player. The video only loads on demand. */
 export default function VideoModal({ src, poster, title, className = "" }: Props) {
@@ -40,7 +40,7 @@ export default function VideoModal({ src, poster, title, className = "" }: Props
         aria-label={`Play video: ${title}`}
       >
         <Picture media={poster} alt="" fill sizes="(min-width: 768px) 60vw, 100vw" className="object-cover transition-transform duration-[1.6s] ease-[var(--ease-expo)] group-hover:scale-105" />
-        <span className="absolute inset-0 bg-espresso/35 transition-colors duration-700 group-hover:bg-espresso/20" />
+        <span className="absolute inset-0 bg-espresso/50 transition-colors duration-700 group-hover:bg-espresso/35" />
         <span className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-ivory/60 text-ivory backdrop-blur-sm transition-transform duration-700 ease-[var(--ease-expo)] group-hover:scale-110 md:h-32 md:w-32">
           <svg viewBox="0 0 24 24" className="ml-1 h-6 w-6" fill="currentColor" aria-hidden="true">
             <path d="M8 5v14l11-7z" />

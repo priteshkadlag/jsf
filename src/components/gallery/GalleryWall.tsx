@@ -5,9 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import Picture from "@/components/ui/Picture";
 import { useLenis } from "@/components/providers/SmoothScroll";
-import type { MediaKey } from "@/lib/media";
-
-export type GalleryItem = { media: MediaKey; caption: string; category: string; href?: string };
+import type { GalleryItem } from "@/lib/cms/types";
 
 const PAGE = 24;
 const ease = [0.19, 1, 0.22, 1] as const;
@@ -88,7 +86,7 @@ export default function GalleryWall({ items, categories }: { items: GalleryItem[
       <ul key={filter} className="mt-10 columns-1 gap-4 sm:columns-2 lg:columns-3 xl:columns-4 [&>li]:mb-4">
         {shown.map((item, i) => (
           <motion.li
-            key={item.media}
+            key={`${item.image}-${i}`}
             className="break-inside-avoid"
             initial={reduce ? false : { opacity: 0, y: 50, scale: 0.97 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -106,7 +104,7 @@ export default function GalleryWall({ items, categories }: { items: GalleryItem[
               aria-label={`Open ${item.caption} (image ${i + 1} of ${filtered.length})`}
             >
               <Picture
-                media={item.media}
+                media={item.image}
                 alt={item.caption}
                 sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 32vw, (min-width: 640px) 48vw, 100vw"
                 className="h-auto w-full transition-transform duration-[1.4s] ease-[var(--ease-expo)] group-hover:scale-[1.06]"
@@ -167,14 +165,14 @@ export default function GalleryWall({ items, categories }: { items: GalleryItem[
             <div className="relative flex-1" onClick={() => setIndex(null)}>
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
-                  key={current.media}
+                  key={`${current.image}-${index}`}
                   className="absolute inset-4 md:inset-x-24 md:inset-y-2"
                   initial={{ opacity: 0, scale: 0.97 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 1.02 }}
                   transition={{ duration: 0.5, ease }}
                 >
-                  <Picture media={current.media} alt={current.caption} fill sizes="100vw" className="object-contain" />
+                  <Picture media={current.image} alt={current.caption} fill sizes="100vw" className="object-contain" />
                 </motion.div>
               </AnimatePresence>
             </div>

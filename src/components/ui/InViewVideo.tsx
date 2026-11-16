@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { getMedia, type MediaKey } from "@/lib/media";
+import { getMedia, type ImageRef } from "@/lib/media";
 
-type Props = { src: string; poster: MediaKey; label: string; className?: string };
+type Props = { src: string; poster: ImageRef; label: string; className?: string };
 
 /** Muted, looping ambient video that only downloads and plays while on screen. */
 export default function InViewVideo({ src, poster, label, className = "" }: Props) {

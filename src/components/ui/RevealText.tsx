@@ -18,7 +18,7 @@ type Props = {
 
 /**
  * Splits text into words with SplitType and slides each word up from behind a mask.
- * Assistive tech reads an sr-only copy; the animated copy is aria-hidden.
+ * The text exists once in the page, so search engines and screen readers read it once.
  */
 export default function RevealText({
   children,
@@ -51,7 +51,7 @@ export default function RevealText({
         word.appendChild(inner);
         return inner;
       });
-      gsap.set(inners, { yPercent: 110 });
+      gsap.set(inners, { yPercent: 160 }); // fully below the mask, which leaves 0.4em for descenders
       el.setAttribute("data-split-ready", "");
 
       const play = () =>
@@ -87,11 +87,11 @@ export default function RevealText({
   );
 
   return (
+    // One copy of the text: search engines and screen readers read the heading once. The words are
+    // split into animated spans in the browser, but they stay real, readable text.
     <Tag ref={ref} className={className} data-reveal="" id={id}>
-      <span className="sr-only">{children}</span>
-      <span ref={target} aria-hidden="true">
-        {children}
-      </span>
+      <span ref={target}>{children}</span>
+      {/* Keeps a word break when two of these sit together as lines of one heading. */}{" "}
     </Tag>
   );
 }

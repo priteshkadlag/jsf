@@ -12,11 +12,13 @@
   --color-teak: #5a3e2e; /* Walnut Brown */
   --color-brass: #b4935a; /* Antique Brass */
   --color-sage: #8a9a83; /* Sage Green */
-  --color-line: rgb(31 42 36 / 0.14);
-  --color-line-light: rgb(232 227 219 / 0.16);
+  /* Derived from ink/ivory so they follow theme colour changes made in the admin. */
+  --color-line: color-mix(in srgb, var(--color-ink) 14%, transparent);
+  --color-line-light: color-mix(in srgb, var(--color-ivory) 16%, transparent);
 
-  --font-serif: var(--font-display), "Times New Roman", serif;
-  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  /* --font-display / --font-body are set by the root layout from the theme chosen in the admin. */
+  --font-serif: var(--font-display, var(--ff-eb-garamond)), "Times New Roman", serif;
+  --font-sans: var(--font-body, var(--ff-manrope)), ui-sans-serif, system-ui, sans-serif;
 
   --ease-expo: cubic-bezier(0.19, 1, 0.22, 1);
   --ease-quart: cubic-bezier(0.76, 0, 0.24, 1);
@@ -123,8 +125,9 @@ html.lenis body {
     display: inline-block;
     overflow: clip;
     vertical-align: top;
-    padding-bottom: 0.12em;
-    margin-bottom: -0.12em;
+    /* Room for descenders and italic tails; the negative margins keep the layout unchanged. */
+    padding: 0 0.15em 0.4em;
+    margin: 0 -0.15em -0.4em;
   }
   .split-word > .split-inner {
     display: inline-block;

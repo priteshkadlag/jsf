@@ -32,11 +32,9 @@ export default function ScrubText({ children, as: Tag = "p", className }: Props)
   );
 
   return (
+    // One copy of the text (split into words in the browser), so it is read and indexed once.
     <Tag ref={ref} className={className}>
-      <span className="sr-only">{children}</span>
-      <span ref={target} aria-hidden="true">
-        {children}
-      </span>
+      <span ref={target}>{children}</span>
     </Tag>
   );
 }
