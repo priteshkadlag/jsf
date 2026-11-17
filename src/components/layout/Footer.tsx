@@ -86,7 +86,7 @@ export default function Footer({ settings, header, footer }: Props) {
         {/* Extra bottom (phone) and right (desktop) space keeps the fixed back-to-top button off the text. */}
         <div className="flex flex-col gap-6 pb-28 pt-10 text-xs text-ivory/50 md:flex-row md:items-center md:justify-between md:py-10 md:pr-20">
           {/* The lock-up has hairline strokes, so it is shown large enough on phones for them to stay crisp. */}
-          <Logo tone="light" src={header.logoLight || undefined} alt={settings.name} className="h-auto w-full max-w-[300px] md:h-16 md:w-auto md:max-w-none" />
+          <Logo tone="light" variant="full" src={header.logoLight || undefined} alt={settings.name} className="h-auto w-full max-w-[220px] md:h-36 md:w-auto md:max-w-none" />
           {footer.legalLine && <p>{footer.legalLine}</p>}
           {footer.copyright && <p>{footer.copyright}</p>}
         </div>

@@ -40,7 +40,7 @@ export default async function SiteChrome({ children }: { children: ReactNode }) 
             <div className="fixed inset-x-0 top-0 z-50">
               <div className="container-x flex h-[72px] items-center md:h-20">
                 <Link href="/" aria-label={`${settings.name} — home`}>
-                  <Logo src={header.logoDark || undefined} alt={settings.name} className="h-10 w-auto md:h-12" />
+                  <Logo src={header.logoDark || undefined} alt={settings.name} className="h-12 w-auto md:h-16" />
                 </Link>
               </div>
             </div>

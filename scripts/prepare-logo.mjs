@@ -1,5 +1,12 @@
-// Builds the header/footer logo variants (JSF HORIZONTAL.png) and app icons (JSF STACKED LOGO.png)
-// from public/images/logo.
+// Builds the website logo files and app icons from the official JSF logo SVGs in public/images/logo:
+//   JSF-Logo-For-Light-Backgrounds.svg  (green lettering, gold arch)
+//   JSF-Logo-For-Dark-Backgrounds.svg   (cream lettering, gold arch)
+// Outputs (public/brand):
+//   jsf-logo-dark.svg / .png        full logo for light backgrounds (header fallback, Google, sharing)
+//   jsf-logo-light.svg / .png       full logo for dark backgrounds (menu, footer)
+//   jsf-logo-dark-compact.svg       without the "Doors · Windows · Interiors" line, for small sizes
+//   jsf-logo-light-compact.svg
+// and src/app/icon.png, apple-icon.png, favicon.ico (arch + JSF on the brand green).
 // Run standalone with: node scripts/prepare-logo.mjs (also called by prepare-assets.mjs).
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -7,12 +14,10 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
-const LOGO_SRC = path.join(ROOT, "public", "images", "logo", "JSF HORIZONTAL.png");
-const MARK_SRC = path.join(ROOT, "public", "images", "logo", "JSF STACKED LOGO.png");
+const SRC = path.join(ROOT, "public", "images", "logo");
 const OUT = path.join(ROOT, "public", "brand");
 const APP = path.join(ROOT, "src", "app");
-const IVORY = { r: 0xe8, g: 0xe3, b: 0xdb };
-const PAPER = "#f1eee8";
+const GREEN = "#30463A";
 
 /** Wraps PNG buffers in an .ico container (PNG-in-ICO is supported by all modern browsers). */
 function toIco(pngs) {
@@ -35,45 +40,69 @@ function toIco(pngs) {
   return Buffer.concat([header, dir, ...pngs.map((p) => p.data)]);
 }
 
+const viewBoxOf = (svg) => svg.match(/viewBox="([^"]+)"/)[1].split(/\s+/).map(Number);
+const withViewBox = (svg, [x, y, w, h]) =>
+  svg
+    .replace(/viewBox="[^"]+"/, `viewBox="${x} ${y} ${w} ${h}"`)
+    .replace(/width="[^"]+"/, `width="${w}"`)
+    .replace(/height="[^"]+"/, `height="${h}"`);
+/** The tagline is the last shape in the file (gold lettering under INDUSTRIES). */
+const withoutTagline = (svg) => {
+  const i = svg.lastIndexOf("<path");
+  return svg.slice(0, i) + svg.slice(svg.indexOf("/>", i) + 2);
+};
+
+/** Tightens the viewBox to the drawn artwork (plus a little breathing room). */
+async function crop(svg, pad = 6) {
+  const [x, y] = viewBoxOf(svg);
+  const scale = 2;
+  const { info } = await sharp(Buffer.from(svg), { density: 72 * scale })
+    .trim({ threshold: 1 })
+    .toBuffer({ resolveWithObject: true });
+  const left = x + -info.trimOffsetLeft / scale - pad;
+  const top = y + -info.trimOffsetTop / scale - pad;
+  const box = [left, top, info.width / scale + pad * 2, info.height / scale + pad * 2].map((n) => Math.round(n * 10) / 10);
+  return withViewBox(svg, box);
+}
+
 export async function prepareLogo() {
-  const { data: raw, info } = await sharp(LOGO_SRC).trim().ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-  const { width, height } = info;
-  const rawOpts = { raw: { width, height, channels: 4 } };
-
-  // Dark = the original walnut-brown artwork; light = same alpha, recoloured ivory for dark backgrounds.
-  const light = Buffer.from(raw);
-  for (let i = 0; i < raw.length; i += 4) {
-    light[i] = IVORY.r;
-    light[i + 1] = IVORY.g;
-    light[i + 2] = IVORY.b;
-  }
+  const dark = await fs.readFile(path.join(SRC, "JSF-Logo-For-Light-Backgrounds.svg"), "utf8");
+  const light = await fs.readFile(path.join(SRC, "JSF-Logo-For-Dark-Backgrounds.svg"), "utf8");
   await fs.mkdir(OUT, { recursive: true });
-  await sharp(raw, rawOpts).png().toFile(path.join(OUT, "jsf-logo-dark.png"));
-  await sharp(light, rawOpts).png().toFile(path.join(OUT, "jsf-logo-light.png"));
 
-  // Icon mark: the arched door from the stacked logo (skip the "19 89" numerals and the wordmark below).
-  const { data: markRaw, info: m } = await sharp(MARK_SRC).trim().ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-  const left = Math.round(m.width * 0.25);
-  const right = Math.round(m.width * 0.75);
-  const bottom = Math.round(m.height * 0.84);
-  const mark = await sharp(markRaw, { raw: { width: m.width, height: m.height, channels: 4 } })
-    .extract({ left, top: 0, width: right - left, height: bottom })
-    .trim()
-    .png()
-    .toBuffer();
-  const square = (size, pad) =>
-    sharp(mark)
-      .resize(size - pad * 2, size - pad * 2, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
-      .extend({ top: pad, bottom: pad, left: pad, right: pad, background: { r: 0, g: 0, b: 0, alpha: 0 } });
+  const files = {
+    "jsf-logo-dark.svg": await crop(dark),
+    "jsf-logo-light.svg": await crop(light),
+    "jsf-logo-dark-compact.svg": await crop(withoutTagline(dark)),
+    "jsf-logo-light-compact.svg": await crop(withoutTagline(light)),
+  };
+  for (const [name, svg] of Object.entries(files)) await fs.writeFile(path.join(OUT, name), svg);
 
-  await square(512, 24).png().toFile(path.join(APP, "icon.png"));
-  await square(180, 22).flatten({ background: PAPER }).png().toFile(path.join(APP, "apple-icon.png"));
-  const icoPngs = await Promise.all(
-    [16, 32, 48].map(async (size) => ({ size, data: await square(size, size >= 32 ? 1 : 0).png().toBuffer() })),
-  );
+  // PNG copies for places that don't take SVG (Google's business logo, social sharing).
+  for (const tone of ["dark", "light"]) {
+    await sharp(Buffer.from(files[`jsf-logo-${tone}.svg`]), { density: 288 })
+      .resize({ width: 1200 })
+      .png()
+      .toFile(path.join(OUT, `jsf-logo-${tone}.png`));
+  }
+
+  // App icons: just the arch and "JSF" (the smaller words can't be read at icon sizes), cream and
+  // gold on the brand green.
+  const markSvg = await crop(light.replace(/<path[^>]*d="M306\.497[\s\S]*$/, "</svg>"), 4);
+  const mark = await sharp(Buffer.from(markSvg), { density: 288 }).png().toBuffer();
+  // (sharp always flattens before resizing, so compose onto a solid square instead.)
+  const icon = async (size, pad) => {
+    const inner = await sharp(mark).resize(size - pad * 2, size - pad * 2, { fit: "inside" }).png().toBuffer();
+    return sharp({ create: { width: size, height: size, channels: 4, background: GREEN } }).composite([{ input: inner, gravity: "centre" }]);
+  };
+
+  await (await icon(512, 72)).png().toFile(path.join(APP, "icon.png"));
+  await (await icon(180, 26)).png().toFile(path.join(APP, "apple-icon.png"));
+  const icoPngs = await Promise.all([16, 32, 48].map(async (size) => ({ size, data: await (await icon(size, Math.round(size * 0.08))).png().toBuffer() })));
   await fs.writeFile(path.join(APP, "favicon.ico"), toIco(icoPngs));
 
-  return { src: "/brand/jsf-logo-dark.png", width, height, blur: "" };
+  const [, , width, height] = viewBoxOf(files["jsf-logo-dark-compact.svg"]);
+  return { src: "/brand/jsf-logo-dark-compact.svg", width: Math.round(width), height: Math.round(height), blur: "" };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

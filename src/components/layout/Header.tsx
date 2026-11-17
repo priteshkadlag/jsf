@@ -86,7 +86,7 @@ export default function Header({ nav, cta, phone, phoneHref, email, siteName, lo
               tone={open ? "light" : "dark"}
               src={(open ? logoLight || logoDark : logoDark) || undefined}
               alt={siteName}
-              className="h-10 w-auto transition md:h-12"
+              className="h-12 w-auto transition md:h-16"
             />
           </Link>
 
