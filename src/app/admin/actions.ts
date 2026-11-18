@@ -17,6 +17,7 @@ import { defaultContent } from "@/lib/cms/defaults";
 import { normalizeDoc } from "@/lib/cms/normalize";
 import { deleteDoc, writeDoc } from "@/lib/cms/storage";
 import { DOC_NAMES, type Content, type DocName } from "@/lib/cms/types";
+import { deleteEnquiries, listEnquiries, type StoredEnquiry } from "@/lib/enquiries";
 
 export type LoginState = { error?: string };
 
@@ -85,4 +86,38 @@ export async function resetDoc(name: DocName): Promise<SaveResult> {
   await deleteDoc(name);
   refreshSite();
   return { ok: true, data: defaultContent()[name] };
+}
+
+export type EnquiriesResult = { ok: true; list: StoredEnquiry[] } | { ok: false; error: string };
+
+/** Latest enquiries for Admin → Enquiries. */
+export async function getEnquiries(): Promise<EnquiriesResult> {
+  try {
+    await requireAdmin();
+  } catch {
+    return { ok: false, error: "Your session has expired. Sign in again." };
+  }
+  try {
+    return { ok: true, list: await listEnquiries() };
+  } catch (err) {
+    console.error("[cms] list enquiries failed", err);
+    return { ok: false, error: "Couldn’t load enquiries from storage. Try again." };
+  }
+}
+
+/** Permanently deletes the given enquiries, then returns the remaining list. */
+export async function removeEnquiries(ids: string[]): Promise<EnquiriesResult> {
+  try {
+    await requireAdmin();
+  } catch {
+    return { ok: false, error: "Your session has expired. Sign in again." };
+  }
+  if (!Array.isArray(ids) || ids.some((id) => typeof id !== "string")) return { ok: false, error: "Nothing to delete." };
+  try {
+    await deleteEnquiries(ids);
+    return { ok: true, list: await listEnquiries() };
+  } catch (err) {
+    console.error("[cms] delete enquiries failed", err);
+    return { ok: false, error: "Couldn’t delete. Try again." };
+  }
 }

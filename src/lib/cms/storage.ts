@@ -116,6 +116,87 @@ export async function deleteDoc(name: DocName): Promise<void> {
   await fs.rm(path.join(contentDir(), `${name}.json`), { force: true });
 }
 
+/*
+ * Records: one JSON file per item (contact-form enquiries), so two visitors submitting at the same
+ * moment can never overwrite each other. Local: content/<kind>/<id>.json. Blob: <kind>/<id>-<random>.json
+ * (the random suffix keeps the public URL unguessable).
+ */
+const RECORD_ID = /^[a-z0-9]{8,40}$/;
+const recordDir = (kind: string) => path.join(contentDir(), kind);
+
+async function listRecordBlobs(kind: string) {
+  const { list } = await import("@vercel/blob");
+  const re = new RegExp(`^${kind}/([a-z0-9]+)(?:-[A-Za-z0-9]+)?\\.json$`);
+  const out: { id: string; url: string }[] = [];
+  let cursor: string | undefined;
+  do {
+    const page = await list({ prefix: `${kind}/`, cursor, limit: 1000 });
+    for (const b of page.blobs) {
+      const m = re.exec(b.pathname);
+      if (m) out.push({ id: m[1], url: b.url });
+    }
+    cursor = page.hasMore ? page.cursor : undefined;
+  } while (cursor);
+  return out;
+}
+
+export async function saveRecord(kind: string, id: string, data: unknown): Promise<void> {
+  if (!RECORD_ID.test(id)) throw new Error("Invalid record id.");
+  const json = JSON.stringify(data, null, 2);
+  if (storageMode() === "blob") {
+    const { put } = await import("@vercel/blob");
+    await put(`${kind}/${id}.json`, json, { access: "public", addRandomSuffix: true, contentType: "application/json" });
+    return;
+  }
+  await fs.mkdir(recordDir(kind), { recursive: true });
+  const file = path.join(recordDir(kind), `${id}.json`);
+  const tmp = `${file}.${randomBytes(4).toString("hex")}.tmp`;
+  await fs.writeFile(tmp, json, "utf8");
+  await fs.rename(tmp, file);
+}
+
+export async function listRecords(kind: string): Promise<{ id: string; data: unknown }[]> {
+  if (storageMode() === "blob") {
+    const blobs = await listRecordBlobs(kind);
+    return Promise.all(
+      blobs.map(async (b) => {
+        const res = await fetch(b.url, { cache: "no-store" });
+        if (!res.ok) throw new Error(`[cms] could not read ${kind} ${b.id} (HTTP ${res.status})`);
+        return { id: b.id, data: JSON.parse(await res.text()) };
+      }),
+    );
+  }
+  let files: string[] = [];
+  try {
+    files = await fs.readdir(recordDir(kind));
+  } catch {
+    return [];
+  }
+  const out: { id: string; data: unknown }[] = [];
+  for (const f of files) {
+    const id = f.replace(/\.json$/, "");
+    if (!f.endsWith(".json") || !RECORD_ID.test(id)) continue;
+    try {
+      out.push({ id, data: JSON.parse(await fs.readFile(path.join(recordDir(kind), f), "utf8")) });
+    } catch (err) {
+      console.error(`[cms] could not read ${kind}/${f}`, err);
+    }
+  }
+  return out;
+}
+
+export async function deleteRecords(kind: string, ids: string[]): Promise<void> {
+  const wanted = new Set(ids.filter((id) => RECORD_ID.test(id)));
+  if (!wanted.size) return;
+  if (storageMode() === "blob") {
+    const { del } = await import("@vercel/blob");
+    const urls = (await listRecordBlobs(kind)).filter((b) => wanted.has(b.id)).map((b) => b.url);
+    if (urls.length) await del(urls);
+    return;
+  }
+  await Promise.all([...wanted].map((id) => fs.rm(path.join(recordDir(kind), `${id}.json`), { force: true })));
+}
+
 /** Saves an uploaded file under a unique name and returns its public URL. */
 export async function saveUpload(fileName: string, bytes: Buffer, contentType: string): Promise<string> {
   const month = new Date().toISOString().slice(0, 7);

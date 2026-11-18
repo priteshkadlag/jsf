@@ -6,6 +6,7 @@ import { adminConfigured, isAdmin } from "@/lib/cms/auth";
 import { loadContent } from "@/lib/cms/content";
 import { storageMode } from "@/lib/cms/storage";
 import { builtInMedia } from "@/lib/media";
+import { listEnquiries, type StoredEnquiry } from "@/lib/enquiries";
 
 /**
  * /admin — content management. Reading the session cookie happens at request time, so the gate
@@ -31,5 +32,13 @@ async function AdminGate({ searchParams }: { searchParams: PageProps<"/admin">["
   const content = await loadContent();
   // ?section=projects opens that section directly (handy for bookmarks).
   const { section } = await searchParams;
-  return <AdminApp initialSection={typeof section === "string" ? section : undefined} initial={content} builtIns={builtInMedia()} storage={storageMode()} />;
+  let enquiries: StoredEnquiry[] = [];
+  let enquiriesError: string | undefined;
+  try {
+    enquiries = await listEnquiries();
+  } catch (err) {
+    console.error("[cms] list enquiries failed", err);
+    enquiriesError = "Couldn’t load enquiries from storage. Press Refresh to try again.";
+  }
+  return <AdminApp enquiries={enquiries} enquiriesError={enquiriesError} initialSection={typeof section === "string" ? section : undefined} initial={content} builtIns={builtInMedia()} storage={storageMode()} />;
 }

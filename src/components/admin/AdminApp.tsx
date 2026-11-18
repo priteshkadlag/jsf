@@ -17,11 +17,14 @@ import HeaderFooterEditor from "./sections/HeaderFooterEditor";
 import ThemeEditor from "./sections/ThemeEditor";
 import MediaManager from "./sections/MediaManager";
 import IntegrationsEditor from "./sections/IntegrationsEditor";
+import EnquiriesManager from "./sections/EnquiriesManager";
+import type { StoredEnquiry } from "@/lib/enquiries";
 
-type SectionId = "overview" | "integrations" | "settings" | "texts" | "projects" | "gallery" | "clients" | "blog" | "seo" | "layout" | "theme" | "media";
+type SectionId = "overview" | "enquiries" | "integrations" | "settings" | "texts" | "projects" | "gallery" | "clients" | "blog" | "seo" | "layout" | "theme" | "media";
 
 const SECTIONS: { id: SectionId; label: string; icon: string; docs: DocName[]; intro: string }[] = [
   { id: "overview", label: "Overview", icon: "◎", docs: [], intro: "What’s on the site and where to change it." },
+  { id: "enquiries", label: "Enquiries", icon: "✉", docs: [], intro: "Messages from the website’s contact form. Reply, delete or export them as a CSV file." },
   { id: "texts", label: "Page text & images", icon: "✎", docs: ["texts"], intro: "Headings, paragraphs, buttons and section images on every page." },
   { id: "projects", label: "Projects", icon: "▦", docs: ["projects"], intro: "Add, edit, reorder or remove projects and their photos." },
   { id: "gallery", label: "Gallery", icon: "◫", docs: ["gallery"], intro: "Photos and categories on the Gallery page." },
@@ -42,11 +45,15 @@ export default function AdminApp({
   builtIns,
   storage,
   initialSection,
+  enquiries,
+  enquiriesError,
 }: {
   initial: Content;
   builtIns: BuiltIn[];
   storage: "local" | "blob";
   initialSection?: string;
+  enquiries: StoredEnquiry[];
+  enquiriesError?: string;
 }) {
   const [content, setContent] = useState(initial);
   const [saved, setSaved] = useState(initial);
@@ -120,6 +127,9 @@ export default function AdminApp({
 
   let body: ReactNode;
   switch (active) {
+    case "enquiries":
+      body = <EnquiriesManager initial={enquiries} loadError={enquiriesError} />;
+      break;
     case "settings":
       body = <SettingsEditor value={content.settings} onChange={set("settings")} />;
       break;
@@ -163,7 +173,7 @@ export default function AdminApp({
       );
       break;
     default:
-      body = <Overview content={saved} storage={storage} go={go} />;
+      body = <Overview content={saved} storage={storage} go={go} enquiries={enquiries.length} />;
   }
 
   return (
@@ -289,9 +299,10 @@ export default function AdminApp({
   );
 }
 
-function Overview({ content: c, storage, go }: { content: Content; storage: "local" | "blob"; go: (id: SectionId) => void }) {
+function Overview({ content: c, storage, go, enquiries }: { content: Content; storage: "local" | "blob"; go: (id: SectionId) => void; enquiries: number }) {
   const posts = publishedPosts(c.blog.posts);
   const stats: [string, number | string, SectionId][] = [
+    ["Enquiries", enquiries, "enquiries"],
     ["Projects", c.projects.length, "projects"],
     ["On the home page", c.projects.filter((p) => p.featured).length, "projects"],
     ["Gallery photos", c.gallery.items.length, "gallery"],

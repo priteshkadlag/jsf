@@ -183,3 +183,37 @@ test("media library: flags low-resolution photos", async ({ page }) => {
   await page.getByRole("button", { name: /^Low resolution, in use/ }).click();
   await expect(page.getByText("Low resolution", { exact: true }).first()).toBeVisible();
 });
+
+test("enquiries: a contact-form message is saved, shown, exported as CSV and deleted", async ({ page, browser }) => {
+  // Sent as a signed-out visitor, the way the contact form does.
+  const visitor = await browser.newContext({ storageState: { cookies: [], origins: [] } });
+  const res = await visitor.request.post("/api/contact", {
+    data: { name: "Test Architect", email: "architect@example.com", phone: "+91 98765 43210", role: "Architect", projectType: "Villa / residence", product: "doors", message: "=SUM(1) Need 12 teak doors for a villa in Assagao." },
+  });
+  expect((await res.json()).ok).toBe(true);
+  await visitor.close();
+
+  await open(page, "enquiries");
+  const card = page.getByRole("listitem").filter({ hasText: "Test Architect" });
+  await expect(card).toBeVisible();
+  await expect(card.getByText("Priority")).toBeVisible();
+  await expect(card.getByText("Architect · Villa / residence · Doors")).toBeVisible();
+
+  const download = page.waitForEvent("download");
+  await page.getByRole("link", { name: "Export CSV" }).click();
+  const csv = await (await (await download).createReadStream()).toArray().then((c) => Buffer.concat(c).toString("utf8"));
+  expect(csv).toContain('"Test Architect","architect@example.com"');
+  expect(csv).toContain(`"'=SUM(1) Need 12 teak doors`); // formulas are neutralised for Excel
+
+  page.once("dialog", (d) => d.accept());
+  await card.getByRole("button", { name: "Delete enquiry from Test Architect" }).click();
+  await expect(card).toHaveCount(0);
+  await page.reload();
+  await expect(page.getByRole("listitem").filter({ hasText: "Test Architect" })).toHaveCount(0);
+});
+
+test("signed-out visitors cannot download enquiries", async ({ browser }) => {
+  const visitor = await browser.newContext({ storageState: { cookies: [], origins: [] } });
+  expect((await visitor.request.get("/api/admin/enquiries")).status()).toBe(401);
+  await visitor.close();
+});
